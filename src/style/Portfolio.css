@@ -1,0 +1,18 @@
+.portfolio-card:hover p{
+    /* background-color: red; */
+    display: block;
+    transition: all;
+    transition-duration: 0.5s;
+    top: 46%;
+    opacity: 1;
+    transition-timing-function: ease;
+}
+
+.portfolio-card:hover a img{
+    filter: brightness(0.4);
+    transform: scale(1.2);
+    transition: all;
+    transition-duration: 0.2s;    
+    /* hover:scale-[1.2] 
+    hover:transition-all hover:duration-[0.2s] */
+}
