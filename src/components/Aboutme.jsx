@@ -44,7 +44,7 @@ export default function Aboutme() {
                   Kishlay Chandan
                 </h2>
                 <p className="mt-6 text-lg leading-8 text-gray-300 max-[1023px]:text-justify">
-                  I am a passionate Full Stack Web Developer specializing in the MERN stack (MongoDB, Express.js, React.js, and Node.js). I have completed my master's in MCA from the Central University of Karnataka, Kalaburagi. With a strong focus on web development, I possess expertise in technologies such as React.js, tailwind css, Material UI etc. However, my skills are not limited to these programming languages, as I am a fast learner and can adapt to new stacks based on project requirements.
+                  I am a passionate Full Stack Web Developer, specializing in (HTML, CSS, Tailwind CSS, Bootstrap, MySQL, MongoDB, Javascript, Express.js, React.js, and Node.js, PHP, Machine Learning). I have completed my master's in MCA from the Central University of Karnataka, Kalaburagi. With a strong focus on web development, I possess expertise in technologies such as React.js, tailwind css, Material UI etc. However, my skills are not limited to these programming languages, as I am a fast learner and can adapt to new stacks based on project requirements.
                 </p>
                 <div className="mt-10 flex max-[1023px]:justify-center">
                   <a
