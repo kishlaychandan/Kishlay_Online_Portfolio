@@ -1,6 +1,4 @@
 import React from "react";
-import image from "../images/Wallpaper.png";
-import profilelogo from "../images/sadavector.png";
 import "../style/Landing.css";
 import { Link, animateScroll as scroll } from "react-scroll";
 

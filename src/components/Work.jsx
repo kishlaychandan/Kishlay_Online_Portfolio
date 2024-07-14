@@ -1,9 +1,7 @@
 import React from "react";
-import Shivila from "../images/shivila.jpeg";
 import kodnest from "../images/kodnest.png";
 import digisnare from "../images/digisnare.png";
 import { BsFillBriefcaseFill } from "react-icons/bs";
-import { FaDownload } from "react-icons/fa";
 import ResumePdf from "../images/KishlayChandan_Geekster1.pdf"
 function Work() {
   let resume = [

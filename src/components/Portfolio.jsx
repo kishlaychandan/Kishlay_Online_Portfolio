@@ -1,14 +1,9 @@
 import kkdial from "../images/kkdial.png";
-import WeatherApp from "../images/weatherapp.png";
 import chaisuttabar from "../images/chaisuttabar.png";
 import areamajorproject from "../images/area-majorproject.png";
 import BoostedUSA from "../images/BoostedUSA.png";
 import camping from "../images/camping.png";
 import coffeehouse from "../images/coffeehouse.png";
-import ShopFusion from "../images/ShopFusion.png";
-import CUK from "../images/CUK-IQAC.png";
-import TODO from "../images/todo1.png";
-import Quotes from "../images/quotes.png";
 import "../style/Portfolio.css";
 const portfolio = [
   {
