@@ -7,10 +7,10 @@
 
 # 💫 About Me
 
-![SadanandGadwal Banner](./src/images/sadanand-banner.jpg)
+![Kishlay Chandan](./src/images/)
 
 
-🔭️ I Work on Javascript Tools like React & Express<br><br>🧑‍💻️ All my projects and experience are available at https://sadanandgadwal.me <br><br>💬️ Ask me about React | Javascript <br><br>📫 How to reach me Sadanandgadwal@gmail.com<br>
+🔭️ I Work on Javascript Tools like React & Express<br><br>🧑‍💻️ All my projects and experience are available at https://sadanandgadwal.me <br><br>💬️ Ask me about React | Javascript <br><br>📫 How to reach me kishlaychandan00@gmail.com<br>
 
 
 
