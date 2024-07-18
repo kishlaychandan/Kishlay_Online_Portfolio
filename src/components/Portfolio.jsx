@@ -1,5 +1,5 @@
 import kkdial from "../images/kkdial.png";
-import expenseTracker from "../images/expense-tracker.png";
+import expenseTracker from "../images/expenseTracker.png";
 import chaisuttabar from "../images/chaisuttabar.png";
 import areamajorproject from "../images/area-majorproject.png";
 import BoostedUSA from "../images/BoostedUSA.png";
