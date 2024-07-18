@@ -17,12 +17,12 @@ const portfolio = [
     github: "https://github.com/kishlaychandan/KKDial",
   },
   {
-    Projectname: "ISLE OF TREES",
+    Projectname: "TVS EMERALD, ISLE OF TREES",
     tech: "HTML,CSS, Wordpress, Hostinger",
     imageUrl: isle,
     des: "CLIENT PROJECT, ISLE OF TREES, Authorized sales partner",
     Demo: "https://isle-of-trees.in/",
-    github: "https://github.com/kishlaychandan/kishlay-expense",
+    github: "https://isle-of-trees.in/",
   },
   {
     Projectname: "Expense-tracker",
