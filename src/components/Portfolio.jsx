@@ -1,4 +1,5 @@
 import kkdial from "../images/kkdial.png";
+import expenseTracker from "../images/expense-tracker.png";
 import chaisuttabar from "../images/chaisuttabar.png";
 import areamajorproject from "../images/area-majorproject.png";
 import BoostedUSA from "../images/BoostedUSA.png";
@@ -8,11 +9,19 @@ import "../style/Portfolio.css";
 const portfolio = [
   {
     Projectname: "KKDial",
-    tech: "HTML,CSS,PHP,MySQL",
+    tech: "HTML,CSS,PHP,JavaScript,MySQL",
     imageUrl: kkdial,
     des: "Information Directory Portal, Dynamic DashBoard for User and Admin",
     Demo: "https://kkdial.infinityfreeapp.com/",
     github: "https://github.com/kishlaychandan/KKDial",
+  },
+  {
+    Projectname: "Expense-tracker",
+    tech: "HTML,CSS, JavaScript",
+    imageUrl: expenseTracker,
+    des: "Expense Tracker Website is a comprehensive financial management platform.",
+    Demo: "https://warm-zabaione-9f18e0.netlify.app/",
+    github: "https://github.com/kishlaychandan/kishlay-expense",
   },
   {
     Projectname: "Chai-Sutta-Bar (Replicate)",
