@@ -1,5 +1,6 @@
 import kkdial from "../images/kkdial.png";
 import expenseTracker from "../images/expenseTracker.png";
+import isle from "../images/isle.png";
 import chaisuttabar from "../images/chaisuttabar.png";
 import areamajorproject from "../images/area-majorproject.png";
 import BoostedUSA from "../images/BoostedUSA.png";
@@ -14,6 +15,14 @@ const portfolio = [
     des: "Information Directory Portal, Dynamic DashBoard for User and Admin",
     Demo: "https://kkdial.infinityfreeapp.com/",
     github: "https://github.com/kishlaychandan/KKDial",
+  },
+  {
+    Projectname: "ISLE OF TREES",
+    tech: "HTML,CSS, Wordpress, Hostinger",
+    imageUrl: isle,
+    des: "CLIENT PROJECT, ISLE OF TREES, Authorized sales partner",
+    Demo: "https://isle-of-trees.in/",
+    github: "https://github.com/kishlaychandan/kishlay-expense",
   },
   {
     Projectname: "Expense-tracker",
@@ -125,7 +134,7 @@ export default function Portfolio() {
               {portfolio.map((project) => (
                 <li key={project.Projectname} className="max-[640px]:flex max-[640px]:flex-col max-[640px]:items-center max-[640px]:gap-[0.4rem]" >
                  <div className="portfolio-card w-full relative overflow-hidden rounded-2xl " >
-                  <a href="">
+                  <a href={project.Demo} target="_blank">
                   <img
                       className="aspect-[14/13] brightness-[0.8]  w-full object-fill rounded-2xl border cursor-pointer  border-gray-600"
                       src={project.imageUrl}
