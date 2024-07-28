@@ -4,8 +4,8 @@ import isle from "../images/isle.png";
 import chaisuttabar from "../images/chaisuttabar.png";
 import areamajorproject from "../images/area-majorproject.png";
 import BoostedUSA from "../images/BoostedUSA.png";
-import camping from "../images/camping.png";
-import coffeehouse from "../images/coffeehouse.png";
+import restaurant from "../images/restaurant.png";
+import Geekpok from '../images/Geekpok.png';
 import "../style/Portfolio.css";
 const portfolio = [
   {
@@ -33,6 +33,14 @@ const portfolio = [
     github: "https://github.com/kishlaychandan/kishlay-expense",
   },
   {
+    Projectname: "Restaurant-UI",
+    tech: "HTML, CSS, React Js",
+    imageUrl: restaurant,
+    des: "Created a UI for Restaurant",
+    Demo: "https://restaurant-orpin-beta.vercel.app/",
+    github: "https://github.com/kishlaychandan/Restaurant",
+  },
+  {
     Projectname: "Chai-Sutta-Bar (Replicate)",
     tech: "HTML, CSS, Tailwind CSS",
     imageUrl: chaisuttabar,
@@ -57,61 +65,14 @@ const portfolio = [
     github: "https://github.com/kishlaychandan/Weekly_Test_6---CSS",
   },
   {
-    Projectname: "Camping",
-    tech: "HTML, CSS",
-    imageUrl: camping,
-    des: "Created a UI for Camping services website",
-    Demo: "https://campingservices.netlify.app/",
-    github: "https://github.com/kishlaychandan/Weekly-Test--4-CSS-Properties",
+    Projectname: "GeekPok",
+    tech: "HTML, CSS, JavaScript",
+    imageUrl: Geekpok,
+    des: "Created a UI for pookemon",
+    Demo: "https://kishlaychandan.github.io/GeeksterPok/",
+    github: "https://github.com/kishlaychandan/GeeksterPok",
   },
-  {
-    Projectname: "Coffee-House",
-    tech: "HTML, CSS",
-    imageUrl: coffeehouse,
-    des: "Created a UI for Coffee House website",
-    Demo: "https://coffee-house-24.netlify.app/",
-    github: "https://github.com/kishlaychandan/Assignment_24_Coffee_house",
-  },
-  // {
-  //   Projectname: "CUK-IQAC",
-  //   tech: "Php",
-  //   imageUrl: CUK,
-  //   des: "Central University of Karnataka - IQAC Portal.",
-  //   Demo: "https://cuk.ac.in/CUK-IQAC/index.php",
-  //   github: "https://github.com/Sadanandgadwal/teckstack",
-  // },
-  // {
-  //   Projectname: "Todo APP",
-  //   tech: "MERN",
-  //   imageUrl: TODO,
-  //   des: "Todo using Mern Stack here we can add todo, delete todo, completed todo",
-  //   Demo: "https://todoapp-yesg.netlify.app",
-  //   github: "https://github.com/Sadanandgadwal/todofrontend",
-  // },
-  //  {
-  //   Projectname: "Weather APP",
-  //   tech: "Reactjs",
-  //   imageUrl: WeatherApp,
-  //   des: "Weather App using Reactjs using Axios, API Using OpenWeatherMap",
-  //   Demo: "https://weatherappyesg.netlify.app",
-  //   github: "https://github.com/Sadanandgadwal/Weatherapp",
-  // },
-  // {
-  //   Projectname: "ShopFusion",
-  //   tech: "Reactjs",
-  //   imageUrl: ShopFusion,
-  //   des: "ShopFusion using Reactjs and zustand, API Using FakeStoreApi",
-  //   Demo: "https://storefusion.netlify.app/",
-  //   github: "https://github.com/Sadanandgadwal/Ecom",
-  // },
-  // {
-  //   Projectname: "Quotes",
-  //   tech: "Reactjs",
-  //   imageUrl: Quotes,
-  //   des: "Quotes using Reactjs with axios, API Using API Ninjas",
-  //   Demo: "https://quotes-delta-blond.vercel.app/",
-  //   github: "https://github.com/Sadanandgadwal/Quotes",
-  // },
+  
 ];
 export default function Portfolio() {
   return (
