@@ -36,7 +36,7 @@ const portfolio = [
     Projectname: "Restaurant-UI",
     tech: "HTML, CSS, React Js",
     imageUrl: restaurant,
-    des: "Created a UI for Restaurant, where you can find ratings and reviews of restaurants online.",
+    des: "Created a UI for Restaurant, where you can find ratings of restaurants.",
     Demo: "https://restaurant-orpin-beta.vercel.app/",
     github: "https://github.com/kishlaychandan/Restaurant",
   },
