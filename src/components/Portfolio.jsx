@@ -6,6 +6,7 @@ import areamajorproject from "../images/area-majorproject.png";
 import BoostedUSA from "../images/BoostedUSA.png";
 import restaurant from "../images/restaurant.png";
 import Geekpok from '../images/Geekpok.png';
+import FoodApp from '../images/FoodApp.png'
 import "../style/Portfolio.css";
 const portfolio = [
   {
@@ -23,6 +24,14 @@ const portfolio = [
     des: "CLIENT PROJECT, ISLE OF TREES, Authorized sales partner",
     Demo: "https://isle-of-trees.in/",
     github: "https://isle-of-trees.in/",
+  },
+  {
+    Projectname: "Food Delivery App",
+    tech: "React JS, Firebase authentication",
+    imageUrl: FoodApp,
+    des: "Web app for online food ordering with AI recipes, payment gateway, and a chatBot.",
+    Demo: "https://food-delivery-app-ebon.vercel.app/",
+    github: "https://github.com/kishlaychandan/FoodDeliveryApp",
   },
   {
     Projectname: "Expense-tracker",
