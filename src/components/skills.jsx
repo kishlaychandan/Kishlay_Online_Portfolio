@@ -29,6 +29,24 @@ export default function Skills() {
 
         <div className="container">
           <div className="container__progressbars">
+          <div className="progressbar">
+              <svg className="progressbar__svg">
+                <circle
+                  cx="80"
+                  cy="80"
+                  r="70"
+                  className="progressbar__svg-circle circle-express shadow-express"
+                >
+                  {" "}
+                </circle>
+              </svg>
+              <span className="progressbar__text shadow-express">
+                <span className="grid justify-items-center p-1">
+                  <BiLogoMongodb />
+                </span>
+                HTML, CSS
+              </span>
+            </div>
             <div className="progressbar">
               <svg className="progressbar__svg">
                 <circle
@@ -135,7 +153,7 @@ export default function Skills() {
                 <span className="grid justify-items-center p-1">
                   <BiLogoTailwindCss />
                 </span>
-                TaiwindCSS
+                TailwindCSS
               </span>
             </div>
             <div className="progressbar">
@@ -208,6 +226,24 @@ export default function Skills() {
                   {/* <DiMysql /> */}
                 </span>
                 Machine Learning
+              </span>
+            </div>
+            <div className="progressbar">
+              <svg className="progressbar__svg">
+                <circle
+                  cx="80"
+                  cy="80"
+                  r="70"
+                  className="progressbar__svg-circle circle-express shadow-express"
+                >
+                  {" "}
+                </circle>
+              </svg>
+              <span className="progressbar__text shadow-express">
+                <span className="grid justify-items-center p-1">
+                  <BiLogoMongodb />
+                </span>
+                WordPress
               </span>
             </div>
           </div>
