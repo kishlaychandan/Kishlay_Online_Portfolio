@@ -34,7 +34,7 @@ export default function Skills() {
                 <circle
                   cx="80"
                   cy="80"
-                  r="70"
+                  r="95"
                   className="progressbar__svg-circle circle-express shadow-express"
                 >
                   {" "}
@@ -52,7 +52,7 @@ export default function Skills() {
                 <circle
                   cx="80"
                   cy="80"
-                  r="70"
+                  r="90"
                   className="progressbar__svg-circle circle-js shadow-js"
                 >
                   {" "}
