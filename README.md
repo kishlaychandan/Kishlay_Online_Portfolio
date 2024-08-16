@@ -10,5 +10,5 @@
 Kishlay Chandan
 
 
-🔭️ I Work on Javascript Tools like React & Express<br><br>🧑‍💻️ All my projects and experience are available at https://voluble-conkies-6a7e48.netlify.app/ <br><br>💬️ Ask me about React | Javascript <br><br>📫 How to reach me kishlaychandan00@gmail.com<br>
+🔭️ I Work on Javascript Tools like React & Express<br><br>🧑‍💻️ All my projects and experience are available at https://kishlaychandan.netlify.app/ <br><br>💬️ Ask me about React | Javascript <br><br>📫 How to reach me kishlaychandan00@gmail.com<br>
 
