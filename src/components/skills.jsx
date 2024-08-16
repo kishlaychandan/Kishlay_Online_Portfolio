@@ -44,7 +44,7 @@ export default function Skills() {
                 <span className="grid justify-items-center p-1">
                   <BiLogoMongodb />
                 </span>
-                HTML, CSS
+                HTML,CSS
               </span>
             </div>
             <div className="progressbar">
