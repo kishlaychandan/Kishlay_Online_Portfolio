@@ -29,20 +29,21 @@ export default function Skills() {
 
         <div className="container">
           <div className="container__progressbars">
+          
           <div className="progressbar">
               <svg className="progressbar__svg">
                 <circle
                   cx="80"
                   cy="80"
-                  r="95"
-                  className="progressbar__svg-circle circle-express shadow-express"
+                  r="70"
+                  className="progressbar__svg-circle circle-tailwindcss shadow-tailwindcss"
                 >
                   {" "}
                 </circle>
               </svg>
-              <span className="progressbar__text shadow-express">
+              <span className="progressbar__text shadow-tailwindcss">
                 <span className="grid justify-items-center p-1">
-                  <BiLogoMongodb />
+                  <BiLogoTailwindCss />
                 </span>
                 HTML,CSS
               </span>
@@ -52,17 +53,17 @@ export default function Skills() {
                 <circle
                   cx="80"
                   cy="80"
-                  r="90"
-                  className="progressbar__svg-circle circle-js shadow-js"
+                  r="70"
+                  className="progressbar__svg-circle circle-tailwindcss shadow-tailwindcss"
                 >
                   {" "}
                 </circle>
               </svg>
-              <span className="progressbar__text shadow-js">
+              <span className="progressbar__text shadow-tailwindcss">
                 <span className="grid justify-items-center p-1">
-                  <DiJavascript />
+                  <BiLogoTailwindCss />
                 </span>
-                JavaScript
+                JavaScipt
               </span>
             </div>
             <div className="progressbar">
