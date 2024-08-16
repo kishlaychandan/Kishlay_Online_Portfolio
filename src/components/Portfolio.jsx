@@ -14,7 +14,7 @@ const portfolio = [
     tech: "HTML,CSS,PHP,JavaScript,MySQL",
     imageUrl: kkdial,
     des: "Information Directory Portal, Dynamic DashBoard for User and Admin",
-    Demo: "https://kkdial.infinityfreeapp.com/",
+    Demo: "http://kkdial.free.nf/dlms/",
     github: "https://github.com/kishlaychandan/KKDial",
   },
   {
