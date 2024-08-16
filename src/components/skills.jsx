@@ -223,11 +223,12 @@ export default function Skills() {
               </svg>
               <span className="progressbar__text shadow-express">
                 <span className="grid justify-items-center p-1">
-                  {/* <DiMysql /> */}
+                  <BiLogoMongodb />
                 </span>
-                Machine Learning
+                WordPress
               </span>
             </div>
+            
             <div className="progressbar">
               <svg className="progressbar__svg">
                 <circle
@@ -241,9 +242,9 @@ export default function Skills() {
               </svg>
               <span className="progressbar__text shadow-express">
                 <span className="grid justify-items-center p-1">
-                  <BiLogoMongodb />
+                  {/* <DiMysql /> */}
                 </span>
-                WordPress
+                Machine Learning
               </span>
             </div>
           </div>
