@@ -43,7 +43,7 @@ export default function Skills() {
               </svg>
               <span className="progressbar__text shadow-tailwindcss">
                 <span className="grid justify-items-center p-1">
-                  <BiLogoTailwindCss />
+                  <BiLogoCss3 />
                 </span>
                 HTML,CSS
               </span>
@@ -61,7 +61,7 @@ export default function Skills() {
               </svg>
               <span className="progressbar__text shadow-tailwindcss">
                 <span className="grid justify-items-center p-1">
-                  <BiLogoTailwindCss />
+                  <DiJavascript />
                 </span>
                 JavaScipt
               </span>
