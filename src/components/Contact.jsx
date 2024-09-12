@@ -7,9 +7,9 @@ export default function Contact() {
     fromMail: '',
     message: '',
   });
-  const [loading, setLoading] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
-  const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false); // Loading state
+  const [submitted, setSubmitted] = useState(false); // Submission state
+  const [errors, setErrors] = useState({}); // Error handling
 
   const validateForm = () => {
     const newErrors = {};
