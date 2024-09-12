@@ -18,14 +18,6 @@ const portfolio = [
     github: "https://github.com/kishlaychandan/KKDial",
   },
   {
-    Projectname: "TVS EMERALD, ISLE OF TREES",
-    tech: "HTML,CSS, Wordpress, Hostinger",
-    imageUrl: isle,
-    des: "CLIENT PROJECT, ISLE OF TREES, Authorized sales partner",
-    Demo: "https://isle-of-trees.in/",
-    github: "https://isle-of-trees.in/",
-  },
-  {
     Projectname: "Food Delivery App",
     tech: "React JS, Firebase authentication",
     imageUrl: FoodApp,
@@ -33,6 +25,15 @@ const portfolio = [
     Demo: "https://food-delivery-app-ebon.vercel.app/",
     github: "https://github.com/kishlaychandan/FoodDeliveryApp",
   },
+  {
+    Projectname: "TVS EMERALD, ISLE OF TREES",
+    tech: "HTML,CSS, Wordpress, Hostinger",
+    imageUrl: isle,
+    des: "CLIENT PROJECT, ISLE OF TREES, Authorized sales partner",
+    Demo: "https://isle-of-trees.in/",
+    github: "https://isle-of-trees.in/",
+  },
+ 
   {
     Projectname: "Expense-tracker",
     tech: "HTML,CSS, JavaScript",
