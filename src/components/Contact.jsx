@@ -7,9 +7,9 @@ export default function Contact() {
     fromMail: '',
     message: '',
   });
-  const [loading, setLoading] = useState(false); // Loading state
-  const [submitted, setSubmitted] = useState(false); // Submission state
-  const [errors, setErrors] = useState({}); // Error handling
+  const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [errors, setErrors] = useState({});
 
   const validateForm = () => {
     const newErrors = {};
@@ -27,10 +27,10 @@ export default function Contact() {
     if (validateForm()) {
       setLoading(true);
       emailjs.send(
-        'service_pgmg1eq', // Updated service ID
-        'template_omf4iyo', // Updated template ID
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
         { name: mailMessage.fullName, email: mailMessage.fromMail, message: mailMessage.message }, 
-        'Mx0ztLcbtCPg3GFi2' // Updated user ID
+        process.env.REACT_APP_EMAILJS_USER_ID
       ).then(
         () => {
           setSubmitted(true);
