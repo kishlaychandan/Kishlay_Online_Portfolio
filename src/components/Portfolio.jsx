@@ -92,7 +92,7 @@ export default function Portfolio() {
         <div className="px-6 pt-8 lg:px-8">
           <div className="mx-auto max-w-2xl pt-14 text-center sm:pt-10">
             <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-              Portfolio
+              Projects
             </h2>
           </div>
         </div>
