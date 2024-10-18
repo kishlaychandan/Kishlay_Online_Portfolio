@@ -23,7 +23,7 @@ const portfolio = [
     Projectname: "Ecommerce",
     tech: "React JS, Node js, MongoDB",
     imageUrl: ecommerce,
-    des: "Dynamic ecommerce website for online shopping,<br/> Dynamic DashBoard for User and Admin",
+    des: "Ecommerce website for online shopping,<br/> Dynamic DashBoard for User and Admin",
     Demo: "https://ecommerce-two-jade.vercel.app/",
     github: "https://github.com/kishlaychandan/Ecommerce",
   },
