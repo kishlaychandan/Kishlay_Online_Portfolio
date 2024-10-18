@@ -7,6 +7,8 @@ import BoostedUSA from "../images/BoostedUSA.png";
 import restaurant from "../images/restaurant.png";
 import Geekpok from '../images/Geekpok.png';
 import FoodApp from '../images/FoodApp.png'
+import ecommerce from "../images/ecommerce.png";
+import netflix from "../images/netflix.png";
 import "../style/Portfolio.css";
 const portfolio = [
   {
@@ -16,6 +18,22 @@ const portfolio = [
     des: "Information Directory Portal, Dynamic DashBoard for User and Admin",
     Demo: "https://kkdial.free.nf/dlms/",
     github: "https://github.com/kishlaychandan/KKDial",
+  },
+  {
+    Projectname: "Ecommerce",
+    tech: "React JS, Node js, MongoDB",
+    imageUrl: ecommerce,
+    des: "ecommerce website for online shopping",
+    Demo: "https://ecommerce-two-jade.vercel.app/",
+    github: "https://github.com/kishlaychandan/Ecommerce",
+  },
+  {
+    Projectname: "Netflix Clone",
+    tech: "React JS, Node js, MongoDB, Tailwind CSS",
+    imageUrl: netflix,
+    des: "Netflix clone with user authentication",
+    Demo: "https://netflix-clone-gamma-smoky.vercel.app/",
+    github: "https://github.com/kishlaychandan/NetflixClone",
   },
   {
     Projectname: "Food Delivery App",
