@@ -12,20 +12,20 @@ import netflix from "../images/netflix.png";
 import "../style/Portfolio.css";
 const portfolio = [
   {
-    Projectname: "KKDial",
-    tech: "HTML,CSS,PHP,JavaScript,MySQL",
-    imageUrl: kkdial,
-    des: `Information Directory Portal, Dynamic DashBoard for User and Admin`,
-    Demo: "https://kkdial.free.nf/dlms/",
-    github: "https://github.com/kishlaychandan/KKDial",
-  },
-  {
     Projectname: "Ecommerce",
     tech: "React JS, Node js, MongoDB",
     imageUrl: ecommerce,
     des: `Ecommerce website for online shopping, Dynamic DashBoard for User and Admin`,
     Demo: "https://ecommerce-two-jade.vercel.app/",
     github: "https://github.com/kishlaychandan/Ecommerce",
+  },
+  {
+    Projectname: "KKDial",
+    tech: "HTML,CSS,PHP,JavaScript,MySQL",
+    imageUrl: kkdial,
+    des: `Information Directory Portal, Dynamic DashBoard for User and Admin`,
+    Demo: "https://kkdial.free.nf/dlms/",
+    github: "https://github.com/kishlaychandan/KKDial",
   },
   {
     Projectname: "Netflix Clone",
