@@ -221,7 +221,34 @@ function ProfessionalWorkPage() {
       ],
     },
     {
-      id: 11,
+  id: 11,
+  title: 'Cloud Cost Optimization & Resource Governance',
+  company: 'iCapo Tech Pvt Ltd (Living Things)',
+  period: 'Phase 11',
+  description:
+    'Implemented proactive cost-optimization strategies by controlling non-production workloads, optimizing resource usage, and introducing batch-based execution models.',
+  technologies: [
+    'Azure',
+    'AKS',
+    'Kubernetes',
+    'Batch Jobs',
+    'Automation',
+    'Monitoring',
+  ],
+  status: 'completed',
+  icon: BsCheckCircleFill,
+  color: 'from-teal-500 to-emerald-500',
+  details: [
+    'Designed strict separation between production and non-production (dev, QA, POC) environments.',
+    'Automated shutdown of development and test environments during non-working hours to reduce idle cloud spend.',
+    'Identified and decommissioned unused VM instances, services, and orphaned resources.',
+    'Implemented batch-processing workflows for heavy and non-real-time workloads instead of always-on services.',
+    'Reduced overall cloud operational costs significantly while maintaining performance and reliability.',
+  ],
+}
+,
+    {
+      id: 12,
       title: 'Ongoing Improvements',
       company: 'iCapo Tech Pvt Ltd (Living Things)',
       period: 'Ongoing',
