@@ -10,12 +10,14 @@ import FoodApp from '../images/FoodApp.png'
 import ecommerce from "../images/ecommerce.png";
 import netflix from "../images/netflix.png";
 import "../style/Portfolio.css";
+import { useTheme } from "../context/ThemeContext";
+
 const portfolio = [
   {
-    Projectname: "Ecommerce",
-    tech: "React JS, Node js, MongoDB",
+    Projectname: "Ecommerce Application",
+    tech: "React, Node.js, Express.js, MongoDB, Tailwind CSS, Razorpay",
     imageUrl: ecommerce,
-    des: `Ecommerce website for online shopping, Dynamic DashBoard for User and Admin`,
+    des: `Scalable ecommerce platform with authentication, wishlists, carts, and Razorpay payment integration; optimized with debouncing and lazy loading to improve conversions and load times.`,
     Demo: "https://ecommerce-two-jade.vercel.app/",
     github: "https://github.com/kishlaychandan/Ecommerce",
   },
@@ -96,73 +98,134 @@ const portfolio = [
     Projectname: "GeekPok",
     tech: "HTML, CSS, JavaScript",
     imageUrl: Geekpok,
-    des: "Created a UI for pookemon",
+    des: "Created a UI for Pokemon",
     Demo: "https://kishlaychandan.github.io/GeeksterPok/",
     github: "https://github.com/kishlaychandan/GeeksterPok",
+  },
+  {
+    Projectname: "Orthopedic Haptic Simulator",
+    tech: "Raspberry Pi, Arduino Uno, Real-time Control, C/C++",
+    imageUrl: areamajorproject,
+    des: "DST-funded project to enhance orthopedic surgical training through a haptic simulation platform with collision detection, motor control, and hardware synchronization.",
+    Demo: "",
+    github: "",
   },
   
 ];
 export default function Portfolio() {
+  const { isDark } = useTheme();
+  
   return (
-    <div className="bg-gray-900" id="Portfolio">
-      <main className=" relative isolate">
+    <div
+      id="Portfolio"
+      className={`${
+        isDark ? "bg-gray-900" : "bg-white"
+      } transition-colors duration-300 py-24`}
+    >
+      <main className="relative isolate">
         {/* Header section */}
         <div className="px-6 pt-8 lg:px-8">
-          <div className="mx-auto max-w-2xl pt-14 text-center sm:pt-10">
-            <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-              Projects
+          <div className="mx-auto max-w-2xl pt-14 text-center sm:pt-10 animate-fade-in">
+            <h2
+              className={`text-4xl font-bold tracking-tight sm:text-5xl mb-3 ${
+                isDark ? "text-white" : "text-gray-900"
+              }`}
+            >
+              Selected Projects
             </h2>
+            <p
+              className={`text-sm md:text-base ${
+                isDark ? "text-gray-400" : "text-gray-600"
+              }`}
+            >
+              A curated collection of work across products, client projects, and
+              experiments.
+            </p>
           </div>
         </div>
-        <div className="relative isolate -z-10 mt-32 sm:mt-16">
+
+        <div className="mt-12">
           <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
             <ul
               role="list"
-              className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 xl:grid-cols-4"
+              className="mx-auto grid max-w-2xl grid-cols-1 gap-8 sm:grid-cols-2 lg:max-w-none lg:grid-cols-3"
             >
               {portfolio.map((project) => (
-                <li key={project.Projectname} className="max-[640px]:flex max-[640px]:flex-col max-[640px]:items-center max-[640px]:gap-[0.4rem]" >
-                 <div className="portfolio-card w-full relative overflow-hidden rounded-2xl " >
-                  <a href={project.Demo} target="_blank">
+                <li key={project.Projectname} className="animate-scale-in">
+                  <div
+                    className={`h-full flex flex-col rounded-xl border ${
+                      isDark
+                        ? "bg-gray-900 border-gray-700"
+                        : "bg-white border-gray-200"
+                    } shadow-sm hover:shadow-md transition-shadow duration-300`}
+                  >
+                    {/* Image */}
+                    <div className="relative overflow-hidden rounded-t-xl">
+                      <a
+                        href={project.Demo}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="block"
+                      >
                   <img
-                      className="aspect-[14/13] brightness-[0.8]  w-full object-fill rounded-2xl border cursor-pointer  border-gray-600"
+                          className="aspect-[16/10] w-full object-cover transition-transform duration-300 hover:scale-105"
                       src={project.imageUrl}
-                      alt=""
+                          alt={`${project.Projectname} project screenshot`}
+                          loading="lazy"
                     />
                   </a>
-                  <p className="hover:cursor-pointer text-center w-full absolute z-100 top-[60%] text-white text-[1.3rem] font-bold opacity-0" >{project.Projectname}</p>
                  </div>
-                  <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-white">
+
+                    {/* Content */}
+                    <div className="flex flex-1 flex-col p-5">
+                      <h3
+                        className={`text-lg font-semibold mb-1 ${
+                          isDark ? "text-white" : "text-gray-900"
+                        }`}
+                      >
                     {project.Projectname}
                   </h3>
-                  <p className="text-base leading-7 text-gray-300">
+                      <p
+                        className={`text-xs font-medium mb-2 ${
+                          isDark ? "text-indigo-300" : "text-indigo-600"
+                        }`}
+                      >
                     {project.tech}
                   </p>
-                  <p className="text-sm leading-6 text-gray-500">
+                      <p
+                        className={`text-sm flex-1 mb-4 ${
+                          isDark ? "text-gray-300" : "text-gray-600"
+                        }`}
+                      >
                     {project.des}
                   </p>
-                  <span
-                    className="text-sm leading-6 text-gray-50 hover:text-gray-400 cursor-pointer "
-                    onClick={(e) => {
-                      e.preventDefault();
-                      window.open(project.Demo, "_blank", "noreferrer");
-                    }}
-                  >
-                    <button className="hover:font-semibold mx-auto text-white bg-indigo-600 border-[2.5px] border-indigo-600 hover:bg-white hover:text-indigo-600 py-1 px-5 focus:outline-none rounded text-lg">
-                      View
-                    </button>
-                  </span>{" "}
-                  <span
-                    className="text-sm leading-6 text-gray-50 hover:text-gray-400 cursor-pointer "
-                    onClick={(e) => {
-                      e.preventDefault(); 
-                      window.open(project.github, "_blank", "noreferrer");
-                    }}
-                  >
-                    <button className=" mx-auto text-white border-[2.5px] border-indigo-600 bg-indigo-600 hover:bg-white hover:font-semibold hover:text-indigo-600  py-1 px-5 focus:outline-none  rounded text-lg">
-                      Github
-                    </button>
-                  </span>
+
+                      <div className="flex gap-2">
+                        <a
+                          href={project.Demo}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="flex-1 inline-flex items-center justify-center px-3 py-2 text-sm font-semibold rounded-md text-white bg-indigo-600 hover:bg-indigo-700 transition-colors duration-200"
+                          aria-label={`View ${project.Projectname} demo`}
+                        >
+                          Live
+                        </a>
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noreferrer"
+                          className={`flex-1 inline-flex items-center justify-center px-3 py-2 text-sm font-semibold rounded-md border ${
+                            isDark
+                              ? "border-gray-600 text-gray-100 hover:bg-gray-800"
+                              : "border-gray-300 text-gray-800 hover:bg-gray-50"
+                          } transition-colors duration-200`}
+                          aria-label={`View ${project.Projectname} source code on GitHub`}
+                        >
+                          Code
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </li>
               ))}
             </ul>

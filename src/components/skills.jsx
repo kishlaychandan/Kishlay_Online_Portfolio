@@ -1,5 +1,4 @@
 import "../style/Skills.css";
-import { AiFillHtml5 } from "react-icons/ai";
 import {
   BiLogoCss3,
   BiLogoTailwindCss,
@@ -7,29 +6,41 @@ import {
   BiLogoNodejs,
   BiLogoMongodb,
   BiLogoPhp,
-  
 } from "react-icons/bi";
-import { DiMysql } from "react-icons/di";
-import { DiJavascript } from "react-icons/di";
-import { RiBootstrapFill } from "react-icons/ri";
-import { TbBrandNextjs } from "react-icons/tb";
-import { SiExpress, SiTaichigraphics, SiCanva } from "react-icons/si";
+import { DiMysql, DiJavascript } from "react-icons/di";
+import { SiExpress, SiTaichigraphics } from "react-icons/si";
+import { useTheme } from "../context/ThemeContext";
+
 export default function Skills() {
+  const { isDark } = useTheme();
+
   return (
     <section
-      className="text-gray-400 bg-gray-900 body-font relative "
       id="Skills"
+      className={`${
+        isDark ? "bg-gray-900" : "bg-white"
+      } body-font relative transition-colors duration-300 py-20`}
     >
-      <div className="container px-5 py-24 mx-auto">
-        <div className="flex flex-col text-center w-full mb-12">
-          <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-            Skills
+      <div className="container px-5 py-10 mx-auto">
+        <div className="flex flex-col text-center w-full mb-12 animate-fade-in">
+          <h2
+            className={`text-3xl sm:text-4xl font-bold mb-2 transition-colors duration-300 ${
+              isDark ? "text-white" : "text-gray-900"
+            }`}
+          >
+            My Skills
           </h2>
+          <p
+            className={`text-sm sm:text-base ${
+              isDark ? "text-gray-400" : "text-gray-600"
+            }`}
+          >
+            Tech stack I use across frontend, backend, and DevOps.
+          </p>
         </div>
 
         <div className="container">
           <div className="container__progressbars">
-          
           <div className="progressbar">
               <svg className="progressbar__svg">
                 <circle
@@ -37,17 +48,16 @@ export default function Skills() {
                   cy="80"
                   r="70"
                   className="progressbar__svg-circle circle-tailwindcss shadow-tailwindcss"
-                >
-                  {" "}
-                </circle>
+                ></circle>
               </svg>
               <span className="progressbar__text shadow-tailwindcss">
                 <span className="grid justify-items-center p-1">
                   <BiLogoCss3 />
                 </span>
-                HTML,CSS
+                HTML, CSS
               </span>
             </div>
+
             <div className="progressbar">
               <svg className="progressbar__svg">
                 <circle
@@ -55,17 +65,16 @@ export default function Skills() {
                   cy="80"
                   r="70"
                   className="progressbar__svg-circle circle-tailwindcss shadow-tailwindcss"
-                >
-                  {" "}
-                </circle>
+                ></circle>
               </svg>
               <span className="progressbar__text shadow-tailwindcss">
                 <span className="grid justify-items-center p-1">
                   <DiJavascript />
                 </span>
-                JavaScipt
+                JavaScript
               </span>
             </div>
+
             <div className="progressbar">
               <svg className="progressbar__svg">
                 <circle
@@ -73,9 +82,7 @@ export default function Skills() {
                   cy="80"
                   r="70"
                   className="progressbar__svg-circle circle-react shadow-react"
-                >
-                  {" "}
-                </circle>
+                ></circle>
               </svg>
               <span className="progressbar__text shadow-react">
                 <span className="grid justify-items-center p-1">
@@ -84,6 +91,7 @@ export default function Skills() {
                 React.js
               </span>
             </div>
+
             <div className="progressbar">
               <svg className="progressbar__svg">
                 <circle
@@ -91,9 +99,7 @@ export default function Skills() {
                   cy="80"
                   r="70"
                   className="progressbar__svg-circle circle-node shadow-node"
-                >
-                  {" "}
-                </circle>
+                ></circle>
               </svg>
               <span className="progressbar__text shadow-node">
                 <span className="grid justify-items-center p-1">
@@ -110,9 +116,7 @@ export default function Skills() {
                   cy="80"
                   r="70"
                   className="progressbar__svg-circle circle-express shadow-express"
-                >
-                  {" "}
-                </circle>
+                ></circle>
               </svg>
               <span className="progressbar__text shadow-express">
                 <span className="grid justify-items-center p-1">
@@ -121,6 +125,7 @@ export default function Skills() {
                 Express.js
               </span>
             </div>
+
             <div className="progressbar">
               <svg className="progressbar__svg">
                 <circle
@@ -128,9 +133,7 @@ export default function Skills() {
                   cy="80"
                   r="70"
                   className="progressbar__svg-circle circle-express shadow-express"
-                >
-                  {" "}
-                </circle>
+                ></circle>
               </svg>
               <span className="progressbar__text shadow-express">
                 <span className="grid justify-items-center p-1">
@@ -139,6 +142,7 @@ export default function Skills() {
                 MongoDB
               </span>
             </div>
+
             <div className="progressbar">
               <svg className="progressbar__svg">
                 <circle
@@ -146,17 +150,16 @@ export default function Skills() {
                   cy="80"
                   r="70"
                   className="progressbar__svg-circle circle-tailwindcss shadow-tailwindcss"
-                >
-                  {" "}
-                </circle>
+                ></circle>
               </svg>
               <span className="progressbar__text shadow-tailwindcss">
                 <span className="grid justify-items-center p-1">
                   <BiLogoTailwindCss />
                 </span>
-                TailwindCSS
+                Tailwind CSS
               </span>
             </div>
+
             <div className="progressbar">
               <svg className="progressbar__svg">
                 <circle
@@ -164,9 +167,7 @@ export default function Skills() {
                   cy="80"
                   r="70"
                   className="progressbar__svg-circle  circle-graphics shadow-graphics"
-                >
-                  {" "}
-                </circle>
+                ></circle>
               </svg>
               <span className="progressbar__text circle-graphics shadow-graphics text-center">
                 <span className="grid justify-items-center p-1">
@@ -175,6 +176,7 @@ export default function Skills() {
                 UI/UX Design
               </span>
             </div>
+
             <div className="progressbar">
               <svg className="progressbar__svg">
                 <circle
@@ -182,9 +184,7 @@ export default function Skills() {
                   cy="80"
                   r="70"
                   className="progressbar__svg-circle circle-express shadow-express"
-                >
-                  {" "}
-                </circle>
+                ></circle>
               </svg>
               <span className="progressbar__text shadow-express">
                 <span className="grid justify-items-center p-1">
@@ -193,6 +193,7 @@ export default function Skills() {
                 MySQL
               </span>
             </div>
+
             <div className="progressbar">
               <svg className="progressbar__svg">
                 <circle
@@ -200,33 +201,13 @@ export default function Skills() {
                   cy="80"
                   r="70"
                   className="progressbar__svg-circle circle-express shadow-express"
-                >
-                  {" "}
-                </circle>
+                ></circle>
               </svg>
               <span className="progressbar__text shadow-express">
                 <span className="grid justify-items-center p-1">
                   <BiLogoPhp />
                 </span>
                 PHP
-              </span>
-            </div>
-            <div className="progressbar">
-              <svg className="progressbar__svg">
-                <circle
-                  cx="80"
-                  cy="80"
-                  r="70"
-                  className="progressbar__svg-circle circle-express shadow-express"
-                >
-                  {" "}
-                </circle>
-              </svg>
-              <span className="progressbar__text shadow-express">
-                <span className="grid justify-items-center p-1">
-                  <BiLogoMongodb />
-                </span>
-                WordPress
               </span>
             </div>
             
@@ -237,14 +218,10 @@ export default function Skills() {
                   cy="80"
                   r="70"
                   className="progressbar__svg-circle circle-express shadow-express"
-                >
-                  {" "}
-                </circle>
+                ></circle>
               </svg>
               <span className="progressbar__text shadow-express">
-                <span className="grid justify-items-center p-1">
-                  {/* <DiMysql /> */}
-                </span>
+                <span className="grid justify-items-center p-1"></span>
                 Machine Learning
               </span>
             </div>

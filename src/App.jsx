@@ -1,23 +1,32 @@
-import "./App.css";
-import Aboutme from "./components/Aboutme";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-import Home from "./components/Home";
-import Portfolio from "./components/Portfolio";
-import Work from "./components/Work";
-import Graphics from "./components/Graphics";
-import Skills from "./components/skills";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import Navbar from "./components/Navbar";
+import HomePage from "./pages/HomePage";
+import ProfessionalWorkPage from "./pages/ProfessionalWorkPage";
+import ContactPage from "./pages/ContactPage";
+import ResumePage from "./pages/ResumePage";
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
   return (
     <div>
-      <Home />
-      <Aboutme />
-      <Skills />
-      <Portfolio />
-      <Graphics />
-      <Work />
-      <Contact />
-      <Footer />
+      <ScrollToTop />
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/professional-work" element={<ProfessionalWorkPage />} />
+        <Route path="/resume" element={<ResumePage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
     </div>
   );
 }
