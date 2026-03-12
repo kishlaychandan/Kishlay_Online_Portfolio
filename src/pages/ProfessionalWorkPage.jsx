@@ -1,11 +1,11 @@
 import { useTheme } from "../context/ThemeContext";
 import { useState, useEffect, useRef } from 'react';
-import { 
-  BsRocketFill, 
-  BsCodeSlash, 
-  BsPaletteFill, 
-  BsCloudFill, 
-  BsGearFill, 
+import {
+  BsRocketFill,
+  BsCodeSlash,
+  BsPaletteFill,
+  BsCloudFill,
+  BsGearFill,
   BsCheckCircleFill,
   BsArrowRepeat,
   BsLightningFill,
@@ -85,20 +85,32 @@ function ProfessionalWorkPage() {
     },
     {
       id: 4,
-      title: 'Gitea Actions & CI/CD Setup',
+      title: 'CI/CD Platform Engineering (Gitea, GitHub Actions & ArgoCD)',
       company: 'iCapo Tech Pvt Ltd (Living Things)',
       period: 'Phase 4',
       description:
-        'Architected and implemented a complete CI/CD ecosystem using Gitea Actions for automated building, testing, and deployment.',
-      technologies: ['Gitea Actions', 'Docker', 'SonarQube', 'Infisical'],
+        'Designed and implemented a production-grade CI/CD ecosystem enabling automated builds, security scanning, container publishing, and GitOps-based deployments to Azure Kubernetes Service (AKS).',
+      technologies: [
+        'Gitea Actions',
+        'GitHub Actions',
+        'ArgoCD',
+        'Docker',
+        'SonarQube',
+        'AKS',
+        'Kubernetes',
+        'Infisical'
+      ],
       status: 'completed',
       icon: BsCodeSlash,
       color: 'from-blue-500 to-cyan-500',
       details: [
-        'Designed custom Gitea Actions workflows for microservices and firmware builds.',
-        'Integrated SonarQube for automated code quality gates and vulnerability checks.',
-        'Secured build-time secrets and production configurations using Infisical.',
-        'Reduced deployment cycles by ~30% with automated environment promotions.',
+        'Designed and implemented automated CI pipelines using Gitea Actions and GitHub Actions for microservices and firmware repositories.',
+        'Built container build pipelines that automatically build, tag, and push Docker images to container registries.',
+        'Integrated SonarQube to enforce automated code quality gates and security scanning in CI pipelines.',
+        'Implemented GitOps deployment strategy using ArgoCD for Kubernetes workloads.',
+        'Configured automated application deployments to Azure Kubernetes Service (AKS) clusters.',
+        'Integrated Infisical for secure management of secrets and environment variables in CI/CD workflows.',
+        'Reduced deployment cycles by ~30% while improving reliability and traceability of releases.',
       ],
     },
     {
@@ -221,62 +233,62 @@ function ProfessionalWorkPage() {
       ],
     },
     {
-  id: 11,
-  title: 'Cloud Cost Optimization & Resource Governance',
-  company: 'iCapo Tech Pvt Ltd (Living Things)',
-  period: 'Phase 11',
-  description:
-    'Implemented proactive cost-optimization strategies by controlling non-production workloads, optimizing resource usage, and introducing batch-based execution models.',
-  technologies: [
-    'Azure',
-    'AKS',
-    'Kubernetes',
-    'Batch Jobs',
-    'Automation',
-    'Monitoring',
-  ],
-  status: 'completed',
-  icon: BsCheckCircleFill,
-  color: 'from-teal-500 to-emerald-500',
-  details: [
-    'Designed strict separation between production and non-production (dev, QA, POC) environments.',
-    'Automated shutdown of development and test environments during non-working hours to reduce idle cloud spend.',
-    'Identified and decommissioned unused VM instances, services, and orphaned resources.',
-    'Implemented batch-processing workflows for heavy and non-real-time workloads instead of always-on services.',
-    'Reduced overall cloud operational costs significantly while maintaining performance and reliability.',
-  ],
-}
-,
-{
-  id: 12,
-  title: 'Real-Time Data Streaming & CDC Platform',
-  company: 'iCapo Tech Pvt Ltd (Living Things)',
-  period: 'Phase 12',
-  description:
-    'Designed and implemented a scalable real-time data platform to ingest IoT sensor data and database changes into Snowflake for analytics and monitoring.',
-  technologies: [
-    'Apache Kafka',
-    'Kafka Connect',
-    'MQTT',
-    'Snowflake',
-    'PostgreSQL',
-    'CDC',
-    'Snowflake Connector',
-    'Azure Blob Storage'
-  ],
-  status: 'completed',
-  icon: BsLightningFill,
-  color: 'from-cyan-500 to-blue-500',
-  details: [
-    'Deployed and configured Apache Kafka cluster for high-throughput streaming of device telemetry.',
-    'Integrated MQTT to Kafka connector to ingest real-time sensor data from IoT devices.',
-    'Built Kafka → Snowflake streaming pipeline using Snowflake Sink Connector for near real-time analytics.',
-    'Implemented PostgreSQL → Snowflake Change Data Capture (CDC) using Snowflake Agent.',
-    'Designed schema mapping and transformation logic to flatten device telemetry events.',
-    'Ensured reliable ingestion with retry handling, dead-letter queues, and monitoring.',
-    'Enabled analytics teams to access live device metrics and operational data directly in Snowflake.',
-  ],
-},
+      id: 11,
+      title: 'Cloud Cost Optimization & Resource Governance',
+      company: 'iCapo Tech Pvt Ltd (Living Things)',
+      period: 'Phase 11',
+      description:
+        'Implemented proactive cost-optimization strategies by controlling non-production workloads, optimizing resource usage, and introducing batch-based execution models.',
+      technologies: [
+        'Azure',
+        'AKS',
+        'Kubernetes',
+        'Batch Jobs',
+        'Automation',
+        'Monitoring',
+      ],
+      status: 'completed',
+      icon: BsCheckCircleFill,
+      color: 'from-teal-500 to-emerald-500',
+      details: [
+        'Designed strict separation between production and non-production (dev, QA, POC) environments.',
+        'Automated shutdown of development and test environments during non-working hours to reduce idle cloud spend.',
+        'Identified and decommissioned unused VM instances, services, and orphaned resources.',
+        'Implemented batch-processing workflows for heavy and non-real-time workloads instead of always-on services.',
+        'Reduced overall cloud operational costs significantly while maintaining performance and reliability.',
+      ],
+    }
+    ,
+    {
+      id: 12,
+      title: 'Real-Time Data Streaming & CDC Platform',
+      company: 'iCapo Tech Pvt Ltd (Living Things)',
+      period: 'Phase 12',
+      description:
+        'Designed and implemented a scalable real-time data platform to ingest IoT sensor data and database changes into Snowflake for analytics and monitoring.',
+      technologies: [
+        'Apache Kafka',
+        'Kafka Connect',
+        'MQTT',
+        'Snowflake',
+        'PostgreSQL',
+        'CDC',
+        'Snowflake Connector',
+        'Azure Blob Storage'
+      ],
+      status: 'completed',
+      icon: BsLightningFill,
+      color: 'from-cyan-500 to-blue-500',
+      details: [
+        'Deployed and configured Apache Kafka cluster for high-throughput streaming of device telemetry.',
+        'Integrated MQTT to Kafka connector to ingest real-time sensor data from IoT devices.',
+        'Built Kafka → Snowflake streaming pipeline using Snowflake Sink Connector for near real-time analytics.',
+        'Implemented PostgreSQL → Snowflake Change Data Capture (CDC) using Snowflake Agent.',
+        'Designed schema mapping and transformation logic to flatten device telemetry events.',
+        'Ensured reliable ingestion with retry handling, dead-letter queues, and monitoring.',
+        'Enabled analytics teams to access live device metrics and operational data directly in Snowflake.',
+      ],
+    },
     {
       id: 13,
       title: 'Ongoing Improvements',
@@ -313,32 +325,27 @@ function ProfessionalWorkPage() {
   };
 
   return (
-    <div className={`min-h-screen ${
-      isDark
+    <div className={`min-h-screen ${isDark
         ? 'bg-slate-950 text-white'
         : 'bg-slate-50 text-slate-900'
-    } transition-colors duration-500 pb-20`}>
-      
+      } transition-colors duration-500 pb-20`}>
+
       {/* Dynamic Background */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
-        <div className={`absolute top-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full blur-[120px] opacity-20 ${
-          isDark ? 'bg-indigo-600' : 'bg-indigo-400'
-        }`} />
-        <div className={`absolute bottom-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full blur-[120px] opacity-10 ${
-          isDark ? 'bg-purple-600' : 'bg-purple-400'
-        }`} />
+        <div className={`absolute top-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full blur-[120px] opacity-20 ${isDark ? 'bg-indigo-600' : 'bg-indigo-400'
+          }`} />
+        <div className={`absolute bottom-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full blur-[120px] opacity-10 ${isDark ? 'bg-purple-600' : 'bg-purple-400'
+          }`} />
       </div>
 
       <main className="relative z-10 container mx-auto px-4 pt-32 pb-16">
         <header className="text-center mb-20 animate-fade-in">
-          <h1 className={`text-4xl md:text-6xl font-black mb-6 tracking-tight ${
-            isDark ? 'text-white' : 'text-slate-900'
-          }`}>
+          <h1 className={`text-4xl md:text-6xl font-black mb-6 tracking-tight ${isDark ? 'text-white' : 'text-slate-900'
+            }`}>
             Professional <span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">Journey</span>
           </h1>
-          <p className={`text-lg md:text-xl max-w-2xl mx-auto ${
-            isDark ? 'text-slate-400' : 'text-slate-600'
-          }`}>
+          <p className={`text-lg md:text-xl max-w-2xl mx-auto ${isDark ? 'text-slate-400' : 'text-slate-600'
+            }`}>
             A detailed look into my professional milestones and technical contributions at Living Things.
           </p>
         </header>
@@ -348,24 +355,21 @@ function ProfessionalWorkPage() {
             const Icon = work.icon;
             const isExpanded = hoveredId === work.id && forceClosedId !== work.id;
             const isVisible = index < visibleCount;
-            
+
             return (
               <div
                 key={work.id}
                 onMouseEnter={() => handleMouseEnter(work.id)}
                 onMouseLeave={handleMouseLeave}
                 onClick={() => handleClick(work.id)}
-                className={`group relative rounded-3xl transition-all duration-700 cursor-pointer overflow-hidden ${
-                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-                } ${
-                  isExpanded 
-                    ? 'scale-[1.02] z-20' 
+                className={`group relative rounded-3xl transition-all duration-700 cursor-pointer overflow-hidden ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                  } ${isExpanded
+                    ? 'scale-[1.02] z-20'
                     : 'scale-100 z-10'
-                } ${
-                  isDark 
-                    ? 'bg-slate-900/50 backdrop-blur-xl border border-slate-800' 
+                  } ${isDark
+                    ? 'bg-slate-900/50 backdrop-blur-xl border border-slate-800'
                     : 'bg-white border border-slate-200 shadow-sm'
-                } hover:shadow-2xl hover:shadow-indigo-500/10`}
+                  } hover:shadow-2xl hover:shadow-indigo-500/10`}
               >
                 {/* Accent Line */}
                 <div className={`absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b ${work.color}`} />
@@ -382,11 +386,10 @@ function ProfessionalWorkPage() {
                         <h3 className={`text-xl md:text-2xl font-bold truncate ${isDark ? 'text-white' : 'text-slate-900'}`}>
                           {work.title}
                         </h3>
-                        <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-widest ${
-                          work.status === 'completed'
+                        <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-widest ${work.status === 'completed'
                             ? 'bg-emerald-500/10 text-emerald-500'
                             : 'bg-amber-500/10 text-amber-500 animate-pulse'
-                        }`}>
+                          }`}>
                           {work.status}
                         </span>
                       </div>
@@ -408,9 +411,8 @@ function ProfessionalWorkPage() {
                   </p>
 
                   {/* Details (Expandable) */}
-                  <div className={`transition-all duration-700 ease-in-out overflow-hidden ${
-                    isExpanded ? 'max-h-[1000px] opacity-100 mt-8' : 'max-h-0 opacity-0'
-                  }`}>
+                  <div className={`transition-all duration-700 ease-in-out overflow-hidden ${isExpanded ? 'max-h-[1000px] opacity-100 mt-8' : 'max-h-0 opacity-0'
+                    }`}>
                     <div className="space-y-6 pt-6 border-t border-slate-800/50">
                       <div>
                         <h4 className={`text-sm font-bold uppercase tracking-wider mb-4 ${isDark ? 'text-indigo-400' : 'text-indigo-600'}`}>
@@ -436,11 +438,10 @@ function ProfessionalWorkPage() {
                           {work.technologies.map((tech) => (
                             <span
                               key={tech}
-                              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all duration-300 ${
-                                isDark 
-                                  ? 'bg-slate-800 text-slate-300 hover:bg-indigo-500/20 hover:text-indigo-400' 
+                              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all duration-300 ${isDark
+                                  ? 'bg-slate-800 text-slate-300 hover:bg-indigo-500/20 hover:text-indigo-400'
                                   : 'bg-slate-100 text-slate-600 hover:bg-indigo-100 hover:text-indigo-600'
-                              }`}
+                                }`}
                             >
                               {tech}
                             </span>
