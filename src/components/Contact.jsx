@@ -88,7 +88,7 @@ export default function Contact() {
               <div className="text-sm space-y-1">
                 <p className="flex items-center gap-2">
                   <FaEnvelope className="text-indigo-500" />
-                  <span>kishlaychandan7@gmail.com</span>
+                  <span>kishlaychandan01@gmail.com</span>
                 </p>
                 <p>Mumbai / Bengaluru, India</p>
               </div>
