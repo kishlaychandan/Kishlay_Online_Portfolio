@@ -247,8 +247,38 @@ function ProfessionalWorkPage() {
   ],
 }
 ,
+{
+  id: 12,
+  title: 'Real-Time Data Streaming & CDC Platform',
+  company: 'iCapo Tech Pvt Ltd (Living Things)',
+  period: 'Phase 12',
+  description:
+    'Designed and implemented a scalable real-time data platform to ingest IoT sensor data and database changes into Snowflake for analytics and monitoring.',
+  technologies: [
+    'Apache Kafka',
+    'Kafka Connect',
+    'MQTT',
+    'Snowflake',
+    'PostgreSQL',
+    'CDC',
+    'Snowflake Connector',
+    'Azure Blob Storage'
+  ],
+  status: 'completed',
+  icon: BsLightningFill,
+  color: 'from-cyan-500 to-blue-500',
+  details: [
+    'Deployed and configured Apache Kafka cluster for high-throughput streaming of device telemetry.',
+    'Integrated MQTT to Kafka connector to ingest real-time sensor data from IoT devices.',
+    'Built Kafka → Snowflake streaming pipeline using Snowflake Sink Connector for near real-time analytics.',
+    'Implemented PostgreSQL → Snowflake Change Data Capture (CDC) using Snowflake Agent.',
+    'Designed schema mapping and transformation logic to flatten device telemetry events.',
+    'Ensured reliable ingestion with retry handling, dead-letter queues, and monitoring.',
+    'Enabled analytics teams to access live device metrics and operational data directly in Snowflake.',
+  ],
+},
     {
-      id: 12,
+      id: 13,
       title: 'Ongoing Improvements',
       company: 'iCapo Tech Pvt Ltd (Living Things)',
       period: 'Ongoing',
