@@ -88,6 +88,9 @@
 .circle-react {
   animation: anim_circle-react 1s ease-in-out forwards;
 }
+.circle-devops {
+  animation: anim_circle-devops 1s ease-in-out forwards;
+}
 .circle-nextjs {
   animation: anim_circle-nextjs 1s ease-in-out forwards;
 }
@@ -134,12 +137,12 @@
 }
 @keyframes anim_circle-node {
   to {
-    stroke-dashoffset: 150;
+    stroke-dashoffset: 30;
   }
 }
 @keyframes anim_circle-react {
   to {
-    stroke-dashoffset: 80;
+    stroke-dashoffset: 30;
   }
 }
 @keyframes anim_circle-nextjs {
@@ -150,6 +153,12 @@
 @keyframes anim_circle-express {
   to {
     stroke-dashoffset: 130;
+  }
+}
+
+@keyframes anim_circle-devops {
+  to {
+    stroke-dashoffset: 30;
   }
 }
 @keyframes anim_circle-graphics {

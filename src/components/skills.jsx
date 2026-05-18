@@ -15,6 +15,7 @@ import {
   SiTerraform,
   SiAnsible,
   SiAmazonaws,
+  SiMicrosoftazure,
   SiGooglecloud,
   SiPrometheus,
   SiGrafana,
@@ -60,7 +61,7 @@ export default function Skills() {
                   cx="80"
                   cy="80"
                   r="70"
-                  className="progressbar__svg-circle circle-express shadow-express"
+                  className="progressbar__svg-circle circle-devops shadow-express"
                 ></circle>
               </svg>
               <span className="progressbar__text shadow-express">
@@ -77,7 +78,7 @@ export default function Skills() {
                   cx="80"
                   cy="80"
                   r="70"
-                  className="progressbar__svg-circle circle-express shadow-express"
+                  className="progressbar__svg-circle circle-devops shadow-express"
                 ></circle>
               </svg>
               <span className="progressbar__text shadow-express">
@@ -94,7 +95,7 @@ export default function Skills() {
                   cx="80"
                   cy="80"
                   r="70"
-                  className="progressbar__svg-circle circle-express shadow-express"
+                  className="progressbar__svg-circle circle-devops shadow-express"
                 ></circle>
               </svg>
               <span className="progressbar__text shadow-express">
@@ -111,7 +112,7 @@ export default function Skills() {
                   cx="80"
                   cy="80"
                   r="70"
-                  className="progressbar__svg-circle circle-express shadow-express"
+                  className="progressbar__svg-circle circle-devops shadow-express"
                 ></circle>
               </svg>
               <span className="progressbar__text shadow-express">
@@ -128,7 +129,7 @@ export default function Skills() {
                   cx="80"
                   cy="80"
                   r="70"
-                  className="progressbar__svg-circle circle-express shadow-express"
+                  className="progressbar__svg-circle circle-devops shadow-express"
                 ></circle>
               </svg>
               <span className="progressbar__text shadow-express">
@@ -139,6 +140,22 @@ export default function Skills() {
               </span>
             </div>
 
+            <div className="progressbar">
+              <svg className="progressbar__svg">
+                <circle
+                  cx="80"
+                  cy="80"
+                  r="70"
+                  className="progressbar__svg-circle circle-devops shadow-express"
+                ></circle>
+              </svg>
+              <span className="progressbar__text shadow-express">
+                <span className="grid justify-items-center p-1">
+                  <SiMicrosoftazure />
+                </span>
+                AZURE
+              </span>
+            </div>
             <div className="progressbar">
               <svg className="progressbar__svg">
                 <circle
@@ -173,20 +190,21 @@ export default function Skills() {
               </span>
             </div>
 
+
             <div className="progressbar">
               <svg className="progressbar__svg">
                 <circle
                   cx="80"
                   cy="80"
                   r="70"
-                  className="progressbar__svg-circle circle-express shadow-express"
+                  className="progressbar__svg-circle circle-devops shadow-express"
                 ></circle>
               </svg>
               <span className="progressbar__text shadow-express">
                 <span className="grid justify-items-center p-1">
                   <SiGrafana />
                 </span>
-                Grafana
+                GRAFANA
               </span>
             </div>
 
@@ -196,7 +214,7 @@ export default function Skills() {
                   cx="80"
                   cy="80"
                   r="70"
-                  className="progressbar__svg-circle circle-express shadow-express"
+                  className="progressbar__svg-circle circle-devops shadow-express"
                 ></circle>
               </svg>
               <span className="progressbar__text shadow-express">
@@ -206,7 +224,6 @@ export default function Skills() {
                 CI/CD (GitHub Actions)
               </span>
             </div>
-
           <div className="progressbar">
               <svg className="progressbar__svg">
                 <circle
@@ -407,158 +424,7 @@ export default function Skills() {
               </span>
             </div>
             {/* DevOps & Cloud Skills */}
-            <div className="progressbar">
-              <svg className="progressbar__svg">
-                <circle
-                  cx="80"
-                  cy="80"
-                  r="70"
-                  className="progressbar__svg-circle circle-express shadow-express"
-                ></circle>
-              </svg>
-              <span className="progressbar__text shadow-express">
-                <span className="grid justify-items-center p-1">
-                  <FaDocker />
-                </span>
-                Docker
-              </span>
-            </div>
 
-            <div className="progressbar">
-              <svg className="progressbar__svg">
-                <circle
-                  cx="80"
-                  cy="80"
-                  r="70"
-                  className="progressbar__svg-circle circle-express shadow-express"
-                ></circle>
-              </svg>
-              <span className="progressbar__text shadow-express">
-                <span className="grid justify-items-center p-1">
-                  <SiKubernetes />
-                </span>
-                Kubernetes
-              </span>
-            </div>
-
-            <div className="progressbar">
-              <svg className="progressbar__svg">
-                <circle
-                  cx="80"
-                  cy="80"
-                  r="70"
-                  className="progressbar__svg-circle circle-express shadow-express"
-                ></circle>
-              </svg>
-              <span className="progressbar__text shadow-express">
-                <span className="grid justify-items-center p-1">
-                  <SiTerraform />
-                </span>
-                Terraform
-              </span>
-            </div>
-
-            <div className="progressbar">
-              <svg className="progressbar__svg">
-                <circle
-                  cx="80"
-                  cy="80"
-                  r="70"
-                  className="progressbar__svg-circle circle-express shadow-express"
-                ></circle>
-              </svg>
-              <span className="progressbar__text shadow-express">
-                <span className="grid justify-items-center p-1">
-                  <SiAnsible />
-                </span>
-                Ansible
-              </span>
-            </div>
-
-            <div className="progressbar">
-              <svg className="progressbar__svg">
-                <circle
-                  cx="80"
-                  cy="80"
-                  r="70"
-                  className="progressbar__svg-circle circle-express shadow-express"
-                ></circle>
-              </svg>
-              <span className="progressbar__text shadow-express">
-                <span className="grid justify-items-center p-1">
-                  <SiAmazonaws />
-                </span>
-                AWS
-              </span>
-            </div>
-
-            <div className="progressbar">
-              <svg className="progressbar__svg">
-                <circle
-                  cx="80"
-                  cy="80"
-                  r="70"
-                  className="progressbar__svg-circle circle-express shadow-express"
-                ></circle>
-              </svg>
-              <span className="progressbar__text shadow-express">
-                <span className="grid justify-items-center p-1">
-                  <SiGooglecloud />
-                </span>
-                GCP
-              </span>
-            </div>
-
-            <div className="progressbar">
-              <svg className="progressbar__svg">
-                <circle
-                  cx="80"
-                  cy="80"
-                  r="70"
-                  className="progressbar__svg-circle circle-express shadow-express"
-                ></circle>
-              </svg>
-              <span className="progressbar__text shadow-express">
-                <span className="grid justify-items-center p-1">
-                  <SiPrometheus />
-                </span>
-                Prometheus
-              </span>
-            </div>
-
-            <div className="progressbar">
-              <svg className="progressbar__svg">
-                <circle
-                  cx="80"
-                  cy="80"
-                  r="70"
-                  className="progressbar__svg-circle circle-express shadow-express"
-                ></circle>
-              </svg>
-              <span className="progressbar__text shadow-express">
-                <span className="grid justify-items-center p-1">
-                  <SiGrafana />
-                </span>
-                Grafana
-              </span>
-            </div>
-
-            <div className="progressbar">
-              <svg className="progressbar__svg">
-                <circle
-                  cx="80"
-                  cy="80"
-                  r="70"
-                  className="progressbar__svg-circle circle-express shadow-express"
-                ></circle>
-              </svg>
-              <span className="progressbar__text shadow-express">
-                <span className="grid justify-items-center p-1">
-                  <SiGithubactions />
-                </span>
-                CI/CD (GitHub Actions)
-              </span>
-            </div>
           </div>
         </div>
       </div>
