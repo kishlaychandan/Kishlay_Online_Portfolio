@@ -18,7 +18,7 @@ const portfolio = [
     tech: "React, Node.js, Express.js, MongoDB, Tailwind CSS, Razorpay",
     imageUrl: ecommerce,
     des: `Scalable ecommerce platform with authentication, wishlists, carts, and Razorpay payment integration; optimized with debouncing and lazy loading to improve conversions and load times.`,
-    Demo: "https://ecommerce-two-jade.vercel.app/",
+    Demo: "https://kishlay-ecommerce.vercel.app/",
     github: "https://github.com/kishlaychandan/Ecommerce",
   },
   {
