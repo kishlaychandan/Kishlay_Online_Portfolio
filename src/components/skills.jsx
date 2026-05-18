@@ -8,7 +8,19 @@ import {
   BiLogoPhp,
 } from "react-icons/bi";
 import { DiMysql, DiJavascript } from "react-icons/di";
-import { SiExpress, SiTaichigraphics } from "react-icons/si";
+import {
+  SiExpress,
+  SiTaichigraphics,
+  SiKubernetes,
+  SiTerraform,
+  SiAnsible,
+  SiAmazonaws,
+  SiGooglecloud,
+  SiPrometheus,
+  SiGrafana,
+  SiGithubactions,
+} from "react-icons/si";
+import { FaDocker } from "react-icons/fa";
 import { useTheme } from "../context/ThemeContext";
 
 export default function Skills() {
@@ -223,6 +235,159 @@ export default function Skills() {
               <span className="progressbar__text shadow-express">
                 <span className="grid justify-items-center p-1"></span>
                 Machine Learning
+              </span>
+            </div>
+            {/* DevOps & Cloud Skills */}
+            <div className="progressbar">
+              <svg className="progressbar__svg">
+                <circle
+                  cx="80"
+                  cy="80"
+                  r="70"
+                  className="progressbar__svg-circle circle-express shadow-express"
+                ></circle>
+              </svg>
+              <span className="progressbar__text shadow-express">
+                <span className="grid justify-items-center p-1">
+                  <FaDocker />
+                </span>
+                Docker
+              </span>
+            </div>
+
+            <div className="progressbar">
+              <svg className="progressbar__svg">
+                <circle
+                  cx="80"
+                  cy="80"
+                  r="70"
+                  className="progressbar__svg-circle circle-express shadow-express"
+                ></circle>
+              </svg>
+              <span className="progressbar__text shadow-express">
+                <span className="grid justify-items-center p-1">
+                  <SiKubernetes />
+                </span>
+                Kubernetes
+              </span>
+            </div>
+
+            <div className="progressbar">
+              <svg className="progressbar__svg">
+                <circle
+                  cx="80"
+                  cy="80"
+                  r="70"
+                  className="progressbar__svg-circle circle-express shadow-express"
+                ></circle>
+              </svg>
+              <span className="progressbar__text shadow-express">
+                <span className="grid justify-items-center p-1">
+                  <SiTerraform />
+                </span>
+                Terraform
+              </span>
+            </div>
+
+            <div className="progressbar">
+              <svg className="progressbar__svg">
+                <circle
+                  cx="80"
+                  cy="80"
+                  r="70"
+                  className="progressbar__svg-circle circle-express shadow-express"
+                ></circle>
+              </svg>
+              <span className="progressbar__text shadow-express">
+                <span className="grid justify-items-center p-1">
+                  <SiAnsible />
+                </span>
+                Ansible
+              </span>
+            </div>
+
+            <div className="progressbar">
+              <svg className="progressbar__svg">
+                <circle
+                  cx="80"
+                  cy="80"
+                  r="70"
+                  className="progressbar__svg-circle circle-express shadow-express"
+                ></circle>
+              </svg>
+              <span className="progressbar__text shadow-express">
+                <span className="grid justify-items-center p-1">
+                  <SiAmazonaws />
+                </span>
+                AWS
+              </span>
+            </div>
+
+            <div className="progressbar">
+              <svg className="progressbar__svg">
+                <circle
+                  cx="80"
+                  cy="80"
+                  r="70"
+                  className="progressbar__svg-circle circle-express shadow-express"
+                ></circle>
+              </svg>
+              <span className="progressbar__text shadow-express">
+                <span className="grid justify-items-center p-1">
+                  <SiGooglecloud />
+                </span>
+                GCP
+              </span>
+            </div>
+
+            <div className="progressbar">
+              <svg className="progressbar__svg">
+                <circle
+                  cx="80"
+                  cy="80"
+                  r="70"
+                  className="progressbar__svg-circle circle-express shadow-express"
+                ></circle>
+              </svg>
+              <span className="progressbar__text shadow-express">
+                <span className="grid justify-items-center p-1">
+                  <SiPrometheus />
+                </span>
+                Prometheus
+              </span>
+            </div>
+
+            <div className="progressbar">
+              <svg className="progressbar__svg">
+                <circle
+                  cx="80"
+                  cy="80"
+                  r="70"
+                  className="progressbar__svg-circle circle-express shadow-express"
+                ></circle>
+              </svg>
+              <span className="progressbar__text shadow-express">
+                <span className="grid justify-items-center p-1">
+                  <SiGrafana />
+                </span>
+                Grafana
+              </span>
+            </div>
+
+            <div className="progressbar">
+              <svg className="progressbar__svg">
+                <circle
+                  cx="80"
+                  cy="80"
+                  r="70"
+                  className="progressbar__svg-circle circle-express shadow-express"
+                ></circle>
+              </svg>
+              <span className="progressbar__text shadow-express">
+                <span className="grid justify-items-center p-1">
+                  <SiGithubactions />
+                </span>
+                CI/CD (GitHub Actions)
               </span>
             </div>
           </div>
