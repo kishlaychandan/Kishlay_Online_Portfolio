@@ -31,7 +31,7 @@ function Home() {
                 isDark ? "text-indigo-300" : "text-indigo-700"
               }`}
             >
-              Full Stack Developer · DevOps Engineer
+              DevOps Engineer · Full Stack Developer
             </p>
           </div>
 

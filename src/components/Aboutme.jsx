@@ -68,22 +68,14 @@ export default function Aboutme() {
                     isDark ? "text-gray-300" : "text-gray-600"
                   }`}
                 >
-                  I’m a full stack developer and DevOps engineer who enjoys
-                  working close to both code and infrastructure. My focus is on
-                  building reliable web applications, automating delivery
-                  pipelines, and putting strong monitoring in place so systems
-                  stay healthy in production.
+                  I'm a DevOps / Platform Engineer who's equally comfortable writing code and owning infrastructure. My work sits at the intersection of development and operations — building reliable systems, automating delivery pipelines, and making sure production stays healthy at 2 AM, not just at deploy time.
                 </p>
                 <p
                   className={`mt-3 text-sm sm:text-base leading-7 transition-colors duration-300 ${
                     isDark ? "text-gray-300" : "text-gray-600"
                   }`}
                 >
-                  I completed my MCA at the Central University of Karnataka and
-                  have experience across React, Node.js, modern CSS, databases,
-                  and cloud platforms. I like working in environments where I
-                  can own features end‑to‑end: from API design and frontend to
-                  CI/CD and observability.
+                  With 1.5 years in DevOps and 3+ years across the full stack, I've shipped production-grade CI/CD pipelines, led a zero-downtime cloud migration (AWS/GCP → Azure), built Kubernetes platforms on AKS, and put DevSecOps practices in place that actually stick. I hold an MCA from the Central University of Karnataka and have hands-on experience across multi-cloud (GCP, AWS, Azure), GitOps with ArgoCD, and full-stack observability with Prometheus and Grafana — paired with React and Node.js when the work calls for it.
                 </p>
                 <div className="mt-10 flex max-[1023px]:justify-center gap-4">
                   <a
