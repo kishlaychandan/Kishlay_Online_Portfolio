@@ -4,6 +4,7 @@ import { useTheme } from "../context/ThemeContext";
 const main = [
   { name: 'Home', path: '/' },
   { name: 'Professional', path: '/professional-work' },
+  { name: 'Certificates', path: '/certificates' },
   { name: 'Contact', path: '/contact' },
 ];
 
