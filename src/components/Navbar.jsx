@@ -10,6 +10,7 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const isHomePage = location.pathname === '/';
+  const showNavSurface = scrolled || !isHomePage || isOpen;
 
   const navItems = [
     { name: 'Home', path: '/' },
@@ -100,7 +101,7 @@ function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-[9999] transition-all duration-700 ease-in-out ${
-        scrolled || !isHomePage
+        showNavSurface
           ? isDark
             ? 'py-2 bg-slate-950/80 backdrop-blur-2xl shadow-[0_8px_32px_rgba(0,0,0,0.8)]'
             : 'py-2 bg-white/80 backdrop-blur-2xl shadow-[0_8px_32px_rgba(99,102,241,0.05)]'
@@ -110,7 +111,7 @@ function Navbar() {
       {/* Scroll Color Glow Effect */}
       <div 
         className={`absolute inset-0 transition-opacity duration-1000 pointer-events-none ${
-          scrolled ? 'opacity-100' : 'opacity-0'
+          showNavSurface ? 'opacity-100' : 'opacity-0'
         } ${
           isDark 
             ? 'bg-gradient-to-r from-indigo-500/5 via-transparent to-purple-500/5' 
