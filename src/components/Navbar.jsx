@@ -99,7 +99,7 @@ function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ease-in-out ${
+      className={`fixed top-0 left-0 right-0 z-[9999] transition-all duration-700 ease-in-out ${
         scrolled || !isHomePage
           ? isDark
             ? 'py-2 bg-slate-950/80 backdrop-blur-2xl shadow-[0_8px_32px_rgba(0,0,0,0.8)]'
@@ -190,7 +190,7 @@ function Navbar() {
       </div>
 
           {/* Right side - Theme Toggle & Mobile Menu Button */}
-          <div className="flex items-center space-x-4">
+          <div className="relative z-[10000] flex items-center space-x-4">
             {/* Theme Toggle */}
             <button
               onClick={toggleTheme}
@@ -235,7 +235,7 @@ function Navbar() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className={`md:hidden p-2 rounded-lg transition-all duration-300 ${
+              className={`relative z-[10001] md:hidden p-2 rounded-lg transition-all duration-300 ${
                 isDark
                   ? 'text-gray-300 hover:bg-gray-800 hover:text-white'
                   : 'text-gray-700 hover:bg-gray-100 hover:text-purple-600'
@@ -253,7 +253,7 @@ function Navbar() {
 
         {/* Mobile Navigation Menu */}
         <div
-          className={`md:hidden transition-all duration-300 overflow-hidden ${
+          className={`relative z-[10000] md:hidden transition-all duration-300 overflow-hidden ${
             isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
           }`}
         >
