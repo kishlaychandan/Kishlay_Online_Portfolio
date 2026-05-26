@@ -1,5 +1,5 @@
 import { BsFillBriefcaseFill } from "react-icons/bs";
-import ResumePdf from "../images/KishlayChandan_Geekster1.pdf";
+import ResumePdf from "../images/kishlaychandan_devops.pdf";
 import { useTheme } from "../context/ThemeContext";
 
 function Work() {
