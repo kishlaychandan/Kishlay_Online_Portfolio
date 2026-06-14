@@ -6,10 +6,14 @@ import {
   BsXLg,
 } from "react-icons/bs";
 import ResumePdf from "../images/kishlaychandan_devops.pdf";
+import ResumePreviewPage1 from "../images/resume-preview/kishlaychandan-devops-1.png";
+import ResumePreviewPage2 from "../images/resume-preview/kishlaychandan-devops-2.png";
 import DigisnareLogo from "../images/company-logos/digisnare-logo.png";
 import GeeksterLogo from "../images/company-logos/geekster-logo.svg";
 import LivingThingsLogo from "../images/company-logos/living-things-logo.jpg";
 import { useTheme } from "../context/ThemeContext";
+
+const resumePreviewPages = [ResumePreviewPage1, ResumePreviewPage2];
 
 function Work() {
   const { isDark } = useTheme();
@@ -235,14 +239,14 @@ function Work() {
 
       {isResumeOpen && (
         <div
-          className="fixed inset-0 z-[10000] flex items-center justify-center bg-slate-950/75 p-3 backdrop-blur-sm sm:p-6"
+          className="fixed inset-0 z-[10000] flex items-center justify-center bg-slate-950/75 p-2 backdrop-blur-sm sm:p-6"
           role="dialog"
           aria-modal="true"
           aria-label="Resume preview"
           onClick={() => setIsResumeOpen(false)}
         >
           <div
-            className={`flex h-[88vh] w-full max-w-5xl flex-col overflow-hidden rounded-2xl shadow-2xl ring-1 ${
+            className={`flex h-[94vh] w-full max-w-5xl flex-col overflow-hidden rounded-2xl shadow-2xl ring-1 sm:h-[88vh] ${
               isDark ? 'bg-slate-900 ring-white/10' : 'bg-white ring-black/10'
             }`}
             onClick={(event) => event.stopPropagation()}
@@ -259,7 +263,7 @@ function Work() {
                 <p className={`text-xs sm:text-sm ${
                   isDark ? 'text-slate-400' : 'text-slate-500'
                 }`}>
-                  Scroll inside the PDF to view all pages.
+                  Scroll to view all resume pages.
                 </p>
               </div>
               <button
@@ -276,12 +280,20 @@ function Work() {
               </button>
             </div>
 
-            <div className={`${isDark ? 'bg-slate-950' : 'bg-slate-100'} flex-1 p-2 sm:p-4`}>
-              <iframe
-                src={ResumePdf}
-                title="Kishlay Chandan Resume"
-                className="h-full w-full rounded-xl bg-white"
-              />
+            <div
+              className={`${isDark ? 'bg-slate-950' : 'bg-slate-100'} flex-1 overflow-y-auto p-2 sm:p-4`}
+            >
+              <div className="mx-auto flex w-full max-w-[860px] flex-col gap-4">
+                {resumePreviewPages.map((page, pageIndex) => (
+                  <img
+                    key={page}
+                    src={page}
+                    alt={`Kishlay Chandan resume page ${pageIndex + 1}`}
+                    className="h-auto w-full rounded-lg bg-white shadow-lg ring-1 ring-black/10"
+                    loading={pageIndex === 0 ? "eager" : "lazy"}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>
