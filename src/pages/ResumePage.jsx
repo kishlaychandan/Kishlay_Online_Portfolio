@@ -6,7 +6,7 @@ function ResumePage() {
   const work = [
     {
       company: "iCapo Tech Pvt Ltd (Living Things)",
-      title: "Full Stack Developer / DevOps Engineer",
+      title: "DevOps Engineer",
       location: "On-site, IIT Bombay, Mumbai",
       period: "Feb 2025 – Present",
       bullets: [
@@ -14,18 +14,35 @@ function ResumePage() {
         "Built CI/CD pipelines with GitLab CI/CD and Gitea Actions, integrating SonarQube and Infisical for secure secrets and quality gates.",
         "Set up batch processing workflows for ML model deployment and undeployment and bill processing using GCP Pub/Sub, Cloud Jobs and Cloud Scheduler, ensuring reliable and scalable event-driven execution.",
         "Enabled Dev/UAT/Prod deployments, reducing release times by ~20–30%.",
-        "Set up observability stack with Grafana, Prometheus, Loki, Alertmanager, Uptime Kuma, and Blackbox Exporter (15+ dashboards, 50+ alerts).",
+        "Set up observability stack with custom Grafana dashboards, Prometheus, Loki, Alertmanager, Uptime Kuma, Blackbox Exporter, and proactive alert templates.",
         "Embedded firmware automation for 17 GSM and 17 WiFi protocols, streamlining development workflows and cutting release cycles from 2+ hours to ~40 minutes.",
         "Orchestrated a strategic multi-cloud migration (AWS/GCP to Azure), transitioning EKS/GKE clusters and S3/GCS storage with zero downtime.",
         "Migrated 100+ repositories from GitLab to self-hosted Gitea, ensuring full history preservation and data sovereignty.",
         "Architected CI/CD ecosystems using Gitea Actions and proactive observability stacks (Grafana/Prometheus) to monitor fleet-wide microservices.",
         "Architected a real-time OTP automation system using Redis and mobile automation, enabling autonomous electricity bill retrieval.",
         "Developed a centralized Fleet Release Hub with MAC-ID search and version filtering, orchestrating bulk firmware/app updates across thousands of IoT devices.",
+        "Rolled out an internal AI enablement platform by deploying an AI proxy on Kubernetes backed by Azure OpenAI keys from Azure AI Foundry.",
+        "Created teams, users, and individual virtual API keys in the AI proxy, replacing direct provider keys and enabling per-user and per-team usage tracking.",
+        "Configured Goose/Codex on employees' local systems so teams could use governed AI assistance in everyday tasks and active project work.",
+        "Set up PostgreSQL MCP servers for respective teams to support controlled AI-assisted database workflows.",
+        "Implemented PostgreSQL least-privilege access by creating read-only team users and scoped service users instead of superuser credentials.",
+        "Configured PostgreSQL backups and point-in-time recovery (PITR) using pgBackRest.",
+      ],
+    },
+    {
+      company: "Geekster",
+      title: "Full Stack Developer Apprenticeship",
+      location: "Remote",
+      period: "Nov 2023 – Jan 2025",
+      bullets: [
+        "Shipped 4 full-stack applications (E-commerce, Food Delivery, Expense Tracker, and Chai Sutta Bar) using React, Node.js, Express.js, and MongoDB.",
+        "Containerized all 4 applications with Docker and Docker Compose, reducing environment setup time from hours to under 5 minutes.",
+        "Secured 1st place in solo and team categories at Geekathon among 50+ participants.",
       ],
     },
     {
       company: "Digisnare Technologies",
-      title: "Intern",
+      title: "Full Stack Developer",
       location: "On-site, Gulbarga, Karnataka",
       period: "Mar 2023 – Jul 2023",
       bullets: [
@@ -326,7 +343,7 @@ function ResumePage() {
             }`}
           >
             <li>UGC NET qualifier (June 2024)</li>
-            <li>Completed Full Stack Web Development Course at Geekster</li>
+            <li>Completed Full Stack Developer Apprenticeship at Geekster</li>
           </ul>
         </section>
       </main>
@@ -335,4 +352,3 @@ function ResumePage() {
 }
 
 export default ResumePage;
-

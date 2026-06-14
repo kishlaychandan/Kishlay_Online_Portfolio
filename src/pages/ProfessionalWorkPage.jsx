@@ -1,15 +1,25 @@
 import { useTheme } from "../context/ThemeContext";
 import { useState, useEffect, useRef } from 'react';
 import {
-  BsRocketFill,
-  BsCodeSlash,
-  BsPaletteFill,
-  BsCloudFill,
-  BsGearFill,
-  BsCheckCircleFill,
-  BsArrowRepeat,
-  BsLightningFill,
-  BsShieldCheck
+  BsActivity,
+  BsBarChartLineFill,
+  BsBoxSeamFill,
+  BsBroadcastPin,
+  BsCashCoin,
+  BsCloudArrowUpFill,
+  BsCloudLightningFill,
+  BsCpuFill,
+  BsDatabaseFillLock,
+  BsDatabaseGear,
+  BsDiagram3Fill,
+  BsGearWideConnected,
+  BsGit,
+  BsHddNetworkFill,
+  BsPersonFillLock,
+  BsPhoneVibrateFill,
+  BsRobot,
+  BsRouterFill,
+  BsShieldLockFill,
 } from 'react-icons/bs';
 import Footer from "../components/Footer";
 
@@ -40,7 +50,7 @@ function ProfessionalWorkPage() {
         'Containerized microservices using Docker and Docker Compose, standardizing environments for development, staging, and production.',
       technologies: ['Docker', 'Docker Compose', 'Kubernetes', 'Trivy'],
       status: 'completed',
-      icon: BsRocketFill,
+      icon: BsBoxSeamFill,
       color: 'from-purple-500 to-indigo-500',
       details: [
         'Introduced multistage builds and distroless images to harden runtime containers.',
@@ -57,7 +67,7 @@ function ProfessionalWorkPage() {
         'Orchestrated a massive infrastructure migration from AWS and GCP to Microsoft Azure, ensuring high availability and zero data loss.',
       technologies: ['Azure AKS', 'EKS/GKE', 'Storage Accounts', 'Azure Monitor', 'Migration'],
       status: 'completed',
-      icon: BsArrowRepeat,
+      icon: BsCloudArrowUpFill,
       color: 'from-blue-400 to-indigo-600',
       details: [
         'Conducted end-to-end requirement gathering, strategic planning, and risk assessment for multi-cloud migration.',
@@ -75,7 +85,7 @@ function ProfessionalWorkPage() {
         'Successfully migrated all source code repositories from GitLab to a self-hosted Gitea instance for better control and data sovereignty.',
       technologies: ['GitLab', 'Gitea', 'Self-hosting', 'Migration'],
       status: 'completed',
-      icon: BsArrowRepeat,
+      icon: BsGit,
       color: 'from-orange-400 to-red-500',
       details: [
         'Planned and executed the migration of all organization repositories, including history and metadata.',
@@ -101,7 +111,7 @@ function ProfessionalWorkPage() {
         'Infisical'
       ],
       status: 'completed',
-      icon: BsCodeSlash,
+      icon: BsDiagram3Fill,
       color: 'from-blue-500 to-cyan-500',
       details: [
         'Designed and implemented automated CI pipelines using Gitea Actions and GitHub Actions for microservices and firmware repositories.',
@@ -129,12 +139,15 @@ function ProfessionalWorkPage() {
         'Blackbox Exporter',
       ],
       status: 'completed',
-      icon: BsPaletteFill,
+      icon: BsActivity,
       color: 'from-pink-500 to-rose-500',
       details: [
-        'Created 15+ Grafana dashboards for services, infrastructure, and SLIs.',
-        'Configured 50+ proactive alerts to catch incidents before they impact users.',
-        'Introduced synthetic checks and blackbox probes for external endpoints.',
+        'Built custom Grafana dashboards for microservices, events, data loss, PostgreSQL, MongoDB, Kafka, Kafka Connectors, Nginx/Traefik, storage databases, and PVC usage.',
+        'Designed dedicated infrastructure dashboards for database PVCs, Kafka PVCs, service health, traffic patterns, and platform capacity trends.',
+        'Configured proactive alerts for microservices, PVC pressure, event failures, service errors, data loss signals, and infrastructure saturation.',
+        'Set up Uptime Kuma to monitor service availability and send uptime alerts before users or operations teams were impacted.',
+        'Created custom alert notification templates to make incidents easier to read, triage, and route to the right team.',
+        'Introduced synthetic checks and blackbox probes for external endpoints and critical user-facing flows.',
       ],
     },
     {
@@ -146,7 +159,7 @@ function ProfessionalWorkPage() {
         'Automated firmware development workflows and build/release processes for IoT devices across GSM and WiFi protocols.',
       technologies: ['Gitea Actions', 'GCS', 'Versioning', 'Embedded Systems'],
       status: 'completed',
-      icon: BsLightningFill,
+      icon: BsCpuFill,
       color: 'from-indigo-500 to-purple-500',
       details: [
         'Automated work processes for the embedded team to streamline development.',
@@ -164,7 +177,7 @@ function ProfessionalWorkPage() {
         'Developed a centralized dashboard to orchestrate large-scale firmware and application deployments across thousands of IoT devices.',
       technologies: ['React', 'Node.js', 'REST APIs', 'Fleet Management'],
       status: 'completed',
-      icon: BsShieldCheck,
+      icon: BsHddNetworkFill,
       color: 'from-green-500 to-emerald-500',
       details: [
         'Built a multi-tenant release interface with granular filters for Device Type, HW Version, and Library dependencies.',
@@ -182,37 +195,13 @@ function ProfessionalWorkPage() {
         'Architected a seamless OTP collection and bill retrieval system, eliminating manual intervention for electricity bill downloads.',
       technologies: ['Redis', 'Automate App', 'Node.js', 'React', 'Dashboards'],
       status: 'completed',
-      icon: BsShieldCheck,
+      icon: BsPhoneVibrateFill,
       color: 'from-orange-500 to-amber-500',
       details: [
         'Automated SMS forwarding from dedicated client SIMs using mobile automation (Automate app).',
         'Engineered a high-speed Redis caching layer for secure OTP storage with automated expiry (TTL).',
         'Developed an operational OTP dashboard for real-time monitoring.',
         'Integrated a chatbot for headless authentication on utility portals, enabling autonomous bill downloads.',
-      ],
-    },
-    {
-      id: 9,
-      title: 'Azure Cost Dashboard & Data Pipeline',
-      company: 'iCapo Tech Pvt Ltd (Living Things)',
-      period: 'Phase 9',
-      description:
-        'Engineered an automated data pipeline to visualize cloud spending by integrating Azure Portal CSV exports with Looker Studio.',
-      technologies: [
-        'Azure Portal',
-        'Google Drive',
-        'Google Sheets',
-        'Google Apps Script',
-        'Looker Studio',
-      ],
-      status: 'completed',
-      icon: BsCloudFill,
-      color: 'from-blue-600 to-indigo-600',
-      details: [
-        'Objective: Create an Azure Cost Dashboard for clear visibility and analysis of cloud spending.',
-        'Architecture: Azure Portal → CSV → Google Drive Folder → Google Sheet (Apps Script) → Looker Studio.',
-        'Developed custom Google Apps Script to automate data extraction from Google Drive to Google Sheets.',
-        'Enabled granular analysis of cloud expenditure using Looker Studio visualizations.',
       ],
     },
     {
@@ -224,7 +213,7 @@ function ProfessionalWorkPage() {
         'Set up batch processing workflows for ML model deployment and undeployment and bill processing using GCP.',
       technologies: ['GCP Pub/Sub', 'Cloud Jobs', 'Cloud Scheduler', 'MLOps'],
       status: 'completed',
-      icon: BsCloudFill,
+      icon: BsCloudLightningFill,
       color: 'from-sky-500 to-indigo-500',
       details: [
         'Ensured reliable and scalable event-driven execution using Pub/Sub and Cloud Scheduler.',
@@ -248,7 +237,7 @@ function ProfessionalWorkPage() {
         'Monitoring',
       ],
       status: 'completed',
-      icon: BsCheckCircleFill,
+      icon: BsCashCoin,
       color: 'from-teal-500 to-emerald-500',
       details: [
         'Designed strict separation between production and non-production (dev, QA, POC) environments.',
@@ -257,8 +246,31 @@ function ProfessionalWorkPage() {
         'Implemented batch-processing workflows for heavy and non-real-time workloads instead of always-on services.',
         'Reduced overall cloud operational costs significantly while maintaining performance and reliability.',
       ],
-    }
-    ,
+    },
+    {
+      id: 9,
+      title: 'Azure Cost Dashboard & Data Pipeline',
+      company: 'iCapo Tech Pvt Ltd (Living Things)',
+      period: 'Phase 9',
+      description:
+        'Engineered an automated data pipeline to visualize cloud spending by integrating Azure Portal CSV exports with Looker Studio.',
+      technologies: [
+        'Azure Portal',
+        'Google Drive',
+        'Google Sheets',
+        'Google Apps Script',
+        'Looker Studio',
+      ],
+      status: 'completed',
+      icon: BsBarChartLineFill,
+      color: 'from-blue-600 to-indigo-600',
+      details: [
+        'Objective: Create an Azure Cost Dashboard for clear visibility and analysis of cloud spending.',
+        'Architecture: Azure Portal → CSV → Google Drive Folder → Google Sheet (Apps Script) → Looker Studio.',
+        'Developed custom Google Apps Script to automate data extraction from Google Drive to Google Sheets.',
+        'Enabled granular analysis of cloud expenditure using Looker Studio visualizations.',
+      ],
+    },
     {
       id: 12,
       title: 'Snowflake Access Control & Role-Based Permission Management',
@@ -268,7 +280,7 @@ function ProfessionalWorkPage() {
         'Designed and implemented robust role-based access control (RBAC) in Snowflake to manage user permissions securely and efficiently.',
       technologies: ['Snowflake', 'RBAC', 'SQL', 'Data Governance', 'Access Control'],
       status: 'completed',
-      icon: BsGearFill,
+      icon: BsPersonFillLock,
       color: 'from-cyan-500 to-blue-600',
       details: [
         'Designed role hierarchy for different user groups including automation, analytics, and operations teams.',
@@ -281,35 +293,38 @@ function ProfessionalWorkPage() {
     },
     {
       id: 13,
-      title: 'MQTT to Kafka to Snowflake Streaming Platform',
+      title: 'Kafka & CDC Streaming Platform',
       company: 'iCapo Tech Pvt Ltd (Living Things)',
       period: 'Phase 13',
       description:
-        'Designed and implemented a scalable real-time data platform to stream MQTT topics to Kafka topics and into Snowflake tables for analytics and monitoring.',
+        'Set up a production-ready Kafka and CDC platform for streaming MQTT data: MQTT → Kafka → Snowflake & ClickHouse for warehousing, analytics, and monitoring.',
       technologies: [
+        'Strimzi Kafka',
         'Apache Kafka',
         'Kafka Connect',
         'MQTT',
         'Snowflake',
+        'ClickHouse',
         'PostgreSQL',
         'CDC',
+        'Dev/UAT/Prod',
+        'Topic Design',
+        'Partitioning',
         'Snowflake Connector',
         'Azure Blob Storage'
       ],
       status: 'completed',
-      icon: BsLightningFill,
+      icon: BsBroadcastPin,
       color: 'from-cyan-500 to-blue-500',
       details: [
-        'Deployed and configured Apache Kafka cluster for high-throughput streaming of device telemetry.',
-        'Integrated MQTT to Kafka connector to ingest real-time sensor data from IoT devices.',
-        'Built Kafka → Snowflake streaming pipeline using Snowflake Sink Connector for near real-time analytics.',
-        'Implemented PostgreSQL → Snowflake Change Data Capture (CDC) using Snowflake Agent.',
-        'Designed schema mapping and transformation logic to flatten device telemetry events.',
-        'Ensured reliable ingestion with retry handling, dead-letter queues, and monitoring.',
-        'Enabled analytics teams to access live device metrics and operational data directly in Snowflake.',
-        'Implemented data transformation and mapping to convert MQTT messages to structured Snowflake table formats.',
-        'Configured dead letter queues (DLQ) for handling failed message processing and error recovery.',
-        'Applied schema evolution and data validation rules for consistent data quality.',
+        'Deployed Strimzi Kafka clusters for Dev, UAT, and Prod environments with clean separation between workloads.',
+        'Designed Kafka topics, partitions, and naming conventions for scalable MQTT telemetry ingestion.',
+        'Integrated MQTT to Kafka pipelines to stream real-time device data into structured Kafka topics.',
+        'Built Kafka to Snowflake and ClickHouse ingestion paths for warehousing, analytics, and operational reporting.',
+        'Implemented PostgreSQL to Snowflake and ClickHouse Change Data Capture (CDC) for database change synchronization.',
+        'Configured dead-letter queues, retry handling, and monitoring to improve pipeline reliability.',
+        'Applied schema mapping and validation so raw MQTT events became analytics-ready warehouse records.',
+        'Enabled analytics and operations teams to access near real-time device and database metrics from Snowflake and ClickHouse.',
       ],
     },
     {
@@ -321,7 +336,7 @@ function ProfessionalWorkPage() {
         'Implemented Debezium for efficient Change Data Capture (CDC) from PostgreSQL to Snowflake via Kafka, utilizing schema registry for optimized storage.',
       technologies: ['Debezium', 'PostgreSQL', 'Kafka', 'Snowflake', 'Schema Registry', 'CDC'],
       status: 'completed',
-      icon: BsLightningFill,
+      icon: BsDatabaseGear,
       color: 'from-cyan-500 to-blue-600',
       details: [
         'Configured Debezium connectors to capture real-time changes from PostgreSQL databases.',
@@ -333,6 +348,113 @@ function ProfessionalWorkPage() {
     },
     {
       id: 15,
+      title: 'Organization-wide AI Enablement Platform',
+      company: 'iCapo Tech Pvt Ltd (Living Things)',
+      period: 'Phase 15',
+      description:
+        'Rolled out a governed AI access platform across the organization to help employees use AI securely and speed up day-to-day work.',
+      technologies: [
+        'Kubernetes',
+        'Azure OpenAI',
+        'Azure AI Foundry',
+        'AI Proxy',
+        'Virtual API Keys',
+        'Goose',
+        'Codex',
+        'MCP',
+        'PostgreSQL'
+      ],
+      status: 'completed',
+      icon: BsRobot,
+      color: 'from-violet-500 to-fuchsia-500',
+      details: [
+        'Deployed an AI proxy on Kubernetes and backed it with Azure OpenAI provider keys from Azure AI Foundry.',
+        'Created teams, users, and individual virtual API keys in the proxy application instead of sharing actual provider keys.',
+        'Enabled usage tracking at individual and team levels for visibility, governance, and cost accountability.',
+        "Configured Goose/Codex on employees' local systems and connected them to the governed AI proxy for everyday work.",
+        'Distributed controlled AI access across employees to support faster engineering and operational workflows.',
+        'Set up PostgreSQL MCP servers and shared them with respective teams for controlled AI-assisted database interactions.',
+      ],
+    },
+    {
+      id: 16,
+      title: 'PostgreSQL Access Control & PITR Backup',
+      company: 'iCapo Tech Pvt Ltd (Living Things)',
+      period: 'Phase 16',
+      description:
+        'Improved PostgreSQL security and recoverability by enforcing least-privilege users and production-grade backup workflows.',
+      technologies: ['PostgreSQL', 'RBAC', 'pgBackRest', 'PITR', 'Backup', 'Access Control'],
+      status: 'completed',
+      icon: BsDatabaseFillLock,
+      color: 'from-emerald-500 to-teal-500',
+      details: [
+        'Created read-only PostgreSQL users for each team to provide safe access without exposing elevated privileges.',
+        'Provisioned individual service users with scoped permissions lower than superuser access for application workloads.',
+        'Reduced operational risk by replacing broad database credentials with least-privilege access patterns.',
+        'Set up PostgreSQL backups using pgBackRest for reliable restore operations.',
+        'Configured point-in-time recovery (PITR) support to recover databases to specific moments when needed.',
+      ],
+    },
+    {
+      id: 17,
+      title: 'Traefik API Gateway Modernization',
+      company: 'iCapo Tech Pvt Ltd (Living Things)',
+      period: 'In Progress',
+      description:
+        'Replacing Nginx with Traefik and open-source gateway components to add advanced routing, identity, visibility, traffic control, and security features.',
+      technologies: [
+        'Traefik',
+        'Kubernetes',
+        'ForwardAuth',
+        'Custom SSO',
+        'Prometheus',
+        'Grafana',
+        'Redis',
+        'Traefik Plugin',
+        'Coraza WAF'
+      ],
+      status: 'in-progress',
+      icon: BsShieldLockFill,
+      color: 'from-red-500 to-rose-600',
+      details: [
+        'Replacing Nginx with Traefik to build a more flexible open-source edge and API gateway layer.',
+        'Identity Layer: ForwardAuth + Custom SSO verifies user sessions before traffic reaches backend services.',
+        'Visibility Layer: Prometheus + Grafana establishes traffic and error monitoring for gateway operations.',
+        'Traffic Control: Redis + Traefik plugin adds cluster-wide per-user and per-application rate limits.',
+        'Shield Layer: Coraza WAF adds deep request inspection to protect services from SQL injection and XSS patterns.',
+        'Why: Strengthens security and governance while avoiding lock-in to expensive proprietary API gateway features.',
+      ],
+    },
+    {
+      id: 18,
+      title: 'IoT Router, WAF & RADIUS Security Setup',
+      company: 'iCapo Tech Pvt Ltd (Living Things)',
+      period: 'In Progress',
+      description:
+        'Setting up network edge controls for IoT device connectivity, combining routing, web application firewall, and RADIUS-based access for stronger authentication.',
+      technologies: [
+        'IoT Devices',
+        'Router',
+        'WAF',
+        'RADIUS',
+        'Network Security',
+        'Access Control',
+        'Authentication',
+        'Firewall Rules'
+      ],
+      status: 'in-progress',
+      icon: BsRouterFill,
+      color: 'from-amber-500 to-orange-600',
+      details: [
+        'Configuring router-level controls to securely manage IoT device connectivity across networks and environments.',
+        'Setting up WAF policies to protect IoT-facing APIs and portals from common web attack patterns.',
+        'Integrating RADIUS-based authentication to centralize access control for device and network entry points.',
+        'Applying firewall and routing rules to reduce exposure and make IoT access paths easier to audit.',
+        'Why: Builds a stronger security foundation before IoT traffic reaches applications and platform services.',
+      ],
+    },
+    {
+      id: 19,
       title: 'Ongoing Improvements',
       company: 'iCapo Tech Pvt Ltd (Living Things)',
       period: 'Ongoing',
@@ -340,7 +462,7 @@ function ProfessionalWorkPage() {
         'Continuously iterating on performance, reliability, and developer experience across the platform.',
       technologies: ['DevOps', 'Full Stack', 'Monitoring'],
       status: 'in-progress',
-      icon: BsGearFill,
+      icon: BsGearWideConnected,
       color: 'from-orange-500 to-red-500',
       details: [
         'Refining pipelines and dashboards based on feedback from developers and operations.',
@@ -370,7 +492,7 @@ function ProfessionalWorkPage() {
     <div className={`min-h-screen ${isDark
         ? 'bg-slate-950 text-white'
         : 'bg-slate-50 text-slate-900'
-      } transition-colors duration-500 pb-20`}>
+      } transition-colors duration-500`}>
 
       {/* Dynamic Background */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">

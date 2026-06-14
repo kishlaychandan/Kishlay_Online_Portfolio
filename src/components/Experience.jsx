@@ -1,5 +1,10 @@
 import { useTheme } from "../context/ThemeContext";
-import { BsBriefcaseFill, BsCalendar3, BsGeoAltFill } from "react-icons/bs";
+import {
+  BsBriefcaseFill,
+  BsCalendar3,
+  BsCheckCircleFill,
+  BsGeoAltFill,
+} from "react-icons/bs";
 
 function Experience() {
   const { isDark } = useTheme();
@@ -8,7 +13,7 @@ function Experience() {
     {
       id: 1,
       company: "iCapo Tech Pvt Ltd (Living Things)",
-      position: "Full Stack Developer / DevOps Engineer",
+      position: "DevOps Engineer",
       location: "On-site, IIT Bombay, Mumbai",
       period: "Feb 2025 – Present",
       description:
@@ -22,6 +27,12 @@ function Experience() {
         "SonarQube",
         "GCP",
         "AWS",
+        "Azure OpenAI",
+        "Goose",
+        "Codex",
+        "PostgreSQL",
+        "MCP",
+        "pgBackRest",
         "Grafana",
         "Prometheus",
         "Loki",
@@ -30,15 +41,42 @@ function Experience() {
         "Containerized microservices with Docker, multistage and distroless images, and Trivy-based vulnerability scanning.",
         "Built CI/CD pipelines with GitLab CI/CD and Gitea Actions, integrating SonarQube and Infisical for secure secrets.",
         "Enabled Dev/UAT/Prod deployments, reducing release times by ~20–30%.",
-        "Set up observability stack (Grafana, Prometheus, Loki, Alertmanager, Uptime Kuma, Blackbox Exporter) with 15+ dashboards and 50+ proactive alerts.",
+        "Set up observability stack with custom Grafana dashboards, Prometheus, Loki, Alertmanager, Uptime Kuma, Blackbox Exporter, and proactive alert templates.",
         "Automated firmware CI/CD for 17 GSM and 17 WiFi protocols using Gitea Actions, cutting release time from 2+ hours to ~40 minutes.",
         "Built a release dashboard with filters and MAC-ID search, reducing manual operations workload.",
+        "Deployed an internal AI proxy on Kubernetes backed by Azure OpenAI, with virtual keys and per-user/team usage tracking.",
+        "Configured Goose/Codex on employees' local systems so teams could use governed AI assistance in daily tasks and project workflows.",
+        "Set up PostgreSQL MCP servers for teams and implemented least-privilege PostgreSQL users for team and service access.",
+        "Configured PostgreSQL backups and point-in-time recovery using pgBackRest.",
       ],
     },
     {
       id: 2,
+      company: "Geekster",
+      position: "Full Stack Developer Apprenticeship",
+      location: "Remote",
+      period: "Nov 2023 – Jan 2025",
+      description:
+        "Completed a full-stack development apprenticeship focused on building, containerizing, and shipping production-style web applications.",
+      technologies: [
+        "React",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Docker",
+        "Docker Compose",
+      ],
+      achievements: [
+        "Shipped 4 full-stack applications: E-commerce, Food Delivery, Expense Tracker, and Chai Sutta Bar.",
+        "Built applications using React, Node.js, Express.js, and MongoDB with end-to-end frontend and backend workflows.",
+        "Containerized all 4 applications with Docker and Docker Compose, reducing environment setup time from hours to under 5 minutes.",
+        "Secured 1st place in solo and team categories at Geekathon among 50+ participants.",
+      ],
+    },
+    {
+      id: 3,
       company: "Digisnare Technologies",
-      position: "Intern",
+      position: "Full Stack Developer",
       location: "On-site, Gulbarga, Karnataka",
       period: "Mar 2023 – Jul 2023",
       description:
@@ -176,9 +214,9 @@ function Experience() {
                             isDark ? 'text-gray-300' : 'text-gray-600'
                           }`}
                         >
-                          <span className={`mt-1.5 flex-shrink-0 w-2 h-2 rounded-full ${
-                            isDark ? 'bg-purple-400' : 'bg-purple-600'
-                          }`}></span>
+                          <BsCheckCircleFill className={`mt-1 flex-shrink-0 w-4 h-4 ${
+                            isDark ? 'text-purple-400' : 'text-purple-600'
+                          }`} />
                           <span>{achievement}</span>
                         </li>
                       ))}
@@ -195,4 +233,3 @@ function Experience() {
 }
 
 export default Experience;
-

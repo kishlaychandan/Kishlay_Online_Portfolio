@@ -8,13 +8,13 @@ export default function Aboutme() {
     <div
       className={`${
         isDark ? "bg-gray-900" : "bg-white"
-      } transition-colors duration-300 py-20`}
+      } transition-colors duration-300 py-12 sm:py-16 lg:py-20`}
       id="About Me"
     >
       <main className="relative isolate">
         {/* Header section */}
-        <div className="px-6 pt-8 lg:px-8">
-          <div className="mx-auto max-w-2xl pt-14 text-center sm:pt-10 animate-fade-in">
+        <div className="px-6 pt-2 sm:pt-6 lg:px-8">
+          <div className="mx-auto max-w-2xl pt-8 text-center sm:pt-10 animate-fade-in">
             <h2
               className={`text-3xl sm:text-4xl font-bold mb-2 transition-colors duration-300 ${
                 isDark ? "text-white" : "text-gray-900"
@@ -32,18 +32,18 @@ export default function Aboutme() {
           </div>
         </div>
 
-        <div className="relative isolate -z-10 mt-20 sm:mt-16">
+        <div className="relative isolate -z-10 mt-8 sm:mt-12 lg:mt-16">
           <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div
-              className={`mx-auto flex max-w-2xl flex-col gap-10 px-6 py-10 sm:rounded-2xl sm:p-8 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:py-14 xl:gap-x-16 xl:px-16 transition-all duration-500 animate-scale-in ${
+              className={`mx-auto flex max-w-2xl flex-col gap-8 px-6 py-8 sm:rounded-2xl sm:p-8 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:gap-10 lg:py-14 xl:gap-x-16 xl:px-16 transition-all duration-500 animate-scale-in ${
                 isDark
                   ? "bg-gray-900 border border-gray-800"
                   : "bg-white border border-gray-200"
               }`}
             >
-              <div className="w-full overflow-hidden flex-none rounded-2xl shadow lg:h-auto lg:max-w-sm object-contain group animate-slide-in-left">
+              <div className="mx-auto w-full max-w-[220px] flex-none overflow-hidden rounded-2xl shadow sm:max-w-xs lg:mx-0 lg:h-auto lg:max-w-sm object-contain group animate-slide-in-left">
                 <div
-                  className={`relative overflow-hidden rounded-2xl ${
+                  className={`relative aspect-[4/5] overflow-hidden rounded-2xl ${
                     isDark ? "ring-1 ring-gray-700" : "ring-1 ring-gray-200"
                   }`}
                 >

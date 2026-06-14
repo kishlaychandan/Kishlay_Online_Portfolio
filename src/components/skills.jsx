@@ -30,8 +30,8 @@ export default function Skills() {
   return (
     <section
       id="Skills"
-      className={`${
-        isDark ? "bg-gray-900" : "bg-white"
+      className={`skills-section ${
+        isDark ? "bg-gray-900" : "skills-light bg-gradient-to-b from-slate-50 via-indigo-50/60 to-white"
       } body-font relative transition-colors duration-300 py-20`}
     >
       <div className="container px-5 py-10 mx-auto">
