@@ -3,7 +3,6 @@ import { useEffect } from "react";
 import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
 import ProfessionalWorkPage from "./pages/ProfessionalWorkPage";
-import ContactPage from "./pages/ContactPage";
 import ResumePage from "./pages/ResumePage";
 import CertificatesPage from "./pages/CertificatesPage";
 
@@ -27,7 +26,6 @@ function App() {
         <Route path="/professional-work" element={<ProfessionalWorkPage />} />
         <Route path="/certificates" element={<CertificatesPage />} />
         <Route path="/resume" element={<ResumePage />} />
-        <Route path="/contact" element={<ContactPage />} />
       </Routes>
     </div>
   );

@@ -1,0 +1,52 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1000" rx="44" fill="#07111F"/>
+  <path d="M0 735C211 600 411 604 600 748C786 889 1010 899 1268 774C1407 706 1514 695 1600 741V1000H0V735Z" fill="#0E2238"/>
+  <circle cx="1320" cy="172" r="240" fill="#1D4ED8" opacity="0.18"/>
+  <circle cx="287" cy="803" r="260" fill="#14B8A6" opacity="0.12"/>
+
+  <text x="92" y="132" fill="#E5F0FF" font-family="Inter, Arial, sans-serif" font-size="56" font-weight="800">Orthopedic Haptic Simulator</text>
+  <text x="94" y="186" fill="#93A4B8" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="500">Raspberry Pi + haptic motor feedback for surgical training simulation</text>
+
+  <g transform="translate(104 300)">
+    <rect x="0" y="0" width="560" height="430" rx="32" fill="#10233A" stroke="#284B70" stroke-width="4"/>
+    <rect x="58" y="70" width="430" height="286" rx="26" fill="#146C43"/>
+    <rect x="96" y="104" width="108" height="72" rx="14" fill="#D6E6F2"/>
+    <rect x="228" y="104" width="86" height="72" rx="14" fill="#0A1524" stroke="#7DD3FC" stroke-width="4"/>
+    <rect x="340" y="104" width="100" height="72" rx="14" fill="#D6E6F2"/>
+    <rect x="96" y="214" width="84" height="84" rx="18" fill="#0A1524" stroke="#C4B5FD" stroke-width="4"/>
+    <circle cx="138" cy="256" r="20" fill="#8B5CF6"/>
+    <rect x="224" y="220" width="216" height="68" rx="16" fill="#0A1524" stroke="#34D399" stroke-width="4"/>
+    <circle cx="452" cy="82" r="18" fill="#F59E0B"/>
+    <circle cx="452" cy="344" r="18" fill="#F59E0B"/>
+    <circle cx="75" cy="82" r="18" fill="#F59E0B"/>
+    <circle cx="75" cy="344" r="18" fill="#F59E0B"/>
+    <text x="74" y="398" fill="#DDEAFE" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800">Raspberry Pi Controller</text>
+  </g>
+
+  <g transform="translate(850 286)">
+    <rect x="0" y="0" width="590" height="458" rx="36" fill="#101A2D" stroke="#2B4262" stroke-width="4"/>
+    <circle cx="214" cy="214" r="126" fill="#CBD5E1"/>
+    <circle cx="214" cy="214" r="88" fill="#9CA3AF"/>
+    <circle cx="214" cy="214" r="36" fill="#F8FAFC"/>
+    <path d="M214 42C280 42 340 79 370 137" stroke="#22C55E" stroke-width="16" stroke-linecap="round" opacity="0.9"/>
+    <path d="M214 386C148 386 88 349 58 291" stroke="#22C55E" stroke-width="16" stroke-linecap="round" opacity="0.9"/>
+    <path d="M403 145L493 93" stroke="#60A5FA" stroke-width="14" stroke-linecap="round"/>
+    <path d="M407 284L493 336" stroke="#60A5FA" stroke-width="14" stroke-linecap="round"/>
+    <path d="M500 91C536 146 536 285 500 338" stroke="#60A5FA" stroke-width="12" stroke-linecap="round"/>
+    <text x="64" y="414" fill="#DDEAFE" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800">Haptic Motor Feedback</text>
+  </g>
+
+  <g stroke="#38BDF8" stroke-width="8" stroke-linecap="round" stroke-dasharray="18 22" opacity="0.8">
+    <path d="M665 500C737 500 769 500 842 500"/>
+  </g>
+  <circle cx="700" cy="500" r="12" fill="#38BDF8"/>
+  <circle cx="807" cy="500" r="12" fill="#38BDF8"/>
+
+  <g transform="translate(604 746)">
+    <rect width="392" height="86" rx="22" fill="#0F766E" opacity="0.92"/>
+    <path d="M80 42H312" stroke="#CCFBF1" stroke-width="10" stroke-linecap="round"/>
+    <path d="M90 26L70 42L90 58" stroke="#CCFBF1" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M302 26L322 42L302 58" stroke="#CCFBF1" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="96" y="122" fill="#B7C7D8" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">Real-time sensor and motor loop</text>
+  </g>
+</svg>

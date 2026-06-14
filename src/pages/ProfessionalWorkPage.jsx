@@ -1,5 +1,5 @@
 import { useTheme } from "../context/ThemeContext";
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import {
   BsActivity,
   BsBarChartLineFill,
@@ -25,8 +25,8 @@ import Footer from "../components/Footer";
 
 function ProfessionalWorkPage() {
   const { isDark } = useTheme();
-  const [hoveredId, setHoveredId] = useState(null);
-  const [forceClosedId, setForceClosedId] = useState(null);
+  const [expandedId, setExpandedId] = useState(null);
+  const [pinnedId, setPinnedId] = useState(null);
   const [visibleCount, setVisibleCount] = useState(0);
 
   useEffect(() => {
@@ -473,18 +473,25 @@ function ProfessionalWorkPage() {
   ];
 
   const handleMouseEnter = (id) => {
-    setHoveredId(id);
-    setForceClosedId(null);
+    if (!pinnedId) setExpandedId(id);
   };
 
   const handleMouseLeave = () => {
-    setHoveredId(null);
-    setForceClosedId(null);
+    if (!pinnedId) setExpandedId(null);
   };
 
   const handleClick = (id) => {
-    if (hoveredId === id) {
-      setForceClosedId(id);
+    setPinnedId((currentId) => {
+      const nextId = currentId === id ? null : id;
+      setExpandedId(nextId);
+      return nextId;
+    });
+  };
+
+  const handleKeyDown = (event, id) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      handleClick(id);
     }
   };
 
@@ -502,13 +509,13 @@ function ProfessionalWorkPage() {
           }`} />
       </div>
 
-      <main className="relative z-10 container mx-auto px-4 pt-32 pb-16">
-        <header className="text-center mb-20 animate-fade-in">
-          <h1 className={`text-4xl md:text-6xl font-black mb-6 tracking-tight ${isDark ? 'text-white' : 'text-slate-900'
+      <main className="relative z-10 container mx-auto px-4 pt-24 pb-12 sm:pt-28 sm:pb-16 lg:pt-32">
+        <header className="text-center mb-12 animate-fade-in sm:mb-16 lg:mb-20">
+          <h1 className={`mx-auto max-w-3xl text-3xl font-black leading-tight sm:text-5xl md:text-6xl ${isDark ? 'text-white' : 'text-slate-900'
             }`}>
-            Professional <span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">Journey</span>
+            Professional <span className="block bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent sm:inline">Journey</span>
           </h1>
-          <p className={`text-lg md:text-xl max-w-2xl mx-auto ${isDark ? 'text-slate-400' : 'text-slate-600'
+          <p className={`mx-auto mt-5 max-w-lg text-base leading-7 sm:max-w-2xl sm:text-lg md:text-xl ${isDark ? 'text-slate-400' : 'text-slate-600'
             }`}>
             A detailed look into my professional milestones and technical contributions at Living Things.
           </p>
@@ -517,16 +524,20 @@ function ProfessionalWorkPage() {
         <div className="max-w-4xl mx-auto space-y-8">
           {professionalWork.map((work, index) => {
             const Icon = work.icon;
-            const isExpanded = hoveredId === work.id && forceClosedId !== work.id;
+            const isExpanded = expandedId === work.id;
             const isVisible = index < visibleCount;
 
             return (
               <div
                 key={work.id}
+                role="button"
+                tabIndex={0}
+                aria-expanded={isExpanded}
                 onMouseEnter={() => handleMouseEnter(work.id)}
                 onMouseLeave={handleMouseLeave}
                 onClick={() => handleClick(work.id)}
-                className={`group relative rounded-3xl transition-all duration-700 cursor-pointer overflow-hidden ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                onKeyDown={(event) => handleKeyDown(event, work.id)}
+                className={`group relative overflow-hidden rounded-2xl transition-all duration-700 cursor-pointer sm:rounded-3xl ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                   } ${isExpanded
                     ? 'scale-[1.02] z-20'
                     : 'scale-100 z-10'
@@ -538,16 +549,16 @@ function ProfessionalWorkPage() {
                 {/* Accent Line */}
                 <div className={`absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b ${work.color}`} />
 
-                <div className="p-6 md:p-8">
-                  <div className="flex items-center gap-6">
+                <div className="p-5 sm:p-6 md:p-8">
+                  <div className="flex items-start gap-4 sm:items-center sm:gap-6">
                     {/* Icon Box */}
-                    <div className={`flex-shrink-0 w-16 h-16 rounded-2xl flex items-center justify-center bg-gradient-to-br ${work.color} shadow-lg transition-transform duration-500 ${isExpanded ? 'rotate-12 scale-110' : 'group-hover:rotate-6'}`}>
-                      <Icon className="text-3xl text-white" />
+                    <div className={`flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center bg-gradient-to-br sm:h-16 sm:w-16 sm:rounded-2xl ${work.color} shadow-lg transition-transform duration-500 ${isExpanded ? 'rotate-12 scale-110' : 'group-hover:rotate-6'}`}>
+                      <Icon className="text-2xl text-white sm:text-3xl" />
                     </div>
 
                     <div className="flex-1 min-w-0">
-                      <div className="flex flex-wrap items-center gap-3 mb-1">
-                        <h3 className={`text-xl md:text-2xl font-bold truncate ${isDark ? 'text-white' : 'text-slate-900'}`}>
+                      <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-1">
+                        <h3 className={`min-w-0 text-lg font-bold leading-snug sm:text-xl md:text-2xl ${isDark ? 'text-white' : 'text-slate-900'}`}>
                           {work.title}
                         </h3>
                         <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-widest ${work.status === 'completed'
@@ -562,8 +573,8 @@ function ProfessionalWorkPage() {
                       </p>
                     </div>
 
-                    <div className={`hidden md:block transition-transform duration-500 ${isExpanded ? 'rotate-180' : ''}`}>
-                      <svg className="w-6 h-6 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <div className={`flex-shrink-0 transition-transform duration-500 ${isExpanded ? 'rotate-180' : ''}`}>
+                      <svg className="w-5 h-5 text-slate-400 sm:w-6 sm:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
                     </div>

@@ -56,24 +56,6 @@ export default function Contact() {
       id="Contact"
     >
       <div className="container px-5 py-10 mx-auto">
-        <div className="flex flex-col text-center w-full mb-10 animate-fade-in">
-          <h2
-            className={`text-3xl sm:text-4xl font-bold mb-2 transition-colors duration-300 ${
-              isDark ? "text-white" : "text-gray-900"
-            }`}
-          >
-            Get in Touch
-          </h2>
-          <p
-            className={`text-sm sm:text-base ${
-              isDark ? "text-gray-400" : "text-gray-600"
-            }`}
-          >
-            Feel free to reach out for opportunities, collaborations, or just to
-            say hello.
-          </p>
-        </div>
-
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Left: Contact info & socials */}
           <div className="space-y-6 md:col-span-1">

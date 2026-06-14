@@ -9,6 +9,7 @@ import Geekpok from '../images/Geekpok.png';
 import FoodApp from '../images/FoodApp.png'
 import ecommerce from "../images/ecommerce.png";
 import netflix from "../images/netflix.png";
+import orthopedicHapticSimulator from "../images/orthopedic-haptic-simulator.svg";
 import "../style/Portfolio.css";
 import { useTheme } from "../context/ThemeContext";
 
@@ -104,9 +105,9 @@ const portfolio = [
   },
   {
     Projectname: "Orthopedic Haptic Simulator",
-    tech: "Raspberry Pi, Arduino Uno, Real-time Control, C/C++",
-    imageUrl: areamajorproject,
-    des: "DST-funded project to enhance orthopedic surgical training through a haptic simulation platform with collision detection, motor control, and hardware synchronization.",
+    tech: "Raspberry Pi, Arduino Uno, Haptic Motor, Real-time Control, C/C++",
+    imageUrl: orthopedicHapticSimulator,
+    des: "DST-funded surgical training simulator using Raspberry Pi, Arduino Uno, haptic motor feedback, collision detection, motor control, and hardware synchronization.",
     Demo: "",
     github: "",
   },
@@ -145,89 +146,118 @@ export default function Portfolio() {
         </div>
 
         <div className="mt-12">
-          <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <ul
               role="list"
               className="mx-auto grid max-w-2xl grid-cols-1 gap-8 sm:grid-cols-2 lg:max-w-none lg:grid-cols-3"
             >
-              {portfolio.map((project) => (
-                <li key={project.Projectname} className="animate-scale-in">
-                  <div
-                    className={`h-full flex flex-col rounded-xl border ${
-                      isDark
-                        ? "bg-gray-900 border-gray-700"
-                        : "bg-white border-gray-200"
-                    } shadow-sm hover:shadow-md transition-shadow duration-300`}
-                  >
-                    {/* Image */}
-                    <div className="relative overflow-hidden rounded-t-xl">
-                      <a
-                        href={project.Demo}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="block"
-                      >
-                  <img
-                          className="aspect-[16/10] w-full object-cover transition-transform duration-300 hover:scale-105"
-                      src={project.imageUrl}
-                          alt={`${project.Projectname} project screenshot`}
-                          loading="lazy"
-                    />
-                  </a>
-                 </div>
+              {portfolio.map((project) => {
+                const hasDemo = Boolean(project.Demo);
+                const hasCode = Boolean(project.github);
 
-                    {/* Content */}
-                    <div className="flex flex-1 flex-col p-5">
-                      <h3
-                        className={`text-lg font-semibold mb-1 ${
-                          isDark ? "text-white" : "text-gray-900"
-                        }`}
-                      >
-                    {project.Projectname}
-                  </h3>
-                      <p
-                        className={`text-xs font-medium mb-2 ${
-                          isDark ? "text-indigo-300" : "text-indigo-600"
-                        }`}
-                      >
-                    {project.tech}
-                  </p>
-                      <p
-                        className={`text-sm flex-1 mb-4 ${
-                          isDark ? "text-gray-300" : "text-gray-600"
-                        }`}
-                      >
-                    {project.des}
-                  </p>
+                return (
+                  <li key={project.Projectname} className="animate-scale-in">
+                    <div
+                      className={`h-full flex flex-col rounded-xl border ${
+                        isDark
+                          ? "bg-gray-900 border-gray-700"
+                          : "bg-white border-gray-200"
+                      } shadow-sm hover:shadow-md transition-shadow duration-300`}
+                    >
+                      {/* Image */}
+                      <div className={`relative aspect-[16/10] overflow-hidden rounded-t-xl p-2.5 sm:p-3 ${isDark ? "bg-slate-800" : "bg-slate-100"}`}>
+                        {hasDemo ? (
+                          <a
+                            href={project.Demo}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="block h-full w-full"
+                          >
+                            <img
+                              className="h-full w-full object-contain transition-opacity duration-300 hover:opacity-90"
+                              src={project.imageUrl}
+                              alt={`${project.Projectname} project screenshot`}
+                              loading="lazy"
+                            />
+                          </a>
+                        ) : (
+                          <img
+                            className="h-full w-full object-contain"
+                            src={project.imageUrl}
+                            alt={`${project.Projectname} project screenshot`}
+                            loading="lazy"
+                          />
+                        )}
+                      </div>
 
-                      <div className="flex gap-2">
-                        <a
-                          href={project.Demo}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="flex-1 inline-flex items-center justify-center px-3 py-2 text-sm font-semibold rounded-md text-white bg-indigo-600 hover:bg-indigo-700 transition-colors duration-200"
-                          aria-label={`View ${project.Projectname} demo`}
+                      {/* Content */}
+                      <div className="flex flex-1 flex-col p-5">
+                        <h3
+                          className={`text-lg font-semibold mb-1 ${
+                            isDark ? "text-white" : "text-gray-900"
+                          }`}
                         >
-                          Live
-                        </a>
-                        <a
-                          href={project.github}
-                          target="_blank"
-                          rel="noreferrer"
-                          className={`flex-1 inline-flex items-center justify-center px-3 py-2 text-sm font-semibold rounded-md border ${
-                            isDark
-                              ? "border-gray-600 text-gray-100 hover:bg-gray-800"
-                              : "border-gray-300 text-gray-800 hover:bg-gray-50"
-                          } transition-colors duration-200`}
-                          aria-label={`View ${project.Projectname} source code on GitHub`}
+                          {project.Projectname}
+                        </h3>
+                        <p
+                          className={`text-xs font-medium mb-2 ${
+                            isDark ? "text-indigo-300" : "text-indigo-600"
+                          }`}
                         >
-                          Code
-                        </a>
+                          {project.tech}
+                        </p>
+                        <p
+                          className={`text-sm flex-1 mb-4 ${
+                            isDark ? "text-gray-300" : "text-gray-600"
+                          }`}
+                        >
+                          {project.des}
+                        </p>
+
+                        <div className={`grid gap-2 ${hasDemo && hasCode ? "grid-cols-2" : "grid-cols-1"}`}>
+                          {hasDemo && (
+                            <a
+                              href={project.Demo}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="inline-flex items-center justify-center px-3 py-2 text-sm font-semibold rounded-md text-white bg-indigo-600 hover:bg-indigo-700 transition-colors duration-200"
+                              aria-label={`View ${project.Projectname} demo`}
+                            >
+                              Live
+                            </a>
+                          )}
+                          {hasCode && (
+                            <a
+                              href={project.github}
+                              target="_blank"
+                              rel="noreferrer"
+                              className={`inline-flex items-center justify-center px-3 py-2 text-sm font-semibold rounded-md border ${
+                                isDark
+                                  ? "border-gray-600 text-gray-100 hover:bg-gray-800"
+                                  : "border-gray-300 text-gray-800 hover:bg-gray-50"
+                              } transition-colors duration-200`}
+                              aria-label={`View ${project.Projectname} source code on GitHub`}
+                            >
+                              Code
+                            </a>
+                          )}
+                          {!hasDemo && !hasCode && (
+                            <span
+                              className={`inline-flex items-center justify-center rounded-md px-3 py-2 text-sm font-semibold ${
+                                isDark
+                                  ? "bg-slate-800 text-slate-300"
+                                  : "bg-slate-100 text-slate-600"
+                              }`}
+                            >
+                              Academic Hardware Project
+                            </span>
+                          )}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </li>
-              ))}
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>

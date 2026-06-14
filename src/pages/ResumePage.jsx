@@ -174,13 +174,18 @@ function ResumePage() {
             <p>
               <span className="font-semibold">DevOps & Orchestration:</span>{" "}
               Docker, Docker Compose, Kubernetes, AWS EKS, AKS, ArgoCD,
-              Ansible, Infisical
+              Helm, Terraform, Ansible, Linux, Infisical
+            </p>
+            <p>
+              <span className="font-semibold">DevSecOps & Security:</span>{" "}
+              Trivy, SonarQube, DevSecOps practices, vulnerability scanning,
+              secrets management, least-privilege access
             </p>
             <p>
               <span className="font-semibold">Cloud & Event-Driven:</span> GCP
               Pub/Sub, Cloud Job, GCS, AWS Lambda, AWS EventBridge, SageMaker,
               Azure Storage Account, Azure Event Grid, Azure Functions, Azure
-              Container Apps/Jobs
+              Container Apps/Jobs, Kafka
             </p>
             <p>
               <span className="font-semibold">Observability:</span> Prometheus,
@@ -188,11 +193,11 @@ function ResumePage() {
             </p>
             <p>
               <span className="font-semibold">CI/CD & Version Control:</span>{" "}
-              GitLab CI/CD, Gitea Actions, SonarQube, GitLab, Gitea
+              GitLab CI/CD, GitHub Actions, Gitea Actions, ArgoCD, GitLab, Gitea
             </p>
             <p>
               <span className="font-semibold">Databases:</span> MySQL,
-              PostgreSQL, MongoDB, Firebase
+              PostgreSQL, MongoDB, Firebase, Redis, Snowflake, ClickHouse
             </p>
             <p>
               <span className="font-semibold">Tools & Design:</span> VS Code,
@@ -251,9 +256,9 @@ function ResumePage() {
                 advanced haptic simulation platform.
               </p>
               <p className="mt-1">
-                Integrated haptic feedback and stepper motor control using
-                Raspberry Pi and Arduino Uno; implemented collision detection
-                and hardware synchronization for realistic simulation.
+                Integrated haptic motor feedback and stepper motor control
+                using Raspberry Pi and Arduino Uno; implemented collision
+                detection and hardware synchronization for realistic simulation.
               </p>
               <p className="mt-1 text-xs">
                 <span className="font-semibold">Focus:</span> Real‑time control

@@ -73,7 +73,7 @@ function Work() {
                     aria-hidden="true"
                     focusable="false"
                     data-prefix="fas"
-                    className="text-black w-3 h-3"
+                    className="text-white w-3 h-3"
                     role="img"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 448 512"
@@ -84,7 +84,7 @@ function Work() {
                     ></path>
                   </svg>
                 </div>
-                <div className={`block flex-1 min-w-0 p-5 sm:p-6 rounded-lg shadow-lg ml-4 sm:ml-6 mb-8 transition-colors duration-300 ${isDark ? 'bg-gray-900' : 'bg-white'}`}>
+                <div className={`block flex-1 min-w-0 p-5 sm:p-6 rounded-lg shadow-lg ml-4 sm:ml-6 mb-8 transition-colors duration-300 ${isDark ? 'bg-gray-800 border border-gray-700/60' : 'bg-white'}`}>
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-4">
                     <span className="font-bold text-indigo-600 text-xl">
                       MCA
@@ -111,7 +111,7 @@ function Work() {
                     aria-hidden="true"
                     focusable="false"
                     data-prefix="fas"
-                    className="text-black w-3 h-3"
+                    className="text-white w-3 h-3"
                     role="img"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 448 512"
@@ -122,7 +122,7 @@ function Work() {
                     ></path>
                   </svg>
                 </div>
-                <div className={`block flex-1 min-w-0 p-5 sm:p-6 rounded-lg shadow-lg ml-4 sm:ml-6 mb-8 transition-colors duration-300 ${isDark ? 'bg-gray-900' : 'bg-white'}`}>
+                <div className={`block flex-1 min-w-0 p-5 sm:p-6 rounded-lg shadow-lg ml-4 sm:ml-6 mb-8 transition-colors duration-300 ${isDark ? 'bg-gray-800 border border-gray-700/60' : 'bg-white'}`}>
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-4">
                     <span className="font-bold text-indigo-600 text-xl">
                       BCA

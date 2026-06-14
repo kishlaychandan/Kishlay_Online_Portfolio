@@ -4,7 +4,6 @@ import {
   BiLogoTailwindCss,
   BiLogoReact,
   BiLogoNodejs,
-  BiLogoMongodb,
   BiLogoPhp,
 } from "react-icons/bi";
 import { DiMysql, DiJavascript } from "react-icons/di";
@@ -20,9 +19,149 @@ import {
   SiPrometheus,
   SiGrafana,
   SiGithubactions,
+  SiGitlab,
+  SiSonarqube,
+  SiArgo,
+  SiHelm,
+  SiLinux,
+  SiPostgresql,
+  SiMongodb,
+  SiRedis,
+  SiTraefikproxy,
+  SiApachekafka,
+  SiSnowflake,
+  SiClickhouse,
 } from "react-icons/si";
 import { FaDocker } from "react-icons/fa";
+import {
+  BsCodeSlash,
+  BsCpuFill,
+  BsGearWideConnected,
+  BsShieldFillCheck,
+  BsShieldLockFill,
+} from "react-icons/bs";
 import { useTheme } from "../context/ThemeContext";
+
+const skillGroups = [
+  {
+    title: "Platform & DevOps",
+    summary: "Kubernetes-first delivery, automation, and release operations.",
+    Icon: BsGearWideConnected,
+    kind: "devops",
+    skills: [
+      { label: "DevOps", Icon: BsGearWideConnected },
+      { label: "Docker", Icon: FaDocker },
+      { label: "Kubernetes", Icon: SiKubernetes },
+      { label: "Helm", Icon: SiHelm },
+      { label: "Terraform", Icon: SiTerraform },
+      { label: "Ansible", Icon: SiAnsible },
+      { label: "Linux", Icon: SiLinux },
+    ],
+  },
+  {
+    title: "DevSecOps & CI/CD",
+    summary: "Secure pipelines, quality gates, and GitOps workflows.",
+    Icon: BsShieldFillCheck,
+    kind: "security",
+    skills: [
+      { label: "DevSecOps", Icon: BsShieldFillCheck },
+      { label: "Trivy", Icon: BsShieldLockFill },
+      { label: "SonarQube", Icon: SiSonarqube },
+      { label: "GitLab CI/CD", Icon: SiGitlab },
+      { label: "GitHub Actions", Icon: SiGithubactions },
+      { label: "ArgoCD", Icon: SiArgo },
+    ],
+  },
+  {
+    title: "Cloud & Observability",
+    summary: "Cloud operations with dashboards, metrics, and proactive alerts.",
+    Icon: SiGrafana,
+    kind: "cloud",
+    skills: [
+      { label: "AWS", Icon: SiAmazonaws },
+      { label: "Azure", Icon: SiMicrosoftazure },
+      { label: "GCP", Icon: SiGooglecloud },
+      { label: "Prometheus", Icon: SiPrometheus },
+      { label: "Grafana", Icon: SiGrafana },
+    ],
+  },
+  {
+    title: "Data & Streaming",
+    summary: "Messaging, storage, and analytics systems for production workloads.",
+    Icon: SiApachekafka,
+    kind: "data",
+    skills: [
+      { label: "Kafka", Icon: SiApachekafka },
+      { label: "Traefik", Icon: SiTraefikproxy },
+      { label: "Redis", Icon: SiRedis },
+      { label: "PostgreSQL", Icon: SiPostgresql },
+      { label: "MySQL", Icon: DiMysql },
+      { label: "MongoDB", Icon: SiMongodb },
+      { label: "Snowflake", Icon: SiSnowflake },
+      { label: "ClickHouse", Icon: SiClickhouse },
+    ],
+  },
+  {
+    title: "Application Engineering",
+    summary: "Full-stack delivery across APIs, UI, and product workflows.",
+    Icon: BsCodeSlash,
+    kind: "app",
+    skills: [
+      { label: "JavaScript", Icon: DiJavascript },
+      { label: "React.js", Icon: BiLogoReact },
+      { label: "HTML, CSS", Icon: BiLogoCss3 },
+      { label: "Tailwind CSS", Icon: BiLogoTailwindCss },
+      { label: "Node.js", Icon: BiLogoNodejs },
+      { label: "Express.js", Icon: SiExpress },
+      { label: "PHP", Icon: BiLogoPhp },
+      { label: "API Design", Icon: BsCodeSlash },
+    ],
+  },
+  {
+    title: "Design & AI",
+    summary: "Useful interfaces, product visuals, and ML experimentation.",
+    Icon: SiTaichigraphics,
+    kind: "design",
+    skills: [
+      { label: "UI/UX Design", Icon: SiTaichigraphics },
+      { label: "Machine Learning", Icon: BsCpuFill },
+    ],
+  },
+];
+
+function SkillPill({ skill }) {
+  const Icon = skill.Icon;
+
+  return (
+    <span className="skill-chip">
+      <Icon aria-hidden="true" />
+      {skill.label}
+    </span>
+  );
+}
+
+function SkillGroup({ group }) {
+  const Icon = group.Icon;
+
+  return (
+    <article className={`skill-group skill-group-${group.kind}`}>
+      <div className="skill-group__top">
+        <span className="skill-group__icon">
+          <Icon aria-hidden="true" />
+        </span>
+        <div>
+          <h3>{group.title}</h3>
+          <p>{group.summary}</p>
+        </div>
+      </div>
+      <div className="skill-chip-list">
+        {group.skills.map((skill) => (
+          <SkillPill key={skill.label} skill={skill} />
+        ))}
+      </div>
+    </article>
+  );
+}
 
 export default function Skills() {
   const { isDark } = useTheme();
@@ -31,11 +170,13 @@ export default function Skills() {
     <section
       id="Skills"
       className={`skills-section ${
-        isDark ? "bg-gray-900" : "skills-light bg-gradient-to-b from-slate-50 via-indigo-50/60 to-white"
-      } body-font relative transition-colors duration-300 py-20`}
+        isDark
+          ? "skills-dark bg-gray-900"
+          : "skills-light bg-gradient-to-b from-white via-slate-50 to-sky-50"
+      } body-font relative transition-colors duration-300 py-16 sm:py-20`}
     >
-      <div className="container px-5 py-10 mx-auto">
-        <div className="flex flex-col text-center w-full mb-12 animate-fade-in">
+      <div className="container px-5 py-8 mx-auto sm:py-10">
+        <div className="flex flex-col text-center w-full mb-10 sm:mb-12 animate-fade-in">
           <h2
             className={`text-3xl sm:text-4xl font-bold mb-2 transition-colors duration-300 ${
               isDark ? "text-white" : "text-gray-900"
@@ -44,388 +185,27 @@ export default function Skills() {
             My Skills
           </h2>
           <p
-            className={`text-sm sm:text-base ${
+            className={`mx-auto max-w-2xl text-sm sm:text-base ${
               isDark ? "text-gray-400" : "text-gray-600"
             }`}
           >
-            Tech stack I use across frontend, backend, and DevOps.
+            A practical stack for shipping reliable apps, secure pipelines,
+            cloud platforms, and observable production systems.
           </p>
         </div>
 
-        <div className="container">
-          <div className="container__progressbars">
-            {/* DevOps & Cloud Skills */}
-            <div className="progressbar">
-              <svg className="progressbar__svg">
-                <circle
-                  cx="80"
-                  cy="80"
-                  r="70"
-                  className="progressbar__svg-circle circle-devops shadow-express"
-                ></circle>
-              </svg>
-              <span className="progressbar__text shadow-express">
-                <span className="grid justify-items-center p-1">
-                  <FaDocker />
-                </span>
-                Docker
-              </span>
-            </div>
+        <div className="skills-grid">
+          {skillGroups.map((group) => (
+            <SkillGroup key={group.title} group={group} />
+          ))}
+        </div>
 
-            <div className="progressbar">
-              <svg className="progressbar__svg">
-                <circle
-                  cx="80"
-                  cy="80"
-                  r="70"
-                  className="progressbar__svg-circle circle-devops shadow-express"
-                ></circle>
-              </svg>
-              <span className="progressbar__text shadow-express">
-                <span className="grid justify-items-center p-1">
-                  <SiKubernetes />
-                </span>
-                Kubernetes
-              </span>
-            </div>
-
-            <div className="progressbar">
-              <svg className="progressbar__svg">
-                <circle
-                  cx="80"
-                  cy="80"
-                  r="70"
-                  className="progressbar__svg-circle circle-devops shadow-express"
-                ></circle>
-              </svg>
-              <span className="progressbar__text shadow-express">
-                <span className="grid justify-items-center p-1">
-                  <SiTerraform />
-                </span>
-                Terraform
-              </span>
-            </div>
-
-            <div className="progressbar">
-              <svg className="progressbar__svg">
-                <circle
-                  cx="80"
-                  cy="80"
-                  r="70"
-                  className="progressbar__svg-circle circle-devops shadow-express"
-                ></circle>
-              </svg>
-              <span className="progressbar__text shadow-express">
-                <span className="grid justify-items-center p-1">
-                  <SiAnsible />
-                </span>
-                Ansible
-              </span>
-            </div>
-
-            <div className="progressbar">
-              <svg className="progressbar__svg">
-                <circle
-                  cx="80"
-                  cy="80"
-                  r="70"
-                  className="progressbar__svg-circle circle-devops shadow-express"
-                ></circle>
-              </svg>
-              <span className="progressbar__text shadow-express">
-                <span className="grid justify-items-center p-1">
-                  <SiAmazonaws />
-                </span>
-                AWS
-              </span>
-            </div>
-
-            <div className="progressbar">
-              <svg className="progressbar__svg">
-                <circle
-                  cx="80"
-                  cy="80"
-                  r="70"
-                  className="progressbar__svg-circle circle-devops shadow-express"
-                ></circle>
-              </svg>
-              <span className="progressbar__text shadow-express">
-                <span className="grid justify-items-center p-1">
-                  <SiMicrosoftazure />
-                </span>
-                AZURE
-              </span>
-            </div>
-            <div className="progressbar">
-              <svg className="progressbar__svg">
-                <circle
-                  cx="80"
-                  cy="80"
-                  r="70"
-                  className="progressbar__svg-circle circle-express shadow-express"
-                ></circle>
-              </svg>
-              <span className="progressbar__text shadow-express">
-                <span className="grid justify-items-center p-1">
-                  <SiGooglecloud />
-                </span>
-                GCP
-              </span>
-            </div>
-
-            <div className="progressbar">
-              <svg className="progressbar__svg">
-                <circle
-                  cx="80"
-                  cy="80"
-                  r="70"
-                  className="progressbar__svg-circle circle-express shadow-express"
-                ></circle>
-              </svg>
-              <span className="progressbar__text shadow-express">
-                <span className="grid justify-items-center p-1">
-                  <SiPrometheus />
-                </span>
-                Prometheus
-              </span>
-            </div>
-
-
-            <div className="progressbar">
-              <svg className="progressbar__svg">
-                <circle
-                  cx="80"
-                  cy="80"
-                  r="70"
-                  className="progressbar__svg-circle circle-devops shadow-express"
-                ></circle>
-              </svg>
-              <span className="progressbar__text shadow-express">
-                <span className="grid justify-items-center p-1">
-                  <SiGrafana />
-                </span>
-                GRAFANA
-              </span>
-            </div>
-
-            <div className="progressbar">
-              <svg className="progressbar__svg">
-                <circle
-                  cx="80"
-                  cy="80"
-                  r="70"
-                  className="progressbar__svg-circle circle-devops shadow-express"
-                ></circle>
-              </svg>
-              <span className="progressbar__text shadow-express">
-                <span className="grid justify-items-center p-1">
-                  <SiGithubactions />
-                </span>
-                CI/CD (GitHub Actions)
-              </span>
-            </div>
-          <div className="progressbar">
-              <svg className="progressbar__svg">
-                <circle
-                  cx="80"
-                  cy="80"
-                  r="70"
-                  className="progressbar__svg-circle circle-tailwindcss shadow-tailwindcss"
-                ></circle>
-              </svg>
-              <span className="progressbar__text shadow-tailwindcss">
-                <span className="grid justify-items-center p-1">
-                  <BiLogoCss3 />
-                </span>
-                HTML, CSS
-              </span>
-            </div>
-
-            <div className="progressbar">
-              <svg className="progressbar__svg">
-                <circle
-                  cx="80"
-                  cy="80"
-                  r="70"
-                  className="progressbar__svg-circle circle-tailwindcss shadow-tailwindcss"
-                ></circle>
-              </svg>
-              <span className="progressbar__text shadow-tailwindcss">
-                <span className="grid justify-items-center p-1">
-                  <DiJavascript />
-                </span>
-                JavaScript
-              </span>
-            </div>
-
-            <div className="progressbar">
-              <svg className="progressbar__svg">
-                <circle
-                  cx="80"
-                  cy="80"
-                  r="70"
-                  className="progressbar__svg-circle circle-react shadow-react"
-                ></circle>
-              </svg>
-              <span className="progressbar__text shadow-react">
-                <span className="grid justify-items-center p-1">
-                  <BiLogoReact />
-                </span>
-                React.js
-              </span>
-            </div>
-
-            <div className="progressbar">
-              <svg className="progressbar__svg">
-                <circle
-                  cx="80"
-                  cy="80"
-                  r="70"
-                  className="progressbar__svg-circle circle-node shadow-node"
-                ></circle>
-              </svg>
-              <span className="progressbar__text shadow-node">
-                <span className="grid justify-items-center p-1">
-                  <BiLogoNodejs />
-                </span>
-                Node.js
-              </span>
-            </div>
-
-            <div className="progressbar">
-              <svg className="progressbar__svg">
-                <circle
-                  cx="80"
-                  cy="80"
-                  r="70"
-                  className="progressbar__svg-circle circle-express shadow-express"
-                ></circle>
-              </svg>
-              <span className="progressbar__text shadow-express">
-                <span className="grid justify-items-center p-1">
-                  <SiExpress />
-                </span>
-                Express.js
-              </span>
-            </div>
-
-            <div className="progressbar">
-              <svg className="progressbar__svg">
-                <circle
-                  cx="80"
-                  cy="80"
-                  r="70"
-                  className="progressbar__svg-circle circle-express shadow-express"
-                ></circle>
-              </svg>
-              <span className="progressbar__text shadow-express">
-                <span className="grid justify-items-center p-1">
-                  <BiLogoMongodb />
-                </span>
-                MongoDB
-              </span>
-            </div>
-
-            <div className="progressbar">
-              <svg className="progressbar__svg">
-                <circle
-                  cx="80"
-                  cy="80"
-                  r="70"
-                  className="progressbar__svg-circle circle-tailwindcss shadow-tailwindcss"
-                ></circle>
-              </svg>
-              <span className="progressbar__text shadow-tailwindcss">
-                <span className="grid justify-items-center p-1">
-                  <BiLogoTailwindCss />
-                </span>
-                Tailwind CSS
-              </span>
-            </div>
-
-            <div className="progressbar">
-              <svg className="progressbar__svg">
-                <circle
-                  cx="80"
-                  cy="80"
-                  r="70"
-                  className="progressbar__svg-circle  circle-graphics shadow-graphics"
-                ></circle>
-              </svg>
-              <span className="progressbar__text circle-graphics shadow-graphics text-center">
-                <span className="grid justify-items-center p-1">
-                  <SiTaichigraphics />
-                </span>
-                UI/UX Design
-              </span>
-            </div>
-
-            <div className="progressbar">
-              <svg className="progressbar__svg">
-                <circle
-                  cx="80"
-                  cy="80"
-                  r="70"
-                  className="progressbar__svg-circle circle-express shadow-express"
-                ></circle>
-              </svg>
-              <span className="progressbar__text shadow-express">
-                <span className="grid justify-items-center p-1">
-                  <DiMysql />
-                </span>
-                MySQL
-              </span>
-            </div>
-            <div className="progressbar">
-              <svg className="progressbar__svg">
-                <circle
-                  cx="80"
-                  cy="80"
-                  r="70"
-                  className="progressbar__svg-circle circle-express shadow-express"
-                ></circle>
-              </svg>
-              <span className="progressbar__text shadow-express">
-                <span className="grid justify-items-center p-1">
-                  <DiMysql />
-                </span>
-                postgresSQL
-              </span>
-            </div>
-            <div className="progressbar">
-              <svg className="progressbar__svg">
-                <circle
-                  cx="80"
-                  cy="80"
-                  r="70"
-                  className="progressbar__svg-circle circle-express shadow-express"
-                ></circle>
-              </svg>
-              <span className="progressbar__text shadow-express">
-                <span className="grid justify-items-center p-1">
-                  <BiLogoPhp />
-                </span>
-                PHP
-              </span>
-            </div>
-            
-            <div className="progressbar">
-              <svg className="progressbar__svg">
-                <circle
-                  cx="80"
-                  cy="80"
-                  r="70"
-                  className="progressbar__svg-circle circle-express shadow-express"
-                ></circle>
-              </svg>
-              <span className="progressbar__text shadow-express">
-                <span className="grid justify-items-center p-1"></span>
-                Machine Learning
-              </span>
-            </div>
-            {/* DevOps & Cloud Skills */}
-
-          </div>
+        <div className="skills-strip" aria-label="Core focus areas">
+          {["Kubernetes", "DevSecOps", "Observability", "Automation", "Full Stack"].map(
+            (item) => (
+              <span key={item}>{item}</span>
+            )
+          )}
         </div>
       </div>
     </section>

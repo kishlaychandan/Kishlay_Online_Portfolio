@@ -18,9 +18,9 @@ function Home() {
       }`}
     >
       {/* Content */}
-      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 w-full max-w-4xl px-5 text-center sm:px-6 lg:px-8">
         <div
-          className={`space-y-6 ${
+          className={`mx-auto space-y-5 sm:space-y-6 ${
             isVisible ? 'animate-fade-in' : 'opacity-0'
           }`}
         >
@@ -38,20 +38,18 @@ function Home() {
           {/* Name */}
           <div className="animate-slide-up" style={{ animationDelay: '0.1s' }}>
             <h1
-              className={`text-4xl sm:text-5xl md:text-6xl font-extrabold mb-3 ${
+              className={`mx-auto max-w-full text-3xl font-extrabold leading-tight sm:text-5xl md:text-6xl ${
                 isDark ? "text-white" : "text-gray-900"
               }`}
             >
-              <span className="inline-block">
-                <span>{`Kishlay Chandan`}</span>
-              </span>
+              Kishlay Chandan
             </h1>
           </div>
 
           {/* Title */}
           <div className="animate-slide-up" style={{ animationDelay: '0.2s' }}>
             <p
-              className={`text-lg sm:text-xl md:text-2xl font-semibold mb-6 ${
+              className={`mx-auto max-w-xl text-base font-semibold leading-relaxed sm:text-xl md:text-2xl ${
                 isDark ? "text-gray-300" : "text-gray-700"
               }`}
             >
@@ -62,7 +60,7 @@ function Home() {
           {/* Description */}
           <div className="animate-slide-up" style={{ animationDelay: '0.3s' }}>
             <p
-              className={`text-sm sm:text-base md:text-lg max-w-2xl mx-auto mb-10 ${
+              className={`mx-auto max-w-2xl text-sm leading-7 sm:text-base md:text-lg ${
                 isDark ? "text-gray-400" : "text-gray-600"
               }`}
             >
@@ -73,7 +71,7 @@ function Home() {
           </div>
 
           {/* CTA Button */}
-          <div className="animate-slide-up flex flex-col items-center gap-12" style={{ animationDelay: '0.4s' }}>
+          <div className="animate-slide-up flex flex-col items-center gap-9 pt-3 sm:gap-12 sm:pt-4" style={{ animationDelay: '0.4s' }}>
             <Link
               to="About Me"
               smooth={true}
