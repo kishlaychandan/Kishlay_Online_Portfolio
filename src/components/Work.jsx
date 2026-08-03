@@ -6,14 +6,10 @@ import {
   BsXLg,
 } from "react-icons/bs";
 import ResumePdf from "../images/kishlaychandan_devops.pdf";
-import ResumePreviewPage1 from "../images/resume-preview/kishlaychandan-devops-1.png";
-import ResumePreviewPage2 from "../images/resume-preview/kishlaychandan-devops-2.png";
 import DigisnareLogo from "../images/company-logos/digisnare-logo.png";
 import GeeksterLogo from "../images/company-logos/geekster-logo.svg";
 import LivingThingsLogo from "../images/company-logos/living-things-logo.jpg";
 import { useTheme } from "../context/ThemeContext";
-
-const resumePreviewPages = [ResumePreviewPage1, ResumePreviewPage2];
 
 function Work() {
   const { isDark } = useTheme();
@@ -281,19 +277,30 @@ function Work() {
             </div>
 
             <div
-              className={`${isDark ? 'bg-slate-950' : 'bg-slate-100'} flex-1 overflow-y-auto p-2 sm:p-4`}
+              className={`${isDark ? 'bg-slate-950' : 'bg-slate-100'} flex-1 overflow-hidden p-2 sm:p-4`}
             >
-              <div className="mx-auto flex w-full max-w-[860px] flex-col gap-4">
-                {resumePreviewPages.map((page, pageIndex) => (
-                  <img
-                    key={page}
-                    src={page}
-                    alt={`Kishlay Chandan resume page ${pageIndex + 1}`}
-                    className="h-auto w-full rounded-lg bg-white shadow-lg ring-1 ring-black/10"
-                    loading={pageIndex === 0 ? "eager" : "lazy"}
-                  />
-                ))}
-              </div>
+              {/* Render the real PDF so the viewer always matches the downloaded file. */}
+              <object
+                data={`${ResumePdf}#view=FitH`}
+                type="application/pdf"
+                className="h-full w-full rounded-lg"
+                aria-label="Kishlay Chandan resume"
+              >
+                {/* Shown only when the browser cannot embed PDFs inline (common on mobile). */}
+                <div className="flex h-full w-full flex-col items-center justify-center gap-4 px-6 text-center">
+                  <p className={isDark ? "text-slate-300" : "text-slate-600"}>
+                    Your browser can&apos;t display PDFs inline.
+                  </p>
+                  <a
+                    href={ResumePdf}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center justify-center rounded-lg bg-indigo-600 px-5 py-3 font-medium text-white transition-colors duration-300 hover:bg-indigo-500"
+                  >
+                    Open PDF in new tab
+                  </a>
+                </div>
+              </object>
             </div>
           </div>
         </div>

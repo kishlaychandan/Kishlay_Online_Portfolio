@@ -31,7 +31,15 @@ function ResumePage() {
         "Configured Goose/Codex on employees' local systems so teams could use governed AI assistance in everyday tasks and active project work.",
         "Set up PostgreSQL MCP servers for respective teams to support controlled AI-assisted database workflows.",
         "Implemented PostgreSQL least-privilege access by creating read-only team users and scoped service users instead of superuser credentials.",
-        "Configured PostgreSQL backups and point-in-time recovery (PITR) using pgBackRest.",
+        "Configured PostgreSQL backups and point-in-time recovery (PITR) using pgBackRest with RPO under 1 minute, integrating Databasus for centralized backup management and unified restore workflows.",
+        "Deployed CloudNativePG for another team with pooler setup and initial-restore bootstrap, using Barman Cloud for backups/PITR, pgAudit for auditing, and Grafana for cluster and PVC monitoring.",
+        "Delivered air-gapped on-premise production stacks for 2 enterprise clients (a global IT firm and a major Indian retailer) using Podman, covering frontend, backend, databases, object storage, reverse proxy, log streaming, and monitoring — with 0 critical CVEs approved for production plus handover runbooks and architecture diagrams.",
+        "Migrated IoT infrastructure from AWS EKS to AKS, moving MQTT brokers and device connectivity for 34 device protocols with zero device downtime.",
+        "Self-hosted Infisical on Kubernetes and integrated it with cluster deployments, eliminating 100% of hardcoded credentials and centralizing rotation for all services.",
+        "Set up Karpenter to autoscale nodes for cron and batch workloads, and OpenCost for per-namespace and per-team Kubernetes cost attribution.",
+        "Built Looker Studio FinOps dashboards powered by Google Apps Script plus a dedicated Azure cost dashboard broken down by service, resource type, and category — idle VM suspension and right-sizing cut cloud costs by ~20%.",
+        "Designed MQTT to Kafka disaster recovery with raw-packet replay and persistent MQTT retention for zero-loss recovery, validated through DR dry-runs and failure simulation.",
+        "Independently owned 3 high-priority full-stack projects end-to-end under tight deadlines — planning, design, proposal, development, deployment, and load testing with Locust and a self-built load-testing tool — documented in stakeholder delivery reports.",
       ],
     },
     {
@@ -179,7 +187,7 @@ function ResumePage() {
             <p>
               <span className="font-semibold">DevOps & Orchestration:</span>{" "}
               Docker, Docker Compose, Podman, Kubernetes, AWS EKS, AKS, ArgoCD,
-              Helm, Linux, Infisical
+              Helm, Karpenter, Linux, Infisical
             </p>
             <p>
               <span className="font-semibold">Infrastructure as Code:</span>{" "}
@@ -203,16 +211,22 @@ function ResumePage() {
               Container Apps/Jobs, Kafka
             </p>
             <p>
-              <span className="font-semibold">Observability:</span> Prometheus,
-              Grafana, Loki, Uptime Kuma, Blackbox Exporter
+              <span className="font-semibold">Observability & FinOps:</span>{" "}
+              Prometheus, Grafana, Loki, Alertmanager, Uptime Kuma, Blackbox
+              Exporter, Beszel, Dozzle, OpenCost, Looker Studio
+            </p>
+            <p>
+              <span className="font-semibold">Testing & Load Testing:</span>{" "}
+              Locust, custom load-testing tooling, unit testing
             </p>
             <p>
               <span className="font-semibold">CI/CD & Version Control:</span>{" "}
               GitLab CI/CD, GitHub Actions, Gitea Actions, ArgoCD, GitLab, Gitea
             </p>
             <p>
-              <span className="font-semibold">Databases:</span> MySQL,
-              PostgreSQL, MongoDB, Firebase, Redis, Snowflake, ClickHouse
+              <span className="font-semibold">Databases & Storage:</span> MySQL,
+              PostgreSQL, CloudNativePG, MongoDB, Firebase, Redis, MinIO,
+              Snowflake, ClickHouse; pgBackRest, Barman Cloud, pgAudit
             </p>
             <p>
               <span className="font-semibold">Tools & Design:</span> VS Code,
