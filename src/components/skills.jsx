@@ -31,12 +31,15 @@ import {
   SiApachekafka,
   SiSnowflake,
   SiClickhouse,
+  SiPodman,
+  SiNginx,
 } from "react-icons/si";
 import { FaDocker } from "react-icons/fa";
 import {
   BsCodeSlash,
   BsCpuFill,
   BsGearWideConnected,
+  BsLightningChargeFill,
   BsShieldFillCheck,
   BsShieldLockFill,
 } from "react-icons/bs";
@@ -54,8 +57,23 @@ const skillGroups = [
       { label: "Kubernetes", Icon: SiKubernetes },
       { label: "Helm", Icon: SiHelm },
       { label: "Terraform", Icon: SiTerraform },
+      { label: "Atlantis", Icon: SiTerraform },
       { label: "Ansible", Icon: SiAnsible },
+      { label: "Podman", Icon: SiPodman },
       { label: "Linux", Icon: SiLinux },
+    ],
+  },
+  {
+    title: "Networking & Edge",
+    summary: "Ingress, CDN delivery, and traffic protection at the edge.",
+    Icon: SiTraefikproxy,
+    kind: "cloud",
+    skills: [
+      { label: "Traefik", Icon: SiTraefikproxy },
+      { label: "Nginx", Icon: SiNginx },
+      { label: "Bunny.net CDN", Icon: BsLightningChargeFill },
+      { label: "CrowdSec", Icon: BsShieldLockFill },
+      { label: "Rate Limiting", Icon: BsGearWideConnected },
     ],
   },
   {
@@ -92,7 +110,6 @@ const skillGroups = [
     kind: "data",
     skills: [
       { label: "Kafka", Icon: SiApachekafka },
-      { label: "Traefik", Icon: SiTraefikproxy },
       { label: "Redis", Icon: SiRedis },
       { label: "PostgreSQL", Icon: SiPostgresql },
       { label: "MySQL", Icon: DiMysql },

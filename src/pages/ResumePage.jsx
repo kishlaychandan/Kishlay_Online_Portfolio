@@ -7,11 +7,16 @@ function ResumePage() {
     {
       company: "iCapo Tech Pvt Ltd (Living Things)",
       title: "DevOps Engineer",
-      location: "On-site, IIT Bombay, Mumbai",
+      location: "AI + IoT Energy Intelligence Platform, SINE IIT Bombay · On-site, Mumbai",
       period: "Feb 2025 – Present",
       bullets: [
+        "Built and maintained production Kubernetes platforms (AKS, EKS) running 150+ Deployments, 20+ StatefulSets, 29 CronJobs, and 240+ Services across 30 namespaces and Dev/UAT/Prod environments.",
         "Containerized microservices using Docker, Docker Compose, and Kubernetes with multistage and distroless images plus Trivy security scans.",
         "Built CI/CD pipelines with GitLab CI/CD and Gitea Actions, integrating SonarQube and Infisical for secure secrets and quality gates.",
+        "Provisioned Bunny.net edge delivery with Terraform — storage pull zones and CDN edge rules for frontend apps defined fully as code.",
+        "Set up Atlantis for PR-based collaborative Terraform workflows, giving the team plan/apply review directly in pull requests.",
+        "Migrated ingress from Nginx to Traefik with rate-limiting and CrowdSec middlewares, strengthening edge security against bot and abusive traffic.",
+        "Implemented GitOps via ArgoCD with automated rollbacks, cutting failed-deployment recovery time by ~70% versus manual intervention.",
         "Set up batch processing workflows for ML model deployment and undeployment and bill processing using GCP Pub/Sub, Cloud Jobs and Cloud Scheduler, ensuring reliable and scalable event-driven execution.",
         "Enabled Dev/UAT/Prod deployments, reducing release times by ~20–30%.",
         "Set up observability stack with custom Grafana dashboards, Prometheus, Loki, Alertmanager, Uptime Kuma, Blackbox Exporter, and proactive alert templates.",
@@ -173,13 +178,23 @@ function ResumePage() {
             </p>
             <p>
               <span className="font-semibold">DevOps & Orchestration:</span>{" "}
-              Docker, Docker Compose, Kubernetes, AWS EKS, AKS, ArgoCD,
-              Helm, Terraform, Ansible, Linux, Infisical
+              Docker, Docker Compose, Podman, Kubernetes, AWS EKS, AKS, ArgoCD,
+              Helm, Linux, Infisical
+            </p>
+            <p>
+              <span className="font-semibold">Infrastructure as Code:</span>{" "}
+              Terraform, Atlantis (PR-based Terraform automation), Ansible,
+              Helm Charts, Bash scripting, YAML
+            </p>
+            <p>
+              <span className="font-semibold">Networking & Edge:</span>{" "}
+              Traefik, Nginx, Nginx Proxy Manager, Bunny.net (CDN, pull zones,
+              edge rules), rate limiting, CrowdSec
             </p>
             <p>
               <span className="font-semibold">DevSecOps & Security:</span>{" "}
-              Trivy, SonarQube, DevSecOps practices, vulnerability scanning,
-              secrets management, least-privilege access
+              Trivy, SonarQube SAST, VAPT, CrowdSec, distroless containers,
+              vulnerability scanning, secrets management, least-privilege access
             </p>
             <p>
               <span className="font-semibold">Cloud & Event-Driven:</span> GCP
@@ -243,6 +258,28 @@ function ResumePage() {
               <p className="mt-1 text-xs">
                 <span className="font-semibold">Tech Stack:</span> React,
                 Node.js, Express.js, MongoDB, Tailwind CSS, Razorpay, Git
+              </p>
+            </div>
+
+            <div>
+              <p className="font-semibold">
+                Edge Delivery & CDN as Code — Bunny.net, Terraform, Atlantis
+              </p>
+              <p className="mt-1">
+                Deployed frontend applications on Bunny.net with storage-account
+                pull zones and CDN edge rules provisioned entirely through
+                Terraform, replacing manual console changes with reviewable,
+                version-controlled infrastructure.
+              </p>
+              <p className="mt-1">
+                Configured Atlantis so Terraform plan and apply run against pull
+                requests, giving the team collaborative, audited infrastructure
+                changes with no local state drift or shared credentials.
+              </p>
+              <p className="mt-1 text-xs">
+                <span className="font-semibold">Tech Stack:</span> Terraform,
+                Atlantis, Bunny.net (Pull Zones, Edge Rules), Azure Storage,
+                Gitea/GitHub Actions, Git
               </p>
             </div>
 
@@ -347,8 +384,19 @@ function ResumePage() {
               isDark ? "text-gray-300" : "text-gray-700"
             }`}
           >
-            <li>UGC NET qualifier (June 2024)</li>
+            <li>
+              Qualified UGC NET (June 2024) — Lectureship & JRF eligibility in
+              Computer Science & Applications
+            </li>
+            <li>
+              1st place (solo and team) — Geekathon Hackathon, Geekster (50+
+              participants)
+            </li>
+            <li>5-Star Gold Badge in Java — HackerRank</li>
             <li>Completed Full Stack Developer Apprenticeship at Geekster</li>
+            <li>
+              Preparing for AWS CLF-C02, CKAD, and HashiCorp Terraform Associate
+            </li>
           </ul>
         </section>
       </main>
