@@ -352,7 +352,8 @@ function ProfessionalWorkPage() {
       icon: BsBroadcastPin,
       color: 'from-yellow-500 to-orange-500',
       details: [
-        'Migrated ClickHouse off a paid Bitnami image to a free, self-hosted Helm-based deployment, and set up 12 Kafka Connect sink connectors (one per topic) streaming live device data into ClickHouse.',
+        'Set up a production-grade, self-hosted ClickHouse database on Kubernetes (migrated off a paid Bitnami image to a free Helm-based deployment), including cluster sizing, storage provisioning, and database/table/DLQ schema design for high-volume IoT device event data.',
+        'Configured 12 Kafka Connect sink connectors (one per topic) to stream live device data from Kafka directly into the new ClickHouse deployment.',
         'Diagnosed and root-caused a ClickHouse-specific batch-rejection behavior (confirmed against official ClickHouse and Snowflake connector source code) where a single bad record could reject an entire batch of otherwise-valid records, and tuned buffer settings to balance data safety against ClickHouse insert-rate limits.',
         'Built full DLQ error observability by integrating a header-to-field Kafka Connect transform, capturing exact error messages, stacktraces, and original topic/partition/offset directly in a queryable ClickHouse DLQ table.',
         "Root-caused and fixed a timestamp precision bug causing records to store as 1970-epoch dates by aligning ClickHouse column precision with Kafka Connect's actual millisecond-based timestamps.",
