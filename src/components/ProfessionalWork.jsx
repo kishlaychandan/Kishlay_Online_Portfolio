@@ -94,17 +94,6 @@ function ProfessionalWork() {
       icon: BsGearFill,
       color: 'from-orange-500 to-red-500',
     },
-    {
-      id: 8,
-      title: 'ClickHouse Analytics Pipeline Setup',
-      company: 'Current Company',
-      period: 'Recent',
-      description: 'Set up ClickHouse as a self-hosted, real-time analytics database, building a live Kafka Connect streaming pipeline from source systems into ClickHouse with dead-letter-queue error handling and schema design for high-volume IoT/device event data. Also worked with Airbyte for batch data replication, and with Debezium and PeerDB for change-data-capture (CDC) based pipelines as part of broader data infrastructure modernization.',
-      technologies: ['ClickHouse', 'Kafka Connect', 'Airbyte', 'Debezium', 'PeerDB', 'Kubernetes'],
-      status: 'in-progress',
-      icon: BsGearFill,
-      color: 'from-yellow-500 to-orange-500',
-    },
   ];
 
   useEffect(() => {
