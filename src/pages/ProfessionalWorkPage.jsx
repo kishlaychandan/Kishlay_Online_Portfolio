@@ -336,7 +336,7 @@ function ProfessionalWorkPage() {
       icon: BsBroadcastPin,
       color: 'from-yellow-500 to-orange-500',
       details: [
-        'Set up a production-grade, self-hosted ClickHouse database on Kubernetes (migrated off a paid Bitnami image to a free Helm-based deployment), including cluster sizing, storage provisioning, and database/table/DLQ schema design for high-volume IoT device event data.',
+        'Set up a production-grade, self-hosted ClickHouse database on Kubernetes, migrating off Bitnami\'s legacy paid-subscription images to the free, open-source HelmForge chart, including cluster sizing, storage provisioning, and database/table/DLQ schema design for high-volume IoT device event data.',
         'Configured 12 Kafka Connect sink connectors (one per topic) to stream live device data from Kafka directly into the new ClickHouse deployment.',
         'Diagnosed and root-caused a ClickHouse-specific batch-rejection behavior (confirmed against official ClickHouse and Snowflake connector source code) where a single bad record could reject an entire batch of otherwise-valid records, and tuned buffer settings to balance data safety against ClickHouse insert-rate limits.',
         'Built full DLQ error observability by integrating a header-to-field Kafka Connect transform, capturing exact error messages, stacktraces, and original topic/partition/offset directly in a queryable ClickHouse DLQ table.',
@@ -549,6 +549,25 @@ function ProfessionalWorkPage() {
         'Ran load tests with Locust to establish throughput and latency baselines before production release.',
         'Built a custom load-testing tool for scenarios the off-the-shelf tooling did not cover.',
         'Documented results in delivery reports so stakeholders could see capacity limits and performance evidence, not just a shipped feature.',
+      ],
+    },
+    {
+      id: 26,
+      title: 'frp Tunnel Setup — LoadBalancer Cost Reduction',
+      company: 'iCapo Tech Pvt Ltd (Living Things)',
+      period: 'In Progress',
+      description:
+        'Replaced multiple paid cloud LoadBalancers (one per app/DB) with a single self-hosted frp tunnel running inside the Kubernetes cluster, cutting LoadBalancer costs while keeping external access to app and database services.',
+      technologies: ['frp', 'Kubernetes', 'ClickHouse', 'PostgreSQL', 'PgBouncer', 'Networking', 'Cost Optimization'],
+      status: 'in-progress',
+      icon: BsHddNetworkFill,
+      color: 'from-emerald-500 to-teal-600',
+      details: [
+        'Deployed frps (frp server) in-cluster with a single LoadBalancer service as the one public entry point, replacing what would otherwise be a separate LoadBalancer per exposed service.',
+        'Deployed frpc (frp client) in-cluster, tunneling traffic internally to each target service via its cluster DNS name — no external VM needed for either component.',
+        'Secured the frpc-to-frps control connection with a shared token stored as a Kubernetes Secret, keeping it out of plaintext configs.',
+        'Exposed the app, ClickHouse, and Postgres (via PgBouncer) through the single frp public IP on dedicated ports, verified working end to end.',
+        'Kept the old per-service LoadBalancers running in parallel during validation, with a clear cutover plan to remove them (and realize the cost savings) once the team confirms the frp endpoints.',
       ],
     },
     {
