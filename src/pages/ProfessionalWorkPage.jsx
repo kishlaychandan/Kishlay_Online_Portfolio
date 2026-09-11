@@ -135,15 +135,18 @@ function ProfessionalWorkPage() {
         'ArgoCD',
         'Docker',
         'SonarQube',
+        'Trivy',
         'AKS',
         'Kubernetes',
-        'Infisical'
+        'Infisical',
+        'Custom Runner Image'
       ],
       status: 'completed',
       icon: SiArgo,
       color: 'from-blue-500 to-cyan-500',
       details: [
         { text: 'Designed and implemented automated CI pipelines using Gitea Actions and GitHub Actions for microservices and firmware repositories.', icon: SiGithubactions },
+        { text: 'Built a custom CI runner image with SonarQube scanner, Trivy, and other pipeline dependencies pre-installed, cutting per-run tool download/setup time out of every pipeline.', icon: SiDocker },
         { text: 'Built container build pipelines that automatically build, tag, and push Docker images to container registries.', icon: SiDocker },
         { text: 'Integrated SonarQube to enforce automated code quality gates and security scanning in CI pipelines.', icon: SiSonarqube },
         { text: 'Implemented GitOps deployment strategy using ArgoCD for Kubernetes workloads.', icon: SiArgo },
@@ -154,7 +157,7 @@ function ProfessionalWorkPage() {
     },
     {
       id: 27,
-      title: 'DevSecOps: Shifting Security Left in CI/CD, SSO & Infisical Secrets Management',
+      title: 'DevSecOps: Shifting Security Left in CI/CD, Infisical Secrets Management & SSO Setup',
       company: 'iCapo Tech Pvt Ltd (Living Things)',
       period: 'Ongoing',
       description:
@@ -243,7 +246,7 @@ function ProfessionalWorkPage() {
     },
     {
       id: 12,
-      title: 'Snowflake Access Control & Role-Based Permission Management',
+      title: 'Snowflake Access Control, Role-Based Permission Management & Resource Consumption Reporting',
       company: 'iCapo Tech Pvt Ltd (Living Things)',
       period: 'Phase 12',
       description:
