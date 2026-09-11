@@ -340,7 +340,7 @@ function ProfessionalWorkPage() {
     },
     {
       id: 14,
-      title: 'CDC: PostgreSQL to Snowflake & ClickHouse (Debezium, Apicurio & Tooling Evaluation)',
+      title: 'CDC: PostgreSQL to Snowflake & ClickHouse (Debezium, Apicurio, PeerDB, Airbyte & Snowflake Connector for PostgreSQL Evaluation)',
       company: 'iCapo Tech Pvt Ltd (Living Things)',
       period: 'Phase 14',
       description:
