@@ -248,7 +248,7 @@ function ProfessionalWorkPage() {
       period: 'Phase 12',
       description:
         'Designed and implemented robust role-based access control (RBAC) in Snowflake to manage user permissions securely and efficiently.',
-      technologies: ['Snowflake', 'RBAC', 'SQL', 'Data Governance', 'Access Control'],
+      technologies: ['Snowflake', 'RBAC', 'SQL', 'Data Governance', 'Access Control', 'Warehouses', 'Consumption Reporting'],
       status: 'completed',
       icon: SiSnowflake,
       color: 'from-cyan-500 to-blue-600',
@@ -258,6 +258,8 @@ function ProfessionalWorkPage() {
         { text: 'Implemented warehouse access control to enable query execution for specific roles.', icon: SiSnowflake },
         { text: 'Managed user-role assignments ensuring least-privilege access principle.', icon: BsPersonFillLock },
         { text: 'Automated permission grants for future tables using Snowflake role inheritance.', icon: BsGearWideConnected },
+        { text: 'Sized and governed warehouses per team/workload, with auto-suspend/auto-resume tuned per usage pattern to avoid idle credit burn.', icon: SiSnowflake },
+        { text: 'Built consumption reports on warehouse credit usage and query load per role/team, using Snowflake\'s account usage views for visibility into who is spending what.', icon: BsCashCoin },
         { text: 'Improved data security, governance, and auditability across the data platform.', icon: BsShieldFillCheck },
       ],
     },
