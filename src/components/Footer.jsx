@@ -71,7 +71,11 @@ function Footer() {
   };
   
   return (
-    <footer className={`${isDark ? 'bg-slate-950 border-t border-slate-900' : 'bg-slate-900'} transition-colors duration-300`}>
+    <footer className={`relative ${isDark ? 'bg-slate-950' : 'bg-slate-900'} transition-colors duration-300`}>
+      {/* Gradient top border - mirrors the nav bar's bottom underline so header
+          and footer read as the same design language instead of unrelated bookends. */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-indigo-500/60 to-transparent" />
+
       <div className="flex justify-center flex-col items-center mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
         <nav 
           className="flex flex-wrap justify-center gap-x-8 gap-y-4"
@@ -95,13 +99,17 @@ function Footer() {
             <a
               key={item.name}
               href={item.href}
-              className="text-gray-400 hover:text-white cursor-pointer transition-colors duration-200"
+              className={`flex h-11 w-11 items-center justify-center rounded-full border transition-all duration-200 hover:scale-105 hover:-translate-y-0.5 ${
+                isDark
+                  ? 'border-slate-800 text-gray-400 hover:border-indigo-500/50 hover:text-white hover:bg-indigo-500/10'
+                  : 'border-slate-700 text-gray-400 hover:border-indigo-400/50 hover:text-white hover:bg-indigo-500/10'
+              }`}
               target="_blank"
               rel="noreferrer"
               aria-label={`Visit ${item.name} profile`}
             >
               <span className="sr-only">{item.name}</span>
-              <item.icon className="h-6 w-6" aria-hidden="true" />
+              <item.icon className="h-5 w-5" aria-hidden="true" />
             </a>
           ))}
         </div>

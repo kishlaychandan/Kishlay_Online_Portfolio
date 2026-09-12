@@ -17,6 +17,17 @@ function Home() {
         isDark ? "bg-gray-900" : "bg-white"
       }`}
     >
+      {/* Ambient gradient glow - dark mode only. Reuses the same indigo/purple
+          language already used in the nav bar and section headings, so the
+          hero doesn't feel visually disconnected from the rest of the site. */}
+      {isDark && (
+        <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[700px] rounded-full bg-indigo-600/20 blur-[120px]" />
+          <div className="absolute bottom-0 right-0 h-[350px] w-[350px] rounded-full bg-purple-600/15 blur-[100px]" />
+          <div className="absolute top-0 left-0 h-[300px] w-[300px] rounded-full bg-pink-600/10 blur-[100px]" />
+        </div>
+      )}
+
       {/* Content */}
       <div className="relative z-10 w-full max-w-4xl px-5 text-center sm:px-6 lg:px-8">
         <div

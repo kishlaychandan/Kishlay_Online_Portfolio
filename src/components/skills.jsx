@@ -188,7 +188,7 @@ export default function Skills() {
       id="Skills"
       className={`skills-section ${
         isDark
-          ? "skills-dark bg-gray-900"
+          ? "skills-dark bg-slate-900"
           : "skills-light bg-gradient-to-b from-white via-slate-50 to-sky-50"
       } body-font relative transition-colors duration-300 py-16 sm:py-20`}
     >
@@ -199,8 +199,9 @@ export default function Skills() {
               isDark ? "text-white" : "text-gray-900"
             }`}
           >
-            My Skills
+            <span className={`bg-gradient-to-r ${isDark ? 'from-purple-400 via-pink-400 to-blue-400' : 'from-purple-600 via-pink-600 to-blue-600'} bg-clip-text text-transparent`}>My</span> Skills
           </h2>
+          <div className="h-1 w-24 mx-auto mb-4 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500"></div>
           <p
             className={`mx-auto max-w-2xl text-sm sm:text-base ${
               isDark ? "text-gray-400" : "text-gray-600"

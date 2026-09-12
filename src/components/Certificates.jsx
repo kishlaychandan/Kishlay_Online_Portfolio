@@ -125,7 +125,18 @@ export default function Certificates() {
         isDark ? "bg-slate-950" : "bg-slate-50"
       }`}
     >
-      <div className="mx-auto flex min-h-[calc(100vh-8rem)] max-w-7xl items-center gap-4">
+      <div className="mx-auto max-w-7xl text-center mb-6">
+        <h2
+          className={`text-3xl sm:text-4xl font-bold mb-2 transition-colors duration-300 ${
+            isDark ? "text-white" : "text-gray-900"
+          }`}
+        >
+          <span className={`bg-gradient-to-r ${isDark ? 'from-purple-400 via-pink-400 to-blue-400' : 'from-purple-600 via-pink-600 to-blue-600'} bg-clip-text text-transparent`}>Certifications</span> & Credentials
+        </h2>
+        <div className="h-1 w-24 mx-auto rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500"></div>
+      </div>
+
+      <div className="mx-auto flex min-h-[calc(100vh-14rem)] max-w-7xl items-center gap-4">
         <button
           type="button"
           onClick={goToPrevious}

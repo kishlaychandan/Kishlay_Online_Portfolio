@@ -7,7 +7,7 @@ export default function Aboutme() {
   return (
     <div
       className={`${
-        isDark ? "bg-gray-900" : "bg-white"
+        isDark ? "bg-slate-900" : "bg-white"
       } transition-colors duration-300 py-12 sm:py-16 lg:py-20`}
       id="About Me"
     >
