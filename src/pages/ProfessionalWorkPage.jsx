@@ -157,7 +157,7 @@ function ProfessionalWorkPage() {
     },
     {
       id: 27,
-      title: 'DevSecOps: Shifting Security Left in CI/CD, Infisical Secrets Management & SSO Setup',
+      title: 'DevSecOps: CI/CD Security Gates, Infisical Secrets Management & SSO Rollout',
       company: 'iCapo Tech Pvt Ltd (Living Things)',
       period: 'Ongoing',
       description:
@@ -181,11 +181,11 @@ function ProfessionalWorkPage() {
     },
     {
       id: 5,
-      title: 'Observability & Proactive Alerting',
+      title: 'Observability & Proactive Alerting (Grafana, Prometheus & Loki)',
       company: 'iCapo Tech Pvt Ltd (Living Things)',
       period: 'Phase 5',
       description:
-        'Set up a full observability stack to monitor microservices, infrastructure, and external dependencies post-migration.',
+        'Set up a full observability stack with custom alert templates to monitor microservices, infrastructure, and external dependencies post-migration.',
       technologies: [
         'Prometheus',
         'Grafana',
