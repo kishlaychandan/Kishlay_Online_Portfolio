@@ -21,15 +21,11 @@ export const useTheme = () => {
 
 export const ThemeProvider = ({ children }) => {
   const transitionTimeoutRef = useRef(null);
-  const [theme, setTheme] = useState(() => {
-    const savedTheme = localStorage.getItem('theme');
-    return savedTheme || 'dark';
-  });
+  const [theme, setTheme] = useState('dark');
 
   useLayoutEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
     document.documentElement.style.colorScheme = theme;
-    localStorage.setItem('theme', theme);
   }, [theme]);
 
   useEffect(() => {
