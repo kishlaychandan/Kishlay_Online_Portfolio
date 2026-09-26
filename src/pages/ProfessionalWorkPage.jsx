@@ -513,7 +513,7 @@ function ProfessionalWorkPage() {
         'SonarQube',
       ],
       status: 'completed',
-      icon: SiPodman,
+      icon: BsShieldLockFill,
       color: 'from-slate-500 to-zinc-600',
       details: [
         { text: 'Packaged and deployed frontend, backend, databases, object storage, reverse proxy, log streaming, and monitoring as a self-contained stack using Podman.', icon: SiPodman },
