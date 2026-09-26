@@ -247,7 +247,7 @@ function ProfessionalWorkPage() {
     },
     {
       id: 12,
-      title: 'Snowflake Access Control, Role-Based Permission Management & Resource Consumption Reporting',
+      title: 'Snowflake Access Control, Role-Based Permission Management, Warehousing & Resource Consumption Reporting',
       company: 'iCapo Tech Pvt Ltd (Living Things)',
       period: 'Phase 12',
       description:
