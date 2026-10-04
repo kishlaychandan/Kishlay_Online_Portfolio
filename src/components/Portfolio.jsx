@@ -10,112 +10,133 @@ import FoodApp from '../images/FoodApp.png'
 import ecommerce from "../images/ecommerce.png";
 import netflix from "../images/netflix.png";
 import orthopedicHapticSimulator from "../images/orthopedic-haptic-simulator.svg";
-import "../style/Portfolio.css";
+import { BsBoxArrowUpRight, BsGithub, BsCpuFill } from "react-icons/bs";
 import { useTheme } from "../context/ThemeContext";
 
+// Ordered so the most substantial work leads — client work and full-featured
+// builds first, smaller practice/clone UIs after. `category` drives the badge
+// so clone/practice projects are framed honestly instead of looking like
+// client deliverables.
 const portfolio = [
   {
     Projectname: "Ecommerce Application",
-    tech: "React, Node.js, Express.js, MongoDB, Tailwind CSS, Razorpay",
+    tech: ["React", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "Razorpay"],
     imageUrl: ecommerce,
-    des: `Scalable ecommerce platform with authentication, wishlists, carts, and Razorpay payment integration; optimized with debouncing and lazy loading to improve conversions and load times.`,
+    des: "Scalable ecommerce platform with authentication, wishlists, carts, and Razorpay payment integration; optimized with debouncing and lazy loading to improve conversions and load times.",
     Demo: "https://ecommerce.kclab.tech/",
     github: "https://github.com/kishlaychandan/Ecommerce",
+    category: "practice",
   },
   {
-    Projectname: "Netflix Clone",
-    tech: "React JS, Node js, MongoDB, Tailwind CSS",
-    imageUrl: netflix,
-    des: "Netflix clone with user authentication",
-    Demo: "https://netflix-clone-gamma-smoky.vercel.app/",
-    github: "https://github.com/kishlaychandan/NetflixClone",
-  },
-  {
-    Projectname: "Food Delivery App",
-    tech: "React JS, Firebase authentication",
-    imageUrl: FoodApp,
-    des: "Web app for online food ordering with AI recipes, payment gateway, and a chatBot.",
-    Demo: "https://food-delivery-app-ebon.vercel.app/",
-    github: "https://github.com/kishlaychandan/FoodDeliveryApp",
-  },
-  {
-    Projectname: "TVS EMERALD, ISLE OF TREES",
-    tech: "HTML,CSS, Wordpress, Hostinger",
+    Projectname: "TVS Emerald, Isle of Trees",
+    tech: ["HTML", "CSS", "WordPress", "Hostinger"],
     imageUrl: isle,
-    des: "CLIENT PROJECT, ISLE OF TREES, Authorized sales partner",
+    des: "Authorized sales partner site delivered for a real estate client, built and shipped on WordPress.",
     Demo: "https://isle-of-trees.in/",
-    github: "https://isle-of-trees.in/",
-  },
- 
-  {
-    Projectname: "Expense-tracker",
-    tech: "HTML,CSS, JavaScript",
-    imageUrl: expenseTracker,
-    des: "Expense Tracker Website is a comprehensive financial management platform.",
-    Demo: "https://warm-zabaione-9f18e0.netlify.app/",
-    github: "https://github.com/kishlaychandan/kishlay-expense",
-  },
-  {
-    Projectname: "Restaurant-UI",
-    tech: "HTML, CSS, React Js",
-    imageUrl: restaurant,
-    des: "Created a UI for Restaurant, where you can find ratings of restaurants.",
-    Demo: "https://restaurant-orpin-beta.vercel.app/",
-    github: "https://github.com/kishlaychandan/Restaurant",
-  },
-  {
-    Projectname: "Chai-Sutta-Bar (Replicate)",
-    tech: "HTML, CSS, Tailwind CSS",
-    imageUrl: chaisuttabar,
-    des: "Created a replicate UI of Chai-Sutta-Bar",
-    Demo: "https://chai-sutta-bar-replicate-ui.netlify.app/",
-    github: "https://github.com/kishlaychandan/chai-sutta-bar",
-  },
-  {
-    Projectname: "Aria-MajorProject-UI",
-    tech: "HTML, CSS",
-    imageUrl: areamajorproject,
-    des: "Created a UI of website Aria",
-    Demo: "https://aria-majorproject-ui.netlify.app/",
-    github: "https://github.com/kishlaychandan/MajorProject-HTML--CSS",
-  },
-  {
-    Projectname: "Boosted USA (Replicate)",
-    tech: "HTML, CSS",
-    imageUrl: BoostedUSA,
-    des: "Created a replicate UI of Boosted USA",
-    Demo: "https://boostedusa-replicate-ui.netlify.app/",
-    github: "https://github.com/kishlaychandan/Weekly_Test_6---CSS",
-  },
-  {
-    Projectname: "GeekPok",
-    tech: "HTML, CSS, JavaScript",
-    imageUrl: Geekpok,
-    des: "Created a UI for Pokemon",
-    Demo: "https://kishlaychandan.github.io/GeeksterPok/",
-    github: "https://github.com/kishlaychandan/GeeksterPok",
-  },
-  {
-    Projectname: "KKDial",
-    tech: "HTML,CSS,PHP,JavaScript,MySQL",
-    imageUrl: kkdial,
-    des: `Information Directory Portal, Dynamic DashBoard for User and Admin`,
-    Demo: "https://kkdial.free.nf/dlms/",
-    github: "https://github.com/kishlaychandan/KKDial",
+    github: "",
+    category: "client",
   },
   {
     Projectname: "Orthopedic Haptic Simulator",
-    tech: "Raspberry Pi, Arduino Uno, Haptic Motor, Real-time Control, C/C++",
+    tech: ["Raspberry Pi", "Arduino Uno", "Haptic Motor", "C/C++"],
     imageUrl: orthopedicHapticSimulator,
     des: "DST-funded surgical training simulator using Raspberry Pi, Arduino Uno, haptic motor feedback, collision detection, motor control, and hardware synchronization.",
     Demo: "",
     github: "",
+    category: "academic",
   },
-  
+  {
+    Projectname: "KKDial",
+    tech: ["HTML", "CSS", "PHP", "JavaScript", "MySQL"],
+    imageUrl: kkdial,
+    des: "Information directory portal with a dynamic dashboard for both users and admins.",
+    Demo: "https://kkdial.free.nf/dlms/",
+    github: "https://github.com/kishlaychandan/KKDial",
+    category: "practice",
+  },
+  {
+    Projectname: "Food Delivery App",
+    tech: ["React JS", "Firebase Auth"],
+    imageUrl: FoodApp,
+    des: "Web app for online food ordering with AI recipes, payment gateway, and a chatbot.",
+    Demo: "https://food-delivery-app-ebon.vercel.app/",
+    github: "https://github.com/kishlaychandan/FoodDeliveryApp",
+    category: "practice",
+  },
+  {
+    Projectname: "Expense Tracker",
+    tech: ["HTML", "CSS", "JavaScript"],
+    imageUrl: expenseTracker,
+    des: "Comprehensive financial management platform for tracking day-to-day expenses.",
+    Demo: "https://warm-zabaione-9f18e0.netlify.app/",
+    github: "https://github.com/kishlaychandan/kishlay-expense",
+    category: "practice",
+  },
+  {
+    Projectname: "Restaurant UI",
+    tech: ["HTML", "CSS", "React JS"],
+    imageUrl: restaurant,
+    des: "UI for browsing restaurants and viewing their ratings.",
+    Demo: "https://restaurant-orpin-beta.vercel.app/",
+    github: "https://github.com/kishlaychandan/Restaurant",
+    category: "practice",
+  },
+  {
+    Projectname: "Netflix Clone",
+    tech: ["React JS", "Node.js", "MongoDB", "Tailwind CSS"],
+    imageUrl: netflix,
+    des: "UI clone built to practice authentication flows and streaming-style layouts.",
+    Demo: "https://netflix-clone-gamma-smoky.vercel.app/",
+    github: "https://github.com/kishlaychandan/NetflixClone",
+    category: "practice",
+  },
+  {
+    Projectname: "Chai Sutta Bar",
+    tech: ["HTML", "CSS", "Tailwind CSS"],
+    imageUrl: chaisuttabar,
+    des: "UI practice build replicating the Chai Sutta Bar brand site.",
+    Demo: "https://chai-sutta-bar-replicate-ui.netlify.app/",
+    github: "https://github.com/kishlaychandan/chai-sutta-bar",
+    category: "practice",
+  },
+  {
+    Projectname: "Aria Major Project",
+    tech: ["HTML", "CSS"],
+    imageUrl: areamajorproject,
+    des: "UI build for the Aria website as a layout/CSS practice project.",
+    Demo: "https://aria-majorproject-ui.netlify.app/",
+    github: "https://github.com/kishlaychandan/MajorProject-HTML--CSS",
+    category: "practice",
+  },
+  {
+    Projectname: "Boosted USA",
+    tech: ["HTML", "CSS"],
+    imageUrl: BoostedUSA,
+    des: "UI practice build replicating the Boosted USA brand site.",
+    Demo: "https://boostedusa-replicate-ui.netlify.app/",
+    github: "https://github.com/kishlaychandan/Weekly_Test_6---CSS",
+    category: "practice",
+  },
+  {
+    Projectname: "GeekPok",
+    tech: ["HTML", "CSS", "JavaScript"],
+    imageUrl: Geekpok,
+    des: "Pokemon-themed UI built for front-end practice.",
+    Demo: "https://kishlaychandan.github.io/GeeksterPok/",
+    github: "https://github.com/kishlaychandan/GeeksterPok",
+    category: "practice",
+  },
 ];
+
+const CATEGORY_STYLE = {
+  client: { label: "Client Project", className: "bg-emerald-500/90 text-white" },
+  academic: { label: "Academic Project", className: "bg-violet-500/90 text-white" },
+  practice: { label: "Practice Build", className: "bg-slate-700/90 text-slate-100" },
+};
+
 export default function Portfolio() {
   const { isDark } = useTheme();
-  
+
   return (
     <div
       id="Portfolio"
@@ -139,8 +160,8 @@ export default function Portfolio() {
                 isDark ? "text-gray-400" : "text-gray-600"
               }`}
             >
-              A curated collection of work across products, client projects, and
-              experiments.
+              A curated collection of work across client sites, products, and
+              practice builds.
             </p>
           </div>
         </div>
@@ -154,58 +175,82 @@ export default function Portfolio() {
               {portfolio.map((project) => {
                 const hasDemo = Boolean(project.Demo);
                 const hasCode = Boolean(project.github);
+                const badge = CATEGORY_STYLE[project.category];
 
                 return (
-                  <li key={project.Projectname} className="animate-scale-in">
+                  <li key={project.Projectname} className="animate-scale-in group">
                     <div
-                      className={`h-full flex flex-col rounded-xl border ${
+                      className={`h-full flex flex-col overflow-hidden rounded-2xl border transition-all duration-500 ${
                         isDark
-                          ? "bg-gray-900 border-gray-700"
-                          : "bg-white border-gray-200"
-                      } shadow-sm hover:shadow-md transition-shadow duration-300`}
+                          ? "bg-slate-900/50 backdrop-blur-xl border-slate-800 hover:border-slate-700"
+                          : "bg-white border-slate-200"
+                      } shadow-sm hover:shadow-2xl hover:shadow-indigo-500/10 hover:-translate-y-1`}
                     >
-                      {/* Image */}
-                      <div className={`relative aspect-[16/10] overflow-hidden rounded-t-xl p-2.5 sm:p-3 ${isDark ? "bg-slate-800" : "bg-slate-100"}`}>
-                        {hasDemo ? (
-                          <a
-                            href={project.Demo}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="block h-full w-full"
-                          >
-                            <img
-                              className="h-full w-full object-contain transition-opacity duration-300 hover:opacity-90"
-                              src={project.imageUrl}
-                              alt={`${project.Projectname} project screenshot`}
-                              loading="lazy"
-                            />
-                          </a>
-                        ) : (
-                          <img
-                            className="h-full w-full object-contain"
-                            src={project.imageUrl}
-                            alt={`${project.Projectname} project screenshot`}
-                            loading="lazy"
-                          />
+                      {/* Image with hover-reveal actions */}
+                      <div className="relative aspect-video overflow-hidden bg-slate-950">
+                        <img
+                          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          src={project.imageUrl}
+                          alt={`${project.Projectname} project screenshot`}
+                          loading="lazy"
+                        />
+
+                        {/* Category badge */}
+                        <span
+                          className={`absolute left-3 top-3 rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide ${badge.className}`}
+                        >
+                          {badge.label}
+                        </span>
+
+                        {/* Hover overlay with quick actions */}
+                        {(hasDemo || hasCode) && (
+                          <div className="absolute inset-0 flex items-center justify-center gap-3 bg-slate-950/0 opacity-0 transition-all duration-300 group-hover:bg-slate-950/70 group-hover:opacity-100">
+                            {hasDemo && (
+                              <a
+                                href={project.Demo}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="inline-flex -translate-y-2 items-center gap-1.5 rounded-full bg-white px-4 py-2 text-sm font-semibold text-slate-900 opacity-0 shadow-lg transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 hover:bg-slate-100"
+                                aria-label={`View ${project.Projectname} demo`}
+                              >
+                                <BsBoxArrowUpRight className="h-4 w-4" />
+                                Live
+                              </a>
+                            )}
+                            {hasCode && (
+                              <a
+                                href={project.github}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="inline-flex -translate-y-2 items-center gap-1.5 rounded-full bg-slate-800 px-4 py-2 text-sm font-semibold text-white opacity-0 shadow-lg transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 hover:bg-slate-700"
+                                aria-label={`View ${project.Projectname} source code on GitHub`}
+                              >
+                                <BsGithub className="h-4 w-4" />
+                                Code
+                              </a>
+                            )}
+                          </div>
+                        )}
+
+                        {!hasDemo && !hasCode && (
+                          <div className="absolute inset-0 flex items-center justify-center bg-slate-950/0 opacity-0 transition-all duration-300 group-hover:bg-slate-950/70 group-hover:opacity-100">
+                            <span className="inline-flex -translate-y-2 items-center gap-1.5 rounded-full bg-slate-800 px-4 py-2 text-sm font-semibold text-white opacity-0 shadow-lg transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                              <BsCpuFill className="h-4 w-4" />
+                              Hardware build — no live link
+                            </span>
+                          </div>
                         )}
                       </div>
 
                       {/* Content */}
                       <div className="flex flex-1 flex-col p-5">
                         <h3
-                          className={`text-lg font-semibold mb-1 ${
+                          className={`text-lg font-semibold mb-2 ${
                             isDark ? "text-white" : "text-gray-900"
                           }`}
                         >
                           {project.Projectname}
                         </h3>
-                        <p
-                          className={`text-xs font-medium mb-2 ${
-                            isDark ? "text-indigo-300" : "text-indigo-600"
-                          }`}
-                        >
-                          {project.tech}
-                        </p>
                         <p
                           className={`text-sm flex-1 mb-4 ${
                             isDark ? "text-gray-300" : "text-gray-600"
@@ -213,45 +258,19 @@ export default function Portfolio() {
                         >
                           {project.des}
                         </p>
-
-                        <div className={`grid gap-2 ${hasDemo && hasCode ? "grid-cols-2" : "grid-cols-1"}`}>
-                          {hasDemo && (
-                            <a
-                              href={project.Demo}
-                              target="_blank"
-                              rel="noreferrer"
-                              className="inline-flex items-center justify-center px-3 py-2 text-sm font-semibold rounded-md text-white bg-indigo-600 hover:bg-indigo-700 transition-colors duration-200"
-                              aria-label={`View ${project.Projectname} demo`}
-                            >
-                              Live
-                            </a>
-                          )}
-                          {hasCode && (
-                            <a
-                              href={project.github}
-                              target="_blank"
-                              rel="noreferrer"
-                              className={`inline-flex items-center justify-center px-3 py-2 text-sm font-semibold rounded-md border ${
-                                isDark
-                                  ? "border-gray-600 text-gray-100 hover:bg-gray-800"
-                                  : "border-gray-300 text-gray-800 hover:bg-gray-50"
-                              } transition-colors duration-200`}
-                              aria-label={`View ${project.Projectname} source code on GitHub`}
-                            >
-                              Code
-                            </a>
-                          )}
-                          {!hasDemo && !hasCode && (
+                        <div className="flex flex-wrap gap-1.5">
+                          {project.tech.map((tech) => (
                             <span
-                              className={`inline-flex items-center justify-center rounded-md px-3 py-2 text-sm font-semibold ${
+                              key={tech}
+                              className={`rounded-md px-2 py-1 text-[11px] font-semibold ${
                                 isDark
-                                  ? "bg-slate-800 text-slate-300"
-                                  : "bg-slate-100 text-slate-600"
+                                  ? "bg-slate-800 text-indigo-300"
+                                  : "bg-indigo-50 text-indigo-700"
                               }`}
                             >
-                              Academic Hardware Project
+                              {tech}
                             </span>
-                          )}
+                          ))}
                         </div>
                       </div>
                     </div>
