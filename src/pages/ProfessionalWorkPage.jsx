@@ -629,34 +629,6 @@ function ProfessionalWorkPage() {
       ],
     },
     {
-      id: 18,
-      title: 'IoT Router, WAF & RADIUS Security Setup',
-      company: 'iCapo Tech Pvt Ltd (Living Things)',
-      period: 'In Progress',
-      description:
-        'Setting up network edge controls for IoT device connectivity, combining routing, web application firewall, and RADIUS-based access for stronger authentication.',
-      technologies: [
-        'IoT Devices',
-        'Router',
-        'WAF',
-        'RADIUS',
-        'Network Security',
-        'Access Control',
-        'Authentication',
-        'Firewall Rules'
-      ],
-      status: 'in-progress',
-      icon: BsRouterFill,
-      color: 'from-amber-500 to-orange-600',
-      details: [
-        { text: 'Configuring router-level controls to securely manage IoT device connectivity across networks and environments.', icon: BsRouterFill },
-        { text: 'Setting up WAF policies to protect IoT-facing APIs and portals from common web attack patterns.', icon: BsShieldLockFill },
-        { text: 'Integrating RADIUS-based authentication to centralize access control for device and network entry points.', icon: BsPersonFillLock },
-        { text: 'Applying firewall and routing rules to reduce exposure and make IoT access paths easier to audit.', icon: BsShieldFillCheck },
-        { text: 'Why: Builds a stronger security foundation before IoT traffic reaches applications and platform services.', icon: BsExclamationTriangleFill },
-      ],
-    },
-    {
       id: 30,
       title: 'Product Temporary Shutdown: Infra Teardown & Cost Elimination',
       company: 'iCapo Tech Pvt Ltd (Living Things)',
@@ -685,11 +657,11 @@ function ProfessionalWorkPage() {
     },
     {
       id: 31,
-      title: 'ISO 27001 & SOC 2 Type 2 Certification Readiness (with DPDP Guidance)',
+      title: 'ISO 27001 & SOC 2 Type 2 Certification Readiness & DPDP Compliance',
       company: 'iCapo Tech Pvt Ltd (Living Things)',
       period: 'In Progress',
       description:
-        'Kicking off a formal security and privacy compliance program — pursuing ISO 27001 and SOC 2 Type 2 certification, with additional guidance on India\'s DPDP Act, working alongside an external GRC partner.',
+        'Kicking off a formal security and privacy compliance program — pursuing ISO 27001 and SOC 2 Type 2 certification, alongside DPDP (India\'s Digital Personal Data Protection Act) implementation, working with an external GRC partner.',
       technologies: ['ISO 27001', 'SOC 2 Type 2', 'NIST', 'DPDP', 'GRC', 'Information Security'],
       status: 'in-progress',
       icon: BsShieldLockFill,
@@ -697,8 +669,36 @@ function ProfessionalWorkPage() {
       details: [
         { text: 'Evaluated compliance tracks with an external GRC partner and selected "Security Essentials" — covering ISO 27001, SOC 2, and NIST framework alignment — over the separate privacy-focused track (GDPR/DPDP/HIPAA).', icon: BsClipboardCheck },
         { text: 'Confirmed ISO 27001 and SOC 2 Type 2 certification as the primary goal, with the introduction/kick-off call scheduled to start the engagement.', icon: BsShieldLockFill },
-        { text: 'Requested additional guidance on DPDP (India\'s Digital Personal Data Protection Act) implementation alongside the main certification track.', icon: BsShieldFillCheck },
+        { text: 'Running DPDP (India\'s Digital Personal Data Protection Act) implementation internally in parallel with the certification track.', icon: BsShieldFillCheck },
         { text: 'Why: moving security and privacy practices from ad hoc to formally certified, to meet enterprise customer and regulatory trust requirements.', icon: BsClockHistory },
+      ],
+    },
+    {
+      id: 18,
+      title: 'IoT Router, WAF & RADIUS Security Setup',
+      company: 'iCapo Tech Pvt Ltd (Living Things)',
+      period: 'In Progress',
+      description:
+        'Setting up network edge controls for IoT device connectivity, combining routing, web application firewall, and RADIUS-based access for stronger authentication.',
+      technologies: [
+        'IoT Devices',
+        'Router',
+        'WAF',
+        'RADIUS',
+        'Network Security',
+        'Access Control',
+        'Authentication',
+        'Firewall Rules'
+      ],
+      status: 'in-progress',
+      icon: BsRouterFill,
+      color: 'from-amber-500 to-orange-600',
+      details: [
+        { text: 'Configuring router-level controls to securely manage IoT device connectivity across networks and environments.', icon: BsRouterFill },
+        { text: 'Setting up WAF policies to protect IoT-facing APIs and portals from common web attack patterns.', icon: BsShieldLockFill },
+        { text: 'Integrating RADIUS-based authentication to centralize access control for device and network entry points.', icon: BsPersonFillLock },
+        { text: 'Applying firewall and routing rules to reduce exposure and make IoT access paths easier to audit.', icon: BsShieldFillCheck },
+        { text: 'Why: Builds a stronger security foundation before IoT traffic reaches applications and platform services.', icon: BsExclamationTriangleFill },
       ],
     },
     {
