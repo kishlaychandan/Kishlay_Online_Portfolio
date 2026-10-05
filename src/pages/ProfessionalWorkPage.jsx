@@ -656,24 +656,6 @@ function ProfessionalWorkPage() {
       ],
     },
     {
-      id: 31,
-      title: 'ISO 27001 & SOC 2 Type 2 Certification Readiness & DPDP Compliance',
-      company: 'iCapo Tech Pvt Ltd (Living Things)',
-      period: 'In Progress',
-      description:
-        'Kicking off a formal security and privacy compliance program — pursuing ISO 27001 and SOC 2 Type 2 certification, alongside DPDP (India\'s Digital Personal Data Protection Act) implementation, working with an external GRC partner.',
-      technologies: ['ISO 27001', 'SOC 2 Type 2', 'NIST', 'DPDP', 'GRC', 'Information Security'],
-      status: 'in-progress',
-      icon: BsShieldLockFill,
-      color: 'from-teal-500 to-cyan-600',
-      details: [
-        { text: 'Evaluated compliance tracks with an external GRC partner and selected "Security Essentials" — covering ISO 27001, SOC 2, and NIST framework alignment — over the separate privacy-focused track (GDPR/DPDP/HIPAA).', icon: BsClipboardCheck },
-        { text: 'Confirmed ISO 27001 and SOC 2 Type 2 certification as the primary goal, with the introduction/kick-off call scheduled to start the engagement.', icon: BsShieldLockFill },
-        { text: 'Running DPDP (India\'s Digital Personal Data Protection Act) implementation internally in parallel with the certification track.', icon: BsShieldFillCheck },
-        { text: 'Why: moving security and privacy practices from ad hoc to formally certified, to meet enterprise customer and regulatory trust requirements.', icon: BsClockHistory },
-      ],
-    },
-    {
       id: 18,
       title: 'IoT Router, WAF & RADIUS Security Setup',
       company: 'iCapo Tech Pvt Ltd (Living Things)',
@@ -699,6 +681,24 @@ function ProfessionalWorkPage() {
         { text: 'Integrating RADIUS-based authentication to centralize access control for device and network entry points.', icon: BsPersonFillLock },
         { text: 'Applying firewall and routing rules to reduce exposure and make IoT access paths easier to audit.', icon: BsShieldFillCheck },
         { text: 'Why: Builds a stronger security foundation before IoT traffic reaches applications and platform services.', icon: BsExclamationTriangleFill },
+      ],
+    },
+    {
+      id: 31,
+      title: 'ISO 27001 & SOC 2 Type 2 Certification Readiness & DPDP Compliance',
+      company: 'iCapo Tech Pvt Ltd (Living Things)',
+      period: 'In Progress',
+      description:
+        'Kicking off a formal security and privacy compliance program — pursuing ISO 27001 and SOC 2 Type 2 certification, alongside DPDP (India\'s Digital Personal Data Protection Act) implementation, working with an external GRC partner.',
+      technologies: ['ISO 27001', 'SOC 2 Type 2', 'NIST', 'DPDP', 'GRC', 'Information Security'],
+      status: 'in-progress',
+      icon: BsShieldLockFill,
+      color: 'from-teal-500 to-cyan-600',
+      details: [
+        { text: 'Evaluated compliance tracks with an external GRC partner and selected "Security Essentials" — covering ISO 27001, SOC 2, and NIST framework alignment — over the separate privacy-focused track (GDPR/DPDP/HIPAA).', icon: BsClipboardCheck },
+        { text: 'Confirmed ISO 27001 and SOC 2 Type 2 certification as the primary goal, with the introduction/kick-off call scheduled to start the engagement.', icon: BsShieldLockFill },
+        { text: 'Running DPDP (India\'s Digital Personal Data Protection Act) implementation internally in parallel with the certification track.', icon: BsShieldFillCheck },
+        { text: 'Why: moving security and privacy practices from ad hoc to formally certified, to meet enterprise customer and regulatory trust requirements.', icon: BsClockHistory },
       ],
     },
     {
