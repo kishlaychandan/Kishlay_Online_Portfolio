@@ -684,6 +684,24 @@ function ProfessionalWorkPage() {
       ],
     },
     {
+      id: 31,
+      title: 'ISO 27001 & SOC 2 Type 2 Certification Readiness (with DPDP Guidance)',
+      company: 'iCapo Tech Pvt Ltd (Living Things)',
+      period: 'In Progress',
+      description:
+        'Kicking off a formal security and privacy compliance program — pursuing ISO 27001 and SOC 2 Type 2 certification, with additional guidance on India\'s DPDP Act, working alongside an external GRC partner.',
+      technologies: ['ISO 27001', 'SOC 2 Type 2', 'NIST', 'DPDP', 'GRC', 'Information Security'],
+      status: 'in-progress',
+      icon: BsShieldLockFill,
+      color: 'from-teal-500 to-cyan-600',
+      details: [
+        { text: 'Evaluated compliance tracks with an external GRC partner and selected "Security Essentials" — covering ISO 27001, SOC 2, and NIST framework alignment — over the separate privacy-focused track (GDPR/DPDP/HIPAA).', icon: BsClipboardCheck },
+        { text: 'Confirmed ISO 27001 and SOC 2 Type 2 certification as the primary goal, with the introduction/kick-off call scheduled to start the engagement.', icon: BsShieldLockFill },
+        { text: 'Requested additional guidance on DPDP (India\'s Digital Personal Data Protection Act) implementation alongside the main certification track.', icon: BsShieldFillCheck },
+        { text: 'Why: moving security and privacy practices from ad hoc to formally certified, to meet enterprise customer and regulatory trust requirements.', icon: BsClockHistory },
+      ],
+    },
+    {
       id: 19,
       title: 'Ongoing Improvements',
       company: 'iCapo Tech Pvt Ltd (Living Things)',
