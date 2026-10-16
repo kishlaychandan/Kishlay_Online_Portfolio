@@ -670,7 +670,7 @@ function ProfessionalWorkPage() {
       color: 'from-teal-500 to-cyan-600',
       details: [
         { text: 'Evaluated compliance tracks with an external GRC partner and selected "Security Essentials" — covering ISO 27001, SOC 2, and NIST framework alignment — over the separate privacy-focused track (GDPR/DPDP/HIPAA).', icon: BsClipboardCheck },
-        { text: 'Confirmed ISO 27001 and SOC 2 Type 2 certification as the primary goal, with the introduction/kick-off call scheduled to start the engagement.', icon: BsShieldLockFill },
+        { text: 'Confirmed ISO 27001 and SOC 2 Type 2 certification as the primary goal for the engagement.', icon: BsShieldLockFill },
         { text: 'Running DPDP (India\'s Digital Personal Data Protection Act) implementation internally in parallel with the certification track.', icon: BsShieldFillCheck },
         { text: 'Why: moving security and privacy practices from ad hoc to formally certified, to meet enterprise customer and regulatory trust requirements.', icon: BsClockHistory },
       ],
