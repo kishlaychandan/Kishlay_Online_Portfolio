@@ -842,7 +842,7 @@ function ProfessionalWorkPage() {
                     }`}>
                     <div className="space-y-6 pt-6 border-t border-slate-800/50">
                       {hasNeed && (
-                        <div className={`border-l-2 pl-4 ${isDark ? 'border-indigo-500/40' : 'border-indigo-300'}`}>
+                        <div className={`border-l-2 pl-4 ${isDark ? 'border-amber-500/60' : 'border-amber-400'}`}>
                           <h4 className={`text-sm font-bold uppercase tracking-wider mb-1.5 ${isDark ? 'text-indigo-400' : 'text-indigo-600'}`}>
                             The Need
                           </h4>
