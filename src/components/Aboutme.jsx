@@ -75,7 +75,7 @@ export default function Aboutme() {
                     isDark ? "text-gray-300" : "text-gray-600"
                   }`}
                 >
-                  With 1.5 years in DevOps and 3+ years across the full stack, I've shipped production-grade CI/CD pipelines, led a zero-downtime cloud migration (AWS/GCP → Azure), built Kubernetes platforms on AKS, and put DevSecOps practices in place that actually stick. I hold an MCA from the Central University of Karnataka and have hands-on experience across multi-cloud (GCP, AWS, Azure), GitOps with ArgoCD, and full-stack observability with Prometheus and Grafana — paired with React and Node.js when the work calls for it.
+                  With 1.9 years in DevOps and 3+ years across the full stack, I've shipped production-grade CI/CD pipelines, led a zero-downtime cloud migration (AWS/GCP → Azure), built Kubernetes platforms on AKS, and put DevSecOps practices in place that actually stick. I hold an MCA from the Central University of Karnataka and have hands-on experience across multi-cloud (Azure, AWS, GCP), GitOps with ArgoCD, and full-stack observability with Prometheus and Grafana — paired with React and Node.js when the work calls for it.
                 </p>
                 <div className="mt-10 flex max-[1023px]:justify-center gap-4">
                   <a
