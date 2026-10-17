@@ -773,6 +773,11 @@ function ProfessionalWorkPage() {
             const Icon = work.icon;
             const isExpanded = expandedId === work.id;
             const isVisible = index < visibleCount;
+            const firstDetail = work.details[0];
+            const firstDetailText = typeof firstDetail === 'object' && firstDetail !== null ? firstDetail.text : firstDetail;
+            const hasNeed = typeof firstDetailText === 'string' && firstDetailText.startsWith('Need: ');
+            const needText = hasNeed ? firstDetailText.slice('Need: '.length) : null;
+            const achievementDetails = hasNeed ? work.details.slice(1) : work.details;
 
             return (
               <div
@@ -836,12 +841,22 @@ function ProfessionalWorkPage() {
                   <div className={`transition-all duration-700 ease-in-out overflow-hidden ${isExpanded ? 'max-h-[1000px] opacity-100 mt-8' : 'max-h-0 opacity-0'
                     }`}>
                     <div className="space-y-6 pt-6 border-t border-slate-800/50">
+                      {hasNeed && (
+                        <div className={`rounded-xl border-l-4 border-amber-500 p-4 ${isDark ? 'bg-amber-500/5' : 'bg-amber-50'}`}>
+                          <h4 className={`text-sm font-bold uppercase tracking-wider mb-1.5 ${isDark ? 'text-amber-400' : 'text-amber-600'}`}>
+                            The Need
+                          </h4>
+                          <p className={`text-sm md:text-base ${isDark ? 'text-slate-300' : 'text-slate-700'}`}>
+                            {needText}
+                          </p>
+                        </div>
+                      )}
                       <div>
                         <h4 className={`text-sm font-bold uppercase tracking-wider mb-4 ${isDark ? 'text-indigo-400' : 'text-indigo-600'}`}>
                           Deep Dive & Achievements
                         </h4>
                         <ul className="space-y-3">
-                          {work.details.map((detail, i) => {
+                          {achievementDetails.map((detail, i) => {
                             const hasIcon = typeof detail === 'object' && detail !== null;
                             const text = hasIcon ? detail.text : detail;
                             const DetailIcon = hasIcon ? detail.icon : null;
