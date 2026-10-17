@@ -83,7 +83,7 @@ function ProfessionalWorkPage() {
       icon: SiDocker,
       color: 'from-purple-500 to-indigo-500',
       details: [
-        { text: 'Need: Microservices were deployed inconsistently across environments, and unscanned images could reach production unchecked.', icon: BsExclamationTriangleFill },
+        { text: 'Need: Microservices were deployed inconsistently across environments, and unscanned images could reach production unchecked. Worked with enterprise clients like DMart and TCS who required secure, vulnerability-scanned images and code-quality gates as part of the engagement.', icon: BsExclamationTriangleFill },
         { text: 'Multistage & Distroless Builds: Introduced multistage builds and distroless images to harden runtime containers.', icon: SiDocker },
         { text: 'Vulnerability Scanning: Integrated Trivy into build pipeline for automated vulnerability scanning.', icon: BsShieldFillCheck },
         { text: 'Result: Reduced image size and improved security posture across services.', icon: BsSpeedometer2 },
