@@ -691,6 +691,39 @@ function ProfessionalWorkPage() {
       ],
     },
     {
+      id: 34,
+      title: 'Full Stack Development: Production-Grade Applications',
+      company: 'iCapo Tech Pvt Ltd (Living Things)',
+      period: 'Ongoing',
+      description:
+        'Planned, built, and deployed full-stack applications end to end — a fleet device management dashboard, a voice-controlled AC application, and an SMS/OTP automation system — alongside a steady stream of smaller full-stack requirements.',
+      technologies: ['React', 'Node.js', 'PostgreSQL', 'MQTT', 'OAuth/SSO', 'LLM', 'Redis', 'REST APIs'],
+      status: 'completed',
+      icon: BsCpuFill,
+      color: 'from-violet-500 to-indigo-600',
+      details: [
+        { text: 'Need: Beyond infrastructure work, several products needed full application builds end to end — planned, implemented, and deployed independently — spanning device fleet management, voice-controlled smart home control, SMS/OTP automation, and a steady stream of smaller analytics and landing-page work.', icon: BsExclamationTriangleFill },
+        { text: 'Cloud OTA: Fleet Device Management Application — Planned, built, and deployed a full-stack fleet device management application end to end, giving the team one place to manage firmware versions, devices, and OTA rollout status across the entire fleet.', icon: BsBroadcastPin, isGroupTitle: true },
+        { text: 'Version Management: Built version tracking across the entire firmware fleet, so the team could see exactly which version was running on which device at a glance.', icon: BsClipboardCheck },
+        { text: 'Device Management: Built device management views covering the full fleet, searchable and filterable by device type, hardware version, and library dependencies.', icon: BsCpuFill },
+        { text: 'Online/Offline Status: Tracked total online versus offline device counts in real time across the fleet, so connectivity issues were visible before they became support tickets.', icon: BsBarChartLineFill },
+        { text: 'GSM & WiFi Variants: Supported both GSM and WiFi protocol device variants (17 each) within the same dashboard, instead of needing separate tooling per connectivity type.', icon: BsGearWideConnected },
+        { text: 'Single & Bulk Updates: Supported both single-device firmware updates via MAC-ID targeting for debugging, and bulk updates across many devices at once for fleet-wide rollout.', icon: BsLightningChargeFill },
+        { text: 'OTA Status Tracking: Built real-time OTA rollout status tracking so the team could see deployment progress and failures across the entire device network as they happened.', icon: BsSpeedometer2 },
+        { text: 'Voice-Controlled AC Application (Alexa-style) — Planned, built, and deployed a voice-controlled AC application end to end, letting users control AC units by voice the same way they would with Alexa.', icon: SiMqtt, isGroupTitle: true },
+        { text: 'Voice Command Understanding: Built a multi-language LLM-based intent classifier to understand voice commands across languages and map them to the correct device action.', icon: SiOpenai },
+        { text: 'Device Control: Used MQTT to send real-time control commands to AC units and receive their current state back.', icon: SiMqtt },
+        { text: 'Secure Access: Implemented OAuth/SSO so only authenticated users could control their own devices.', icon: BsPersonFillLock },
+        { text: 'Application Stack: Built the full application on React, Node.js, and PostgreSQL for the frontend, backend, and data layer.', icon: SiPostgresql },
+        { text: 'SMS/OTP Automation Application — Planned, built, and deployed an SMS-based OTP automation application end to end, removing manual OTP entry from the bill-download workflow.', icon: BsPhoneVibrateFill, isGroupTitle: true },
+        { text: 'SMS Automation: Automated SMS forwarding from dedicated client SIMs using mobile automation (Automate app).', icon: BsPhoneVibrateFill },
+        { text: 'OTP Caching: Built a high-speed Redis caching layer for secure OTP storage with automated expiry (TTL).', icon: SiRedis },
+        { text: 'OTP Dashboard: Built an operational dashboard for real-time OTP monitoring across a high volume of phone numbers, replacing a process where OTPs arrived with no consolidated view.', icon: BsBarChartLineFill },
+        { text: 'Headless Auth: Integrated a chatbot for headless authentication on utility portals, enabling fully autonomous bill downloads.', icon: BsRobot },
+        { text: 'Ongoing Small Builds: Took on a steady stream of smaller full-stack requirements alongside these larger builds — analytics fixes, marketing landing pages, and other ad hoc feature requests across the product.', icon: BsGearWideConnected },
+      ],
+    },
+    {
       id: 19,
       title: 'Ongoing Improvements',
       company: 'iCapo Tech Pvt Ltd (Living Things)',
@@ -709,14 +742,6 @@ function ProfessionalWorkPage() {
       ],
     },
   ];
-
-  const handleMouseEnter = (id) => {
-    if (!pinnedId) setExpandedId(id);
-  };
-
-  const handleMouseLeave = () => {
-    if (!pinnedId) setExpandedId(null);
-  };
 
   const handleClick = (id) => {
     setPinnedId((currentId) => {
@@ -776,8 +801,6 @@ function ProfessionalWorkPage() {
                 role="button"
                 tabIndex={0}
                 aria-expanded={isExpanded}
-                onMouseEnter={() => handleMouseEnter(work.id)}
-                onMouseLeave={handleMouseLeave}
                 onClick={() => handleClick(work.id)}
                 onKeyDown={(event) => handleKeyDown(event, work.id)}
                 className={`group relative overflow-hidden rounded-2xl transition-all duration-700 cursor-pointer sm:rounded-3xl ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
@@ -829,7 +852,7 @@ function ProfessionalWorkPage() {
                   </p>
 
                   {/* Details (Expandable) */}
-                  <div className={`transition-all duration-700 ease-in-out overflow-hidden ${isExpanded ? 'max-h-[1000px] opacity-100 mt-8' : 'max-h-0 opacity-0'
+                  <div className={`transition-all duration-700 ease-in-out overflow-hidden ${isExpanded ? 'max-h-[5000px] opacity-100 mt-8' : 'max-h-0 opacity-0'
                     }`}>
                     <div className="space-y-6 pt-6 border-t border-slate-800/50">
                       {hasNeed && (
@@ -852,8 +875,21 @@ function ProfessionalWorkPage() {
                             const text = hasIcon ? detail.text : detail;
                             const DetailIcon = hasIcon ? detail.icon : null;
                             const isNew = hasIcon && detail.isNew;
+                            const isGroupTitle = hasIcon && detail.isGroupTitle;
+                            if (isGroupTitle) {
+                              return (
+                                <li key={i} className={`pt-3 first:pt-0 border-t first:border-t-0 ${isDark ? 'border-slate-800' : 'border-slate-200'}`}>
+                                  <p className={`flex items-center gap-2 text-sm md:text-base font-bold ${isDark ? 'text-white' : 'text-slate-900'}`}>
+                                    {DetailIcon && (
+                                      <DetailIcon className={`flex-shrink-0 text-base ${isDark ? 'text-indigo-400' : 'text-indigo-600'}`} />
+                                    )}
+                                    {text}
+                                  </p>
+                                </li>
+                              );
+                            }
                             return (
-                              <li key={i} className="flex items-start gap-3 group/item">
+                              <li key={i} className="flex items-start gap-3 group/item pl-2">
                                 {DetailIcon ? (
                                   <DetailIcon className={`mt-0.5 flex-shrink-0 text-base ${
                                     isNew
