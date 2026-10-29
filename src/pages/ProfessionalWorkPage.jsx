@@ -26,6 +26,7 @@ import {
 } from 'react-icons/bs';
 import {
   SiAirbyte,
+  SiAnsible,
   SiApachekafka,
   SiArgo,
   SiClickhouse,
@@ -39,6 +40,7 @@ import {
   SiHelm,
   SiKubernetes,
   SiMicrosoftazure,
+  SiMongodb,
   SiMqtt,
   SiOpenai,
   SiPodman,
@@ -502,6 +504,7 @@ function ProfessionalWorkPage() {
         { text: 'Need: Enterprise clients required production stacks with zero internet dependency, which standard cloud deployments couldn\'t satisfy.', icon: BsExclamationTriangleFill },
         { text: 'Self-Contained Stack: Packaged and deployed frontend, backend, databases, object storage, reverse proxy, log streaming, and monitoring as a self-contained stack using Podman.', icon: SiPodman },
         { text: 'Offline-First Design: Designed the stack to run fully offline, with images and dependencies pre-staged for environments that have no outbound connectivity.', icon: BsBoxSeamFill },
+        { text: 'Ansible Automation: Used Ansible playbooks to automate the on-premise install end-to-end — setting up Podman and Docker on the destination server, transferring a tarred copy of the application images (since there was no internet access to pull them directly), loading the images on the destination, and bringing all services up in order.', icon: SiAnsible },
         { text: 'Security Gates Passed: Passed customer VAPT alongside Trivy and SonarQube gates — 0 critical CVEs approved for production.', icon: SiSonarqube },
         { text: 'Handover Documentation: Authored client-handover runbooks and architecture diagrams so customer teams could operate the stack independently.', icon: BsFileEarmarkCodeFill },
       ],
@@ -663,6 +666,28 @@ function ProfessionalWorkPage() {
         { text: 'Primary Goal Confirmed: Confirmed ISO 27001 and SOC 2 Type 2 certification as the primary goal for the engagement.', icon: BsShieldLockFill },
         { text: 'DPDP Implementation: Running DPDP (India\'s Digital Personal Data Protection Act) implementation internally in parallel with the certification track.', icon: BsShieldFillCheck },
         { text: 'Why: moving security and privacy practices from ad hoc to formally certified, to meet enterprise customer and regulatory trust requirements.', icon: BsClockHistory },
+      ],
+    },
+    {
+      id: 33,
+      title: 'MongoDB: Resource Optimization, Indexing & Percona Operator Migration Planning',
+      company: 'iCapo Tech Pvt Ltd (Living Things)',
+      period: 'Ongoing',
+      description:
+        'Optimized MongoDB resource usage, indexing, and data lifecycle in production, and scoped a zero-downtime migration from the existing Bitnami replica set to a Percona Operator-managed cluster.',
+      technologies: ['MongoDB', 'Percona Operator', 'PCSM', 'TTL Index', 'Indexing', 'PITR', 'Kubernetes', 'Bitnami'],
+      status: 'in-progress',
+      icon: SiMongodb,
+      color: 'from-green-600 to-emerald-700',
+      details: [
+        { text: 'Need: MongoDB was running under-optimized — unindexed queries and collections growing unbounded with no expiry — on an aging Bitnami replica set that needed a path to a properly managed, Percona Operator-run cluster without extended downtime.', icon: BsExclamationTriangleFill },
+        { text: 'Resource Optimization: Optimized MongoDB node pool sizing and disk allocation based on real compute and storage usage instead of static Bitnami defaults, as part of the platform\'s broader cost and capacity cleanup.', icon: BsCpuFill },
+        { text: 'Indexing Plan: Identified missing indexes needed on high-traffic collections and queries, to replace collection scans that are silently slowing down the application.', icon: SiMongodb },
+        { text: 'TTL Setup Plan: Scoped TTL indexes for collections holding data that doesn\'t need long-term, historic retention, so those records will expire automatically instead of growing the database unbounded.', icon: BsClockHistory },
+        { text: 'Migration Planning: Scoped a zero-downtime migration path from the existing Bitnami MongoDB replica set to a Percona Operator-managed cluster, using Percona\'s ClusterSync (PCSM) for live, continuous sync between the old and new clusters during cutover.', icon: SiKubernetes },
+        { text: 'Blockers Identified: Investigation surfaced concrete blockers before starting sync — the source MongoDB version was below PCSM\'s minimum supported version, actual disk usage needed verification against provisioned storage, and the oplog retention window needed checking against expected initial-copy time.', icon: BsExclamationTriangleFill },
+        { text: 'PITR & Validation Plan: Scoped point-in-time recovery support and a data-validation/resync step into the plan, so cutover can be verified and safely rolled back if synchronization doesn\'t catch up in time.', icon: BsShieldFillCheck },
+        { text: 'Current Status: Node and disk resource optimization is live in production; indexing, TTL cleanup, and the Percona migration itself are all in the investigation and planning stage, with blockers identified and a cutover plan drafted ahead of execution.', icon: BsClockHistory },
       ],
     },
     {

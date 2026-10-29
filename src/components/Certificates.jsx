@@ -46,9 +46,11 @@ export default function Certificates() {
   const [imageFailed, setImageFailed] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [loadProgress, setLoadProgress] = useState(0);
-  const activeUrl = certificates[activeIndex];
-  const thumbnailUrl = useMemo(() => getThumbnailUrl(activeUrl), [activeUrl]);
-  const previewUrl = useMemo(() => getPreviewUrl(activeUrl), [activeUrl]);
+  const activeEntry = certificates[activeIndex];
+  const activeUrl = typeof activeEntry === "string" ? activeEntry : activeEntry.url;
+  const imageSource = typeof activeEntry === "string" ? activeEntry : activeEntry.image;
+  const thumbnailUrl = useMemo(() => getThumbnailUrl(imageSource), [imageSource]);
+  const previewUrl = useMemo(() => getPreviewUrl(imageSource), [imageSource]);
 
   const goToPrevious = () => {
     setActiveIndex((current) =>
